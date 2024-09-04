@@ -1,4 +1,4 @@
-## Ello! Welcome to my github!
+## WASSSUPPP!!
 Hi, I'm Squirrel! I am mainly a website designer (Html, Css and javascript. I'm 🏳️‍🌈 if you wanted to know :sob: 
 
 Here is some stuff I can brag about :3 
