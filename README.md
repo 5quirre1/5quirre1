@@ -9,4 +9,4 @@ That's literally it :sob:
 
 🔥I know and am using these languages!
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,java)](https://skillicons.dev)
