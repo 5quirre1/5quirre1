@@ -3,7 +3,9 @@ Hi, I'm Squirrel! I am mainly a website designer (Html, Css and javascript). I'm
 
 Here is some stuff I can brag about :3 
 
-🧽I own the website [freakybob.site](https://github.com/Freakybob-Team/Freakybob.site)!
+🧽I am a main dev of [Freakybob.site](https://github.com/Freakybob-Team/Freakybob.site) and a lot of the FreakyBob projects!
+
+Meow mreow :33 
 
 That's literally it :sob:
 
