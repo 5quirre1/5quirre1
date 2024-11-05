@@ -1,5 +1,5 @@
 ## WASSSUPPP!!
-Hi, I'm Squirrel! I am mainly a website designer (Html, Css and javascript). I'm severely 🏳️‍🌈gay🌈 and have the best bf !! :3
+Hi, I'm Squirrel! I am mainly a website designer (Html, Css and javascript). I'm severely 🏳️‍🌈gay🌈 :3
 
 Here is some stuff I can brag about :3 
 
