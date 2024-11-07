@@ -1,11 +1,11 @@
 ## WASSSUPPP!!
-Hi, I'm Squirrel! I am mainly a website designer (Html, Css and javascript). I'm severely 🏳️‍🌈gay🌈 :3
+Hi, I'm Squirrel! I am mainly a website designer (Html, Css and javascript). I'm severely HO HO HO, MERRY CHRISTMAS 🎅🏿🎅🎅🏿🎅
 
-Here is some stuff I can brag about :3 
+Here is some stuff I can brag about 🔥🔥🔥
 
 🧽I am a main dev of [Freakybob.site](https://github.com/Freakybob-Team/Freakybob.site) and a lot of the FreakyBob projects!
 
-Meow mreow :33 
+GEEGGREGGREGGREGREGREG 🤑🤑
 
 That's literally it :sob:
 
