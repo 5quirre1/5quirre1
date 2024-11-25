@@ -15,4 +15,4 @@ That's literally it :sob:
 
 What I am Currently learning:
 
-[![learning](https://skillicons.dev/icons?i=cpp)](https://skillicons.dev)
+[![learning](https://skillicons.dev/icons?i=cpp,python)](https://skillicons.dev)
