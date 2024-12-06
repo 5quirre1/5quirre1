@@ -11,8 +11,14 @@ That's literally it :sob:
 
 🔥I know and am using these languages!
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,java,)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,java)](https://skillicons.dev)
 
 What I am Currently learning:
 
-[![learning](https://skillicons.dev/icons?i=cpp,python,go)](https://skillicons.dev)
+[![learning](https://skillicons.dev/icons?i=cpp,python,csharp)](https://skillicons.dev)
+
+
+What I **wanna** learn:
+
+[![learning](https://skillicons.dev/icons?i=go,c)](https://skillicons.dev)
+
