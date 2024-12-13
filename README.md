@@ -15,7 +15,7 @@ That's literally it :sob:
 
 What I am Currently learning:
 
-[![learning](https://skillicons.dev/icons?i=python,csharp)](https://skillicons.dev)
+[![learning](https://skillicons.dev/icons?i=python,cs)](https://skillicons.dev)
 
 
 What I **wanna** learn:
