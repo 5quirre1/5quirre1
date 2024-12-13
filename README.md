@@ -9,11 +9,22 @@
   <li align=center>I'm a owner and main dev of <a href='https://github.com/Freakybob-Team'>Freakybob-Team</a> :3</li>
   <li align=center>I can't do anything but code :sob:</li>
   <li align=center>I can make some pretty cool websites lol</li>
-<h1 align=center>Some of my socials and links</h1>
+  <br>
+  <details align=center>
+<summary>Some of my fav websites :3</summary>
+<br>
+<a href="https://freakybob.site"><img src="https://freakybob.site/images/FreakybobDOTsite.png" width="70"></a>
+<a href="https://blog.freakybob.site"><img src="https://freakybob.site/images/freakyblog.png" width="70"></a>
+<a href="https://freakybrowse.freakybob.site"><img src="https://freakybrowse.freakybob.site/icons/icon.png" width="70"></a>
+</details>
+<h1 align=center>Some of my socials :3</h1>
 <p align=center>
-<a href="https://pikidiary.lol/@squirrel"><img src="assets/icons/piki.png"/></a>
+<a href="https://pikidiary.lol/@squirrel"><img height='90' src="assets/icons/piki.png"/></a>
   
-<p align=center>More socials and stuff coming soon :3</p>
+<p align=center>More socials coming soon..</p>
+ 
+
+
 <h1 align=center>Language stuff</h1>
 <p align=center>🔥I know these languages :33</p>
 
