@@ -46,3 +46,8 @@
 <p align=center>
 <img src="assets/languages/3rd_bar.svg" width="306">
 </p>
+
+<h1 align=center>Some ways to contact me !!</h1>
+<p align=center>
+<a href="mailto:squirrelhomebrew@gmail.com"><img src="assets/icons/gmail1.png" height='50'></a>
+</p>
