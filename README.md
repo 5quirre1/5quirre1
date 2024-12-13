@@ -1,7 +1,7 @@
 
 <h1 align=center>Hai!! I'm Squirrel :333</h1>
 <p align=center>
-<img width='auto' height='400' src="assets/nyan-cat.gif">
+<img width='auto' height='300' src="assets/nyan-cat.gif">
 </p>
 <h1 align=center>Here's some things 'bout me ;3</h1>
   <li align=center>I'm 13 🥖</li>
