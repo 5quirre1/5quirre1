@@ -30,26 +30,10 @@
 <a href="mailto:squirrelhomebrew@gmail.com"><img src="assets/icons/gmail1.png" height='80'></a>
 </p>
  </details>
-<h1 align=center>Language stuff</h1>
-<p align=center>🔥I know these languages :33</p>
-
+<h1 align=center>My most used languages :3</h1>
 <p align=center>
-<img src="assets/languages/top_bar.svg" width="240">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=5quirre1&theme=radical&show_icons=true&hide_border=true&layout=compact" alt="5quirre1's GitHub Stats" />
 </p>
-
-<p align=center>What I am Currently learning:</p>
-
-<p align=center>
-<img src="assets/languages/2nd_bar.svg" width="140">
-</p>
-
-
-<p align=center>What I wanna learn!!:</p>
-
-<p align=center>
-<img src="assets/languages/3rd_bar.svg" width="186">
-</p>
-
 <h1 align=center>Some other stuff</h1>
 <p align=center>
   <a href="https://discord.gg/T9z27hv7FN"><img src="assets/icons/discord.png" height='50'></a>
