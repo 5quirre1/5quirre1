@@ -31,18 +31,18 @@
 <p align=center>🔥I know these languages :33</p>
 
 <p align=center>
-<img src="assets/languages/top_bar.svg">
+<img src="assets/languages/top_bar.svg" width="400">
 </p>
 
 <p align=center>What I am Currently learning:</p>
 
 <p align=center>
-<img src="assets/languages/2nd_bar.svg"><a href="https://pikidiary.lol/@squirrel">
+<img src="assets/languages/2nd_bar.svg" width="200">
 </p>
 
 
 <p align=center>What I wanna learn!!:</p>
 
 <p align=center>
-<img src="assets/languages/3rd_bar.svg">
+<img src="assets/languages/3rd_bar.svg" width="306">
 </p>
