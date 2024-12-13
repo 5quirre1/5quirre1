@@ -9,13 +9,13 @@ GEEGGREGGREGGREGREGREG 🤑🤑
 
 That's literally it :sob:
 
-🔥I know and am using these languages!
+🔥I know these languages :33 
 
-[![My Skills](https://skillicons.dev/icons?i=html,css,js,java)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,java,cpp)](https://skillicons.dev)
 
 What I am Currently learning:
 
-[![learning](https://skillicons.dev/icons?i=cpp,python,csharp)](https://skillicons.dev)
+[![learning](https://skillicons.dev/icons?i=python,csharp)](https://skillicons.dev)
 
 
 What I **wanna** learn:
