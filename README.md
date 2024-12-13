@@ -19,7 +19,7 @@
 </details>
 <h1 align=center>Some of my socials :3</h1>
 <p align=center>
-<a href="https://pikidiary.lol/@squirrel"><img height='90' src="assets/icons/piki.png"/></a>
+<a href="https://pikidiary.lol/@squirrel"><img height='50' src="assets/icons/piki.png"/></a>
   
 <p align=center>More socials coming soon..</p>
  
