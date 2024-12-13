@@ -24,30 +24,30 @@
 <a href="https://pikidiary.lol/@squirrel"><img height='50' src="assets/icons/piki.png"/></a>
   
 <p align=center>More socials coming soon..</p>
- 
-
-
+ <details align=center>
+<summary>Ways to contact me 😄</summary> 
+<p align=center>
+<a href="mailto:squirrelhomebrew@gmail.com"><img src="assets/icons/gmail1.png" height='80'></a>
+</p>
+ </details>
 <h1 align=center>Language stuff</h1>
 <p align=center>🔥I know these languages :33</p>
 
 <p align=center>
-<img src="assets/languages/top_bar.svg" width="400">
+<img src="assets/languages/top_bar.svg" width="290">
 </p>
 
 <p align=center>What I am Currently learning:</p>
 
 <p align=center>
-<img src="assets/languages/2nd_bar.svg" width="200">
+<img src="assets/languages/2nd_bar.svg" width="190">
 </p>
 
 
 <p align=center>What I wanna learn!!:</p>
 
 <p align=center>
-<img src="assets/languages/3rd_bar.svg" width="306">
+<img src="assets/languages/3rd_bar.svg" width="246">
 </p>
 
-<h1 align=center>Some ways to contact me !!</h1>
-<p align=center>
-<a href="mailto:squirrelhomebrew@gmail.com"><img src="assets/icons/gmail1.png" height='50'></a>
-</p>
+
