@@ -34,20 +34,25 @@
 <p align=center>🔥I know these languages :33</p>
 
 <p align=center>
-<img src="assets/languages/top_bar.svg" width="290">
+<img src="assets/languages/top_bar.svg" width="240">
 </p>
 
 <p align=center>What I am Currently learning:</p>
 
 <p align=center>
-<img src="assets/languages/2nd_bar.svg" width="190">
+<img src="assets/languages/2nd_bar.svg" width="140">
 </p>
 
 
 <p align=center>What I wanna learn!!:</p>
 
 <p align=center>
-<img src="assets/languages/3rd_bar.svg" width="246">
+<img src="assets/languages/3rd_bar.svg" width="186">
 </p>
 
-
+<h1 align=center>Some other stuff</h1>
+<p align=center>
+  <a href="https://discord.gg/T9z27hv7FN"><img src="assets/icons/discord.png" height='50'></a>
+  <p align=center>        ^       </p>
+  <p align=center>The Freakcord server :3</p>
+</p>
