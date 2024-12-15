@@ -1,4 +1,3 @@
-
 <h1 align=center>Hai!! I'm Squirrel :333</h1>
 <p align=center>
 <img width='auto' height='300' src="assets/nyan-cat.gif">
@@ -24,11 +23,13 @@
 <p align=center>
 <a href="https://bsky.app/profile/5quirre1.bsky.social"><img src="https://freakybob.site/images/Bluesky.png" height='50'></a>
 <a href="https://pikidiary.lol/@squirrel"><img height='50' src="assets/icons/piki.png"/></a>
-  
+
 <p align=center>More socials coming soon..</p>
  <details align=center>
 <summary>Ways to contact me 😄</summary> 
 <p align=center>
+<!--https://discord.com/users/1127731486485921813-->
+<a href="https://discord.com/users/1127731486485921813"><img src="assets/discord2icons.png" height='77'></a>
 <a href="mailto:squirrelhomebrew@gmail.com"><img src="assets/icons/gmail1.png" height='80'></a>
 </p>
  </details>
