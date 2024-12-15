@@ -16,7 +16,7 @@
 <a href="https://blog.freakybob.site"><img src="https://freakybob.site/images/freakyblog.png" width="70"></a>
 <a href="https://freakybrowse.freakybob.site"><img src="https://freakybrowse.freakybob.site/icons/icon.png" width="70"></a>
 <a href="https://nomaakip.github.io/"><img src="https://github.com/nomaakip.png" width="70"></a>
-<a href="https://5quirre1.github.io"><img src="https://squirrel.freakybob.site/images/boykisser.png" width="70"></a> 
+<a href="https://squirrel.freakybob.site"><img src="https://squirrel.freakybob.site/images/boykisser.png" width="70"></a> 
 <a href="https://greg.com"><img src="assets/icons/greg.jpeg" width="69" height="70"></a>
 </details>
 <h1 align=center>Some of my socials :3</h1>
