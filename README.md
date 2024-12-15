@@ -15,7 +15,7 @@
 <a href="https://freakybob.site"><img src="https://freakybob.site/images/FreakybobDOTsite.png" width="70"></a>
 <a href="https://blog.freakybob.site"><img src="https://freakybob.site/images/freakyblog.png" width="70"></a>
 <a href="https://freakybrowse.freakybob.site"><img src="https://freakybrowse.freakybob.site/icons/icon.png" width="70"></a>
-<a href="https://nomaakip.github.io/"><img src="https://github.com/nomaakip.png" width="70"></a>
+<a href="https://swag.freakybob.site/"><img src="https://github.com/nomaakip.png" width="70"></a>
 <a href="https://squirrel.freakybob.site"><img src="https://squirrel.freakybob.site/images/boykisser.png" width="70"></a> 
 <a href="https://greg.com"><img src="assets/icons/greg.jpeg" width="69" height="70"></a>
 </details>
