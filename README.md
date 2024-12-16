@@ -43,3 +43,7 @@
   <p align=center>        ^       </p>
   <p align=center>The Freakcord server :3</p>
 </p>
+<h1 align=center>Notes</h1>
+  <p align=center>
+<img src="https://forthebadge.com/images/badges/i-fucking-hate-java.svg">
+  </p>
