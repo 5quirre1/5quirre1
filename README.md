@@ -1,8 +1,10 @@
-<h1 align=center>Hai!! I'm Squirrel :333</h1>
 <p align=center>
-<img width='auto' height='300' src="assets/nyan-cat.gif">
+<img width='900' height='350' src="assets/gifs/pretty.gif">
 </p>
-<h1 align=center>Here's some things 'bout me ;3</h1>
+
+<h1 align=center>Hai!! I'm Squirrel :333
+  
+  Here's some things 'bout me ;3</h1>
   <li align=center>I'm 13 🥖</li>
   <li align=center>I'm Severely gay :3 🏳️‍🌈</li>
   <li align=center>I'm a owner and main dev of <a href='https://github.com/Freakybob-Team'>Freakybob-Team</a> :3</li>
