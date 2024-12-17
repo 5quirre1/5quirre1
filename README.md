@@ -1,5 +1,5 @@
 <p align=center>
-<img width='900' height='350' src="/assets/README/gifs/pretty.gif">
+<img width='900' height='350' src="/assets/README/images/peak.png">
 </p>
 
 <h1 align=center>Hai!! I'm Squirrel :333
