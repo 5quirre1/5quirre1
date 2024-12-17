@@ -25,7 +25,7 @@
 <h1 align=center>Some of my socials :3</h1>
 <p align=center>
 <a href="https://bsky.app/profile/5quirre1.bsky.social"><img src="https://freakybob.site/images/Bluesky.png" height='50'></a>
-<a href="https://pikidiary.lol/@squirrel"><img height='50' src="/assets/README/icons/piki.pngicons/piki.png"/></a>
+<a href="https://pikidiary.lol/@squirrel"><img height='50' src="/assets/README/icons/piki.png"/></a>
 
 <p align=center>More socials coming soon..</p>
  <details align=center>
