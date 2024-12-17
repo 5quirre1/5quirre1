@@ -1,5 +1,5 @@
 <p align=center>
-<img width='900' height='350' src="assets/gifs/pretty.gif">
+<img width='900' height='350' src="/assets/README/gifs/pretty.gif">
 </p>
 
 <h1 align=center>Hai!! I'm Squirrel :333
@@ -20,20 +20,20 @@
 <a href="https://freakybrowse.freakybob.site"><img src="https://freakybrowse.freakybob.site/icons/icon.png" width="70"></a>
 <a href="https://swag.freakybob.site/"><img src="https://github.com/nomaakip.png" width="70"></a>
 <a href="https://squirrel.freakybob.site"><img src="https://squirrel.freakybob.site/assets/boykisser.png" width="70"></a> 
-<a href="https://greg.com"><img src="assets/icons/greg.jpeg" width="69" height="70"></a>
+<a href="https://greg.com"><img src="/assets/README/icons/greg.jpeg" width="69" height="70"></a>
 </details>
 <h1 align=center>Some of my socials :3</h1>
 <p align=center>
 <a href="https://bsky.app/profile/5quirre1.bsky.social"><img src="https://freakybob.site/images/Bluesky.png" height='50'></a>
-<a href="https://pikidiary.lol/@squirrel"><img height='50' src="assets/icons/piki.png"/></a>
+<a href="https://pikidiary.lol/@squirrel"><img height='50' src="/assets/README/icons/piki.png"/></a>
 
 <p align=center>More socials coming soon..</p>
  <details align=center>
 <summary>Ways to contact me 😄</summary> 
 <p align=center>
 <!--https://discord.com/users/1127731486485921813-->
-<a href="https://discord.com/users/1127731486485921813"><img src="assets/discord2icons.png" height='77'></a>
-<a href="mailto:squirrelhomebrew@gmail.com"><img src="assets/icons/gmail1.png" height='80'></a>
+<a href="https://discord.com/users/1127731486485921813"><img src="/assets/README/icons/discord2icons.png" height='77'></a>
+<a href="mailto:squirrelhomebrew@gmail.com"><img src="/assets/README/icons/gmail1.png" height='80'></a>
 </p>
  </details>
 <h1 align=center>My most used languages :3</h1>
@@ -42,7 +42,7 @@
 </p>
 <h1 align=center>Some other stuff</h1>
 <p align=center>
-  <a href="https://discord.gg/T9z27hv7FN"><img src="assets/icons/discord.png" height='50'></a>
+  <a href="https://discord.gg/T9z27hv7FN"><img src="/assets/README/icons/discord.png" height='50'></a>
   <p align=center>        ^       </p>
   <p align=center>The Freakcord server :3</p>
 </p>
