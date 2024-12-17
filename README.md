@@ -1,5 +1,6 @@
+<p align=center>One of my websites ;3</p>
 <p align=center>
-<img width='900' height='350' src="/assets/README/images/peak.png">
+<img width='770' height='450' src="/assets/README/images/peak.png">
 </p>
 
 <h1 align=center>Hai!! I'm Squirrel :333
