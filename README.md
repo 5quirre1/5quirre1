@@ -10,6 +10,7 @@
   <li align=center>I'm a owner and main dev of <a href='https://github.com/Freakybob-Team'>Freakybob-Team</a> :3</li>
   <li align=center>I can't do anything but code :sob:</li>
   <li align=center>I can make some pretty cool websites lol</li>
+  <li align=center>GenderFluid or smth ;3</li>
   <br>
   <details align=center>
 <summary>Some of my fav websites :3</summary>
