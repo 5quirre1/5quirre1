@@ -1,13 +1,20 @@
-<p align=center>One of my websites ;3</p>
+<h1 align=center>Hai!! I'm Squirrel :333
 <p align=center>
-<img width='770' height='450' src="/assets/README/images/peak.png">
+  <br>
+<img src="assets/README/languages/CPP.svg" width=60>
+<img src="assets/README/languages/CSS.svg" width=60>
+<img src="assets/README/languages/HTML.svg" width=60>
+<img src="assets/README/languages/JAVA.svg" width=60>
+<img src="assets/README/languages/JAVASCRIPT.svg" width=60>
+<img src="assets/README/languages/PYTHON.svg" width=60>
+<img src="assets/README/languages/DISCORD.svg" width=60>
+<img src="assets/README/languages/BASH.svg" width=60>
 </p>
 
-<h1 align=center>Hai!! I'm Squirrel :333
-  
-  Here's some things 'bout me ;3</h1>
+
+<h1 align=center>Here's some things 'bout me >w<</h1>
   <li align=center>I'm 13 🥖</li>
-  <li align=center>I'm Severely gay :3 🏳️‍🌈</li>
+  <li align=center>Silly boykisser :333333</w></li>
   <li align=center>I'm a owner and main dev of <a href='https://github.com/Freakybob-Team'>Freakybob-Team</a> :3</li>
   <li align=center>I can't do anything but code :sob:</li>
   <li align=center>I can make some pretty cool websites lol</li>
@@ -46,7 +53,7 @@
 <a href="https://blog.freakybob.site"><img src="https://freakybob.site/images/freakyblog.png" width="70"></a>
 <a href="https://freakybrowse.freakybob.site"><img src="https://freakybrowse.freakybob.site/icons/icon.png" width="70"></a>
 <a href="https://swag.freakybob.site/"><img src="https://github.com/nomaakip.png" width="70"></a>
-<a href="https://wish.freakybob.site"><img src="https://github.com/wishyt13.png width="70:></a>
+<a href="https://wish.freakybob.site"><img src="https://github.com/wish13yt.png" width="70:></a>
 <a href="https://squirrel.freakybob.site"><img src="https://squirrel.freakybob.site/assets/boykisser.png" width="70"></a> 
 <a href="https://greg.com"><img src="/assets/README/icons/greg.jpeg" width="69" height="70"></a>
 </details>
