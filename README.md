@@ -9,6 +9,7 @@
 <img src="assets/README/languages/PYTHON.svg" width=60>
 <img src="assets/README/languages/DISCORD.svg" width=60>
 <img src="assets/README/languages/BASH.svg" width=60>
+<img src="assets/README/languages/GO.svg" width=60>
 </p>
 
 
