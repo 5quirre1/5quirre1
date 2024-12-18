@@ -29,14 +29,6 @@
 <a href="https://pikidiary.lol/@squirrel"><img height='50' src="/assets/README/icons/piki.png"/></a>
 
 <p align=center>More socials coming soon..</p>
- <details align=center>
-<summary>Ways to contact me 😄</summary> 
-<p align=center>
-<!--https://discord.com/users/1127731486485921813-->
-<a href="https://discord.com/users/1127731486485921813"><img src="assets/README/languages/DISCORD.svg" height='75'>
-<a href="mailto:squirrelhomebrew@gmail.com"><img src="assets/README/icons/svgs/Gmail.svg" height='75'></a>
-</p>
- </details>
 <h1 align=center>My most used languages :3</h1>
 <p align=center>
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=5quirre1&theme=radical&show_icons=true&hide_border=true&layout=compact" alt="5quirre1's GitHub Stats" />
@@ -58,6 +50,14 @@
 <a href="https://squirrel.freakybob.site"><img src="https://squirrel.freakybob.site/assets/boykisser.png" width="70"></a> 
 <a href="https://greg.com"><img src="/assets/README/icons/greg.jpeg" width="69" height="70"></a>
 </details>
+ <details align=center>
+<summary>Ways to contact me 😄</summary> 
+<p align=center>
+<!--https://discord.com/users/1127731486485921813-->
+<a href="https://discord.com/users/1127731486485921813"><img src="assets/README/languages/DISCORD.svg" height='75'>
+<a href="mailto:squirrelhomebrew@gmail.com"><img src="assets/README/icons/svgs/Gmail.svg" height='75'></a>
+</p>
+ </details>
 <h1 align=center>Notes</h1>
   <p align=center>
 <img src="https://forthebadge.com/images/badges/i-fucking-hate-java.svg">
