@@ -32,7 +32,7 @@
 <summary>Ways to contact me 😄</summary> 
 <p align=center>
 <!--https://discord.com/users/1127731486485921813-->
-<a href="https://discord.com/users/1127731486485921813"><img src="/assets/README/icons/discord2icons.png" height='77'></a>
+<a href="https://discord.com/users/1127731486485921813"><img src="assets/README/languages/DISCORD.svg" height='75'>
 <a href="mailto:squirrelhomebrew@gmail.com"><img src="/assets/README/icons/gmail1.png" height='80'></a>
 </p>
  </details>
