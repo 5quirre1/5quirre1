@@ -13,7 +13,7 @@
     <title>5quirre1 :3</title>
     <style>
         body {
-            background-image: linear-gradient(rgba(118, 26, 84, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/WEBSITE/backgrounds/sunset.webp);
+            background-image: linear-gradient(rgba(118, 26, 84, 0.5), rgba(0, 0, 0, 0.5)), url(/assets/WEBSITE/backgrounds/);
             background-color: #006b79;
             color: rgb(245, 124, 222);
             font-family: 'Lucida Sans', sans-serif;
@@ -143,6 +143,7 @@
 
 
 .username {
+    color: rgb(205, 176, 205);
     background: none;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
@@ -172,7 +173,7 @@
     top: 30px;
     left: 38%;
     transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(230, 57, 230, 0.7);
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
@@ -211,7 +212,6 @@
 
 
 .about {
-    
     background:none;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
@@ -220,10 +220,82 @@
     text-align: center;
 
 }
+.blog {
+    background: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2em;
+    text-align: center;
+    color: rgb(245, 245, 95);
+    text-decoration: none;
+    position: relative;
+    left: 19.2%;
+    top: -10px;   
+    transition: color 0.3s ease;
+}
+.blog:hover {
+    color: rgb(34, 122, 151);
+    
+}
+.projects {
+    background: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2em;
+    text-align: center;
+    color: rgb(245, 245, 95);
+    text-decoration: none;
+    position: relative;
+    left: 28%;
+    top: -10px;   
+    transition: color 0.3s ease;
+}
+.projects:hover {
+    color: rgb(34, 122, 151);
+}
+
+
+.about2 {
+    background: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.2em;
+    text-align: center;
+    color: rgb(245, 245, 95);
+    text-decoration: none;
+    position: relative;
+    left: 39%;
+    top: -10px;
+    transition: color 0.3s ease;
+}
+.about2:hover {
+    color: rgb(34, 122, 151);
+}
+
+#music-by {
+    font-size: 0.9;
+    color: rgb(245, 124, 222);
+    text-align: center;
+    margin-top: -30px;
+    font-style: italic;
+}
+#music-by a {
+    text-decoration: none;
+    color: rgb(150, 245, 124);
+    transition: all 0.3s ease-in-out;
+}
+#music-by a:hover {
+    color:#59e1f3;
+    text-decoration: underline
+}
+
 
         @media (max-width: 768px) {
     body {
-        background-image: linear-gradient(rgba(166, 25, 152, 0.526), rgba(13, 3, 21, 0.526), rgba(43, 155, 203, 0.242)), url(assets/WEBSITE/backgrounds/pretty-stars.jpg);
+        background-image: linear-gradient(rgba(166, 25, 152, 0.526), rgba(13, 3, 21, 0.526), rgba(43, 155, 203, 0.242)), url(assets/backgrounds/pretty-stars.jpg);
         background-size: cover;
         background-attachment: fixed;
         background-position: center;
@@ -243,17 +315,27 @@
         height: 350px;
     }
     .github {
-        margin-top: 280px !important;
+        margin-top: -40px !important;
         margin-right: 85px;
     }
-    
-    
+    .blog, .projects, .about2 {
+        position: relative;
+        left: 0;
+        top: 0;
+        font-size: 1em;
+        margin: 10px auto;
+        text-align: center;
+        display: block;
+    }
 }
+
+    
+
 
     </style>
 </head>
 <body>
-    <audio autoplay loop src="https://ia601301.us.archive.org/12/items/NyanCatoriginal/Nyan%20Cat%20%5Boriginal%5D.mp3"></audio>
+    <audio autoplay loop src="assets/background-music/peaksong!!!.mp3" type="audio/mp3"></audio>
 <!--I STOLE THIS CODE FROM NOMA SO THANK YOU :33333 !!!! https://nomaakip.github.io/ !!!!-->
     <header>
     <div class="card">
@@ -264,14 +346,19 @@
                 <div class="pfp-hover-thing">Ruff Ruff >w<</div>
                 <h1 class ="username">5quirre1</h1>
                 <a href="https://github.com/5quirre1">
-                    <img src="assets/WEBSITES/icons/github.svg" class="github" style="margin-left: 35%; margin-top: 20px;">
+                    <img src="/assets/WEBSITE/icons/github.svg" class="github" style="margin-left: 35%; margin-top: 20px;">
                 </a>
             </div>
             <h1 class="about">Web Designer and random stuff programmer</h1>
+            <a href="./blogs/blog.html" class="blog">Blog Posts</a>
+            <a href="#" class="projects">Projects</a>
+            <a href="#" class="about2">About</a>
         </div>
     </div>
 </header>
+<p id="music-by">The Music you're hearing is made by <a href="https://www.youtube.com/@Goober-5-p4p"  target="_blank" rel="noopener noreferrer">Goober 5</a>:3</p>
 
     
 </body>
 </html>
+

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A place for Freakybob.">
+    <meta content="Freakyblog" property="og:title" />
+    <meta content="The blog for all things freaky!" property="og:description" />
+    <meta content="https://freakybob-team.github.io/Freakyblog/" property="og:url" />
+    <meta content="https://github.com/Freakybob-Team/Freakyblog/blob/main/icon.png?raw=true" property="og:image" />
+    <meta content="#006b79" data-react-helmet="true" name="theme-color" />
+    <title>5quirre1's Blog :33</title>
+    <link rel="icon" type="image/x-icon" href="/assets/WEBSITE/boykisser.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        background-image: linear-gradient(rgb(72, 8, 66), rgba(0, 0, 0, 0.289)), url('/assets/WEBSITE/backgrounds/sunset.webp');
+        background-color: rgb(3, 102, 102);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        font-family: "Noto Sans", sans-serif;
+        min-height: 100vh;
+        min-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: rgb(1, 160, 200);
+    }
+    h1 {
+        text-align: center;
+        color: rgb(0, 251, 255);
+        font-size: 42px;
+        margin-top: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    h2 {
+        text-align: center;
+        color: rgb(225, 246, 4);
+    }
+    h3 {
+        text-align: center;
+        color: rgb(3, 246, 209);
+        font-size: 20px;
+    }
+    #para1 {
+        text-align: center;
+        color: yellow;
+    }
+    #para2 {
+        text-align: center;
+        color: rgb(3, 246, 209);
+    }
+    button {
+        margin-top: 12px;
+        padding: 15px 25px;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: rgb(172, 147, 5);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s ease;
+        max-width: 220px;
+        width: 100%;
+    }
+    button:hover {
+        background-color: rgb(8, 111, 126);
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 6px 8px rgba(3,102,102,255);
+    }
+    
+    .sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(164, 32, 178, 0.533);
+    padding-top: 20px;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    transition: left 0.3s;
+    backdrop-filter: blur(10px);
+    filter: drop-shadow(2px 2px 6px rgba(0, 255, 255, 0.815));
+    border-width: 4px;
+    border-color: rgba(33, 65, 139, 0.321);
+    border-style: solid; 
+    pointer-events: none;
+}
+
+    .sidebar a {
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        margin-bottom: 10px;
+        border-radius: 6px;
+        transition: background-color 0.3s;
+        box-shadow: inset 0 0 0 0 #54b3d6;
+        color: #54b3d6;
+        margin: 0 -.25rem;
+        padding: 1rem;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+    .sidebar a:hover {
+        box-shadow: inset 230px 0 0 0 #0d83ad;
+        color: white;
+    }
+    .main-note {
+        background-color: rgba(133, 22, 148, 0.584);
+        padding: 20px;
+        margin: 20px 0;
+        width: 80%;
+        max-width: 800px;
+        border-radius: 8px;
+    }
+    .main-note h3 {
+        color: rgb(111, 208, 228);
+    }
+    .main-note p {
+        text-align: justify;
+        color: rgb(255, 255, 255);
+    }
+    .main-note a {      
+        text-decoration: none;
+        color: rgb(237, 172, 255);
+    }
+    .main-note a:hover {
+        text-decoration: underline;
+    }
+    #menu-button {
+        height: 40px;
+        width: auto;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        background-color: rgba(33, 106, 120, 0.438);
+        color: white;
+        padding: 10px;
+        font-size: 13px;
+        cursor: pointer;
+        border: none;
+        border-radius: 12px;
+        transition: all 0.6s ease;
+    }
+    #menu-button:hover {
+        background-color: rgba(24, 175, 177, 0.529);
+    }
+     .thankyou a {
+        text-decoration: none;
+        color: rgb(222, 54, 255);
+    }
+    .thankyou a:hover {
+        text-decoration: underline;
+        color: rgb(30, 201, 223);
+    }
+    .lastupdated {
+            font-size: 20px;
+            color: rgb(225, 246, 4);
+            text-align: center;
+        }
+        .greg {
+            margin-top: -10px ;
+            margin-left: 15px;
+            font-size: 15px;
+            text-align: center;
+            color: rgb(225, 246, 4);
+        }
+        #music-by {
+    font-size: 0.9;
+    color: rgb(245, 124, 222);
+    text-align: center;
+    margin-top: -30px;
+    font-style: italic;
+}
+    @media screen and (max-width: 600px) {
+        h1 {
+            font-size: x-large;
+        }
+        .thankyou {
+            text-align: center;
+            margin-left: 19px;
+            font-size: 0.9em;
+        }
+        .main-note {
+            margin-left: 18px;
+            height: 280px;
+        }
+        .lastupdated {
+            margin-top: -10px ;
+            font-size: 15px;
+            color: rgb(225, 246, 4);
+            text-align: center;
+        }
+        .greg {
+            margin-top: -10px ;
+            margin-left: 15px;
+            font-size: 15px;
+            text-align: center;
+            color: rgb(225, 246, 4);
+        }
+    }
+</style>
+
+<body>
+
+    <button id="menu-button" onclick="toggleMenu()">☰</button>
+
+    <div class="sidebar" id="sidebar">
+        <h2>5quirre1 Blog :33</h2>
+        <a href="https://squirrel.freakybob.site/blogs/blog.html">Home</a>
+        <a href="https://squirrel.freakybob.site" target="_blank">Squirrel.freakybob.site</a>
+        <hr style="border-radius: 5px; border: 3px solid rgba(210, 17, 245, 0.6); margin: 10px 0; width: 90%;">
+        <h1 class="menu-blog-title" style="font-size: 1.4em; text-align: center; color: rgb(238, 27, 220);">The Blog Posts!</h1>
+        <a href="https://squirrel.freakybob.site/blogs/hai">HAIIII!!!!!</a>
+    </div>
+    
+
+        <h1>Welcome to my BlogPosts ;3</h1>
+        <p class="lastupdated">Last updated: <span>12/15/24</span></p>
+        
+        <h2>What is this meant for?</h2>
+
+        <div class="main-note">
+            <h3>Hello!!!! I would like to talk about this site :3</h3>
+            <p>I want a website for me to archive some of my coolest moments or achivements so I decided to add a blog posts page to my website!!! I'll be trying to update this page as much as I can :3 </p>
+            <p style="text-align: center;">From <a href="https://github.com/5quirre1">5quirre1</a> <3</p>
+        </div>
+        <p id="music-by" style="margin-top: 50px; color: rgb(26, 230, 196);">This page is just a reuse of <a href="https://blog.freakybob.site" style="color: rgb(55, 255, 0);">FreakyBlog</a> :3</p>
+        
+<audio autoplay loop src="/assets/WEBSITE/background-music/blog-music.mp3"></audio>
+    <script>
+
+        function toggleMenu() {
+    var sidebar = document.getElementById("sidebar");
+
+    if (sidebar.style.left === "0px") {
+        sidebar.style.left = "-250px";
+        sidebar.style.pointerEvents = "none"; 
+    } else {
+        sidebar.style.left = "0";
+        sidebar.style.pointerEvents = "auto"; 
+    }
+}
+
+    </script>
+
+</body>
+</html>
