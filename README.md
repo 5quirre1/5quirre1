@@ -47,7 +47,7 @@
 <a href="https://freakybrowse.freakybob.site"><img src="https://freakybrowse.freakybob.site/icons/icon.png" width="70"></a>
 <a href="https://swag.freakybob.site/"><img src="https://github.com/nomaakip.png" width="70"></a>
 <a href="https://wish.freakybob.site"><img src="https://github.com/wish13yt.png" width="70:></a>
-<a href="https://squirrel.freakybob.site"><img src="https://squirrel.freakybob.site/assets/boykisser.png" width="70"></a> 
+<a href="https://squirrel.freakybob.site"><img src="https://squirrel.freakybob.site/assets/WEBSITE/boykisser.png" width="70"></a> 
 <a href="https://greg.com"><img src="/assets/README/icons/greg.jpeg" width="69" height="70"></a>
 </details>
  <details align=center>
