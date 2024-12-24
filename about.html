@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About 5quirre1">
+    <meta property="og:title" content="5quirre1 :3">
+    <meta property="og:description" content="Sorta about me lol">
+    <meta property="og:image" content="https://github.com/5quirre1/5quirre1.github.io/blob/main/images/Screenshot%202024-12-14%20225402.png?raw=true">
+    <meta property="og:url" content="https://squirrel.freakybob.site/about">
+    <meta name="theme-color" content="#006b79">
+    <link rel="icon" href="assets/WEBSITE/boykisser.png" type="image/png">
+    <title>About 5quirre1</title>
+    <style>
+        body {
+            background-image: linear-gradient(rgba(20, 70, 90, 0.6), rgba(10, 30, 50, 0.8)), url(assets/WEBSITE/backgrounds/storm_beach.jpg);
+            background-color: #034b6b;
+            color: rgb(240, 200, 255);
+            font-family: 'Lucida Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+        a {
+            color: rgb(220, 100, 255);
+            text-decoration: none;
+            transition: all 0.3s ease-in-out;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: rgb(220, 150, 255);
+        }
+        .title-container {
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(2, 17, 22, 0.8);
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            display: inline-block;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            transform: translateY(20%);
+        }
+        h1 {
+            color: rgb(220, 100, 255);
+            font-size: 2.8em;
+            margin: 0;
+        }
+        small {
+            display: block;
+            color: rgba(67, 255, 255, 0.9);
+            font-size: 1em;
+            margin: 10px 0;
+        }
+        .under-title {
+            color: rgba(0, 220, 50, 0.9);
+            font-size: 1.2em;
+        }
+        .section-title {
+            color: rgb(220, 150, 255);
+            font-size: 2em;
+            margin: 50px auto 20px;
+        }
+        .content-container {
+            margin: 20px auto;
+            max-width: 800px;
+            background-color: rgba(10, 30, 50, 0.85);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            color: rgb(240, 200, 255);
+            font-size: 1.2em;
+            text-align: justify;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+        }
+        .project-info, .language-info {
+            background-color: rgba(10, 30, 50, 0.85);
+            padding: 12px;
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            color: rgb(240, 200, 255);
+            font-size: 1.2em;
+            text-align: justify;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.6);
+        }
+        .language-info {
+            font-size: 1em;
+            height: 170px;
+            width: 200px;
+        }
+        .stuff {
+            margin-top: -20px;
+            flex-direction: row;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 55px;
+        }
+        .stuff-title {
+            color: rgb(220, 150, 255);
+            font-size: 2em;
+            margin-top: -10px;
+            margin-bottom: 30px;
+        }
+        footer {
+        background-color: rgba(8, 131, 106, 0.258);
+        padding: 25px;
+        border-radius: 20px;
+        backdrop-filter: blur(5px);
+        color: rgb(240, 200, 255);
+        font-size: 1.2em;
+        text-align: center;
+        margin-top: 50px;
+        box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.6);
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-links a {
+        margin: 10px;
+        color: rgb(220, 100, 255);
+        text-decoration: none;
+        font-size: 1.2em;
+        transition: all 0.3s ease-in-out;
+    }
+    .footer-links a:hover {
+        color: rgb(220, 150, 255);
+        text-decoration: underline;
+    }
+    .footer-content p {
+        margin-bottom: 15px;
+    }
+    .home {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 10px 20px;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: rgb(240, 200, 255);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: all 0.3s ease-in-out;
+    }
+    .home:hover {
+        background-color: #034b6b;
+        color: rgb(220, 150, 255);
+    }
+    
+        @media screen and (max-width: 600px) {
+            .title-container {
+                width: 90%;
+                transform: translateY(10%);
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .content-container {
+                padding: 20px;
+                font-size: 1em;
+            }
+            .section-title {
+                font-size: 1.5em;
+            }
+            .stuff {
+                flex-direction: column;
+                gap: 16px;
+            }
+            footer {
+                font-size: 1em;
+            }
+            .footer-links a {
+                font-size: 1em;
+            }
+            .footer-content p {
+                margin-bottom: 10px;
+            }
+            .language-info {
+                height: 170px;
+                width: 180px;
+            }
+            .project-info {
+                font-size: 1em;
+            }
+            .under-title {
+                font-size: 1em;
+            }
+            small {
+                font-size: 0.8em;
+            }
+            .title-container {
+                width: 70%;
+            }
+            .content-container {
+                width: 70%;
+            }
+            .home {
+                left: 105px;
+                margin-top: 920px;
+                padding: 8px 16px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="home" onclick="window.location.href='index.html';">Go back home</button>
+    <div class="title-container">
+        <h1>Hai! I'm 5quirre1</h1>
+        <small>Him/Her | Gay Furry >w< | 13</small>
+        <p class="under-title">I'ma tell you a bit about me :3</p>
+    </div>
+    <h2 class="section-title">About Me!</h2>
+    <div class="content-container">
+        <p>I love creating websites, coding, and sharing cool projects with everyone! When I'm not busy programming random <a href="https://github.com/freakybob-team">Freakybob-Team</a> stuff, I <b>LOVE</b> to do photography, play games, and read!</p>
+    </div>
+    <h2 class="stuff-title">Some stuff greg</h2>
+    <div class="stuff">
+        <div class="project-info">
+            <p>I'm currently working on:</p>
+            <ul>
+                <li><a href="https://search.freakybob.site">FreakySearch</a></li>
+                <li><a href="https://freakybob.site">FreakyBob.site</a></li>
+                <li><a href="https://blog.freakybob.site">FreakyBlog</a></li>
+                <li>A secret :3</li>
+            </ul>
+        </div>
+        <div class="language-info">
+            <p>I know:</p>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>C++</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-content">
+            <p>Contact me: <a href="mailto:squirre1@freakybob.site">squirrel@freakybob.site</a></p>
+            <div class="footer-links">
+                <a href="https://github.com/5quirre1">GitHub</a>
+                <a href="https://squirrel.freakybob.site/blogs">Blog</a>
+            </div>
+            <small>Music by <a href="https://pixabay.com/users/slicebeats-21621711/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=7508">Slicebeats</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=7508">Pixabay</a> <br>(But I made better :3)</small>
+        </div>
+    </footer>
+    <audio autoplay loop src="assets/WEBSITE/background-music/about-music.mp3" type="audio/mp3"></audio>
+</body>
+</html>
