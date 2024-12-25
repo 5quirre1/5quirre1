@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 :p</title>
+    <style>
+        body {
+            background-color: rgb(14, 2, 26);
+            color: rgb(245, 124, 222);
+            font-family: 'Lucida Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(rgba(44, 2, 28, 0.5), rgba(15, 0, 0, 0.659)), url(assets/WEBSITE/backgrounds/field.png);
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0;
+            animation: backgroundFadeIn 8s forwards;
+        }
+        .content-container {
+            position: relative;
+            text-align: center;
+            z-index: 1;
+        }
+        .content, .content2 {
+            opacity: 0;
+            animation: fadeInContent 5s forwards;
+        }
+        .content2 {
+            animation-delay: 5s;
+        }
+        h1, p {
+            margin: 0;
+            opacity: 0;
+            position: relative;
+            width: 100%;
+            transition: opacity 2s;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        #homeButton {
+            opacity: 0;
+            transition: opacity 3s;
+            font-size: 1.5em;
+            color: rgb(245, 124, 222);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        @keyframes backgroundFadeIn {
+            0% { opacity: 0; }
+            20% { opacity: 0.1; }
+            40% { opacity: 0.3; }
+            60% { opacity: 0.6; }
+            80% { opacity: 0.9; }
+            100% { opacity: 1; }
+        }
+        @keyframes fadeInContent {
+            to { opacity: 1; }
+        }
+        @keyframes fadeOutContent {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="content-container">
+        <div class="content2">
+            <h1 class="message2">Maybe there was a page here..</h1>
+            <p class="message2">But now there isn't.</p>
+            <p class="message2">Maybe there was no page here at all...</p>
+            <p class="message2">I don't know.</p>
+            <p class="message2">You should get going..</p>
+            <button id="homeButton" onclick="window.location.href='https://squirrel.freakybob.site'">Go back home</button>
+        </div>
+        <div class="content">
+            <h1 class="message">Hm..</h1>
+            <p class="message">That's weird.</p>
+            <p class="message">The page you're looking for.. doesn't exist..</p>
+            <p class="message">I mean, you sorta found it..</p>
+            <p class="message">Well.. ofc not.. this is a 404 page..</p>
+            <p class="message">All I know..</p>
+            <p class="message">Is you're lost.</p>
+        </div>
+        
+    </div>
+    <script>
+        const messages = document.querySelectorAll('.message');
+        const messages2 = document.querySelectorAll('.message2');
+        const homeButton = document.getElementById('homeButton');
+        let index = 0;
+
+        function showMessage() {
+            if (index > 0) {
+                messages[index - 1].style.animation = "fadeOutContent 2s forwards";
+            }
+            if (index < messages.length) {
+                messages[index].style.animation = "fadeInContent 2s forwards";
+                index++;
+                setTimeout(showMessage, 4000);
+            } else {
+                setTimeout(showSecondContent, 1000);
+            }
+        }
+
+        function showSecondContent() {
+            let index2 = 0;
+            function showMessage2() {
+                if (index2 > 0) {
+                    messages2[index2 - 1].style.animation = "fadeOutContent 2s forwards";
+                }
+                if (index2 < messages2.length) {
+                    messages2[index2].style.animation = "fadeInContent 2s forwards";
+                    index2++;
+                    setTimeout(showMessage2, 4000);
+                } else {
+                    setTimeout(showHomeButton, 3000);
+                }
+            }
+            showMessage2();
+        }
+
+        function showHomeButton() {
+            homeButton.style.opacity = 1;
+        }
+
+        setTimeout(showMessage, 5000);
+    </script>
+</body>
+</html>
