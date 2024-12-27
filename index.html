@@ -484,7 +484,7 @@ submitBtn.addEventListener('click', () => {
     fetch(`secrets/${sanitizedPhrase}.html`, { method: 'HEAD' })
         .then((response) => {
             if (response.ok) {
-                window.location.href = `secrets/${sanitizedPhrase}.html`;
+                window.location.href = `./secrets/${sanitizedPhrase}.html`;
             } else {
                 const suggestion = getClosestMatch(sanitizedPhrase);
                 errorMessage.textContent = suggestion 
@@ -542,6 +542,8 @@ function getLevenshteinDistance(a, b) {
     
 </body>
 </html>
+
+
 
 
 
