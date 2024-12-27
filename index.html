@@ -498,7 +498,7 @@ submitBtn.addEventListener('click', () => {
 });
 
 function getClosestMatch(input) {
-    const knownCodes = ['in the end', 'greg'];
+    const knownCodes = ['in_the_end', 'greg'];
     let closestMatch = null;
     let minDistance = Infinity;
 
@@ -535,6 +535,7 @@ function getLevenshteinDistance(a, b) {
 
     return tmp[a.length][b.length];
 }
+
 
 </script>
 
