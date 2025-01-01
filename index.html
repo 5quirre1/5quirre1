@@ -517,7 +517,7 @@ submitBtn.addEventListener('click', () => {
             } else {
                 const suggestion = getClosestMatch(sanitizedPhrase);
                 errorMessage.textContent = suggestion
-                    ? `That was not found... maybe you were wanting to say "${suggestion} !! "`
+                    ? `That was not found... maybe you were wanting to say "${suggestion}"  !! `
                     : 'That doesn\'t exist, sorry :c';
             }
         })
@@ -527,7 +527,7 @@ submitBtn.addEventListener('click', () => {
 });
 
 function getClosestMatch(input) {
-    const knownCodes = ['in_the_end', 'greg', 'skibidi', 'king_von_anti_piracy', 'snake', 'king_von', 'cube'];
+    const knownCodes = ['in_the_end', 'greg', 'skibidi', 'king_von_anti_piracy', 'snake', 'king_von', 'new-years'];
     let closestMatch = null;
     let minDistance = Infinity;
 
@@ -581,22 +581,3 @@ function updateClock() {
     
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
