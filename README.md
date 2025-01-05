@@ -15,7 +15,7 @@
 
 <h1 align=center>Here's some things 'bout me >w<</h1>
   <li align=center>I'm 13 🥖</li>
-  <li align=center>Silly boykisser :333333</w></li>
+  <li align=center>greg</w></li>
   <li align=center>I'm a owner and main dev of <a href='https://github.com/Freakybob-Team'>Freakybob-Team</a> :3</li>
   <li align=center>I can't do anything but code :sob:</li>
   <li align=center>I can make some pretty cool websites lol</li>
