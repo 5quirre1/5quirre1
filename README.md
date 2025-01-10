@@ -1,6 +1,7 @@
 <h1 align=center>Hai!! I'm Squirrel :333
 <p align=center>
   <br>
+<p align=center>The stuff I know!</p>
 <img src="assets/README/languages/CPP.svg" width=60>
 <img src="assets/README/languages/CSS.svg" width=60>
 <img src="assets/README/languages/HTML.svg" width=60>
@@ -15,7 +16,7 @@
 
 <h1 align=center>Here's some things 'bout me >w<</h1>
   <li align=center>I'm 13 🥖</li>
-  <li align=center>greg</w></li>
+  <li align=center>Gay 🏳️‍🌈</li>
   <li align=center>I'm a owner and main dev of <a href='https://github.com/Freakybob-Team'>Freakybob-Team</a> :3</li>
   <li align=center>I can't do anything but code :sob:</li>
   <li align=center>I can make some pretty cool websites lol</li>
