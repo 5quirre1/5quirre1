@@ -8,9 +8,7 @@
 <img src="assets/README/languages/JAVA.svg" width=60>
 <img src="assets/README/languages/JAVASCRIPT.svg" width=60>
 <img src="assets/README/languages/PYTHON.svg" width=60>
-<img src="assets/README/languages/DISCORD.svg" width=60>
-<img src="assets/README/languages/BASH.svg" width=60>
-<img src="assets/README/languages/GO.svg" width=60>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" width=60 />
 </p>
 
 
