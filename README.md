@@ -4,11 +4,11 @@
 <p align=center>
   <br>
 <p align=center>The stuff I know!</p>
-<img src="assets/README/languages/CPP.svg" width=60>
-<img src="assets/README/languages/CSS.svg" width=60>
-<img src="assets/README/languages/HTML.svg" width=60>
-<img src="assets/README/languages/JAVASCRIPT.svg" width=60>
-<img src="assets/README/languages/PYTHON.svg" width=60>
+<img src="assets/README/languages/cpp.svg" width=60>
+<img src="assets/README/languages/css.svg" width=60>
+<img src="assets/README/languages/html.svg" width=60>
+<img src="assets/README/languages/js.svg" width=60>
+<img src="assets/README/languages/python.svg" width=60>
 <img src="assets/README/languages/Go_dancing!!!.gif" width=60>
 <img src="assets/README/languages/C.svg" width=60>
 </p>
