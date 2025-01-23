@@ -1,6 +1,6 @@
 <!--luv u all fr!!!! <3-->
 
-<h1 align=center>Hai!! I'm Squirrel :333
+<h1 align=center>Haiiii I'm Squirrel :p
 <p align=center>
   <br>
 <p align=center>The stuff I know!</p>
@@ -14,14 +14,13 @@
 </p>
 
 
-<h1 align=center>Here's some things 'bout me >w<</h1>
-  <li align=center>I'm 13 🥖</li>
-  <li align=center>Gay 🏳️‍🌈</li>
-  <li align=center>I'm a owner and main dev of <a href='https://github.com/Freakybob-Team'>Freakybob-Team</a> :3</li>
-  <li align=center>I can't do anything but code :sob:</li>
-  <li align=center>I can make some pretty cool websites lol</li>
-  <li align=center>GenderFluid or smth ;3</li>
-  <li align=center>Furry >w<</li>
+<h1 align=center>Here's some things bout meee</h1>
+  <li align=center>I'm 13 lmfaoo</li>
+  <li align=center>Very gayy</li>
+  <li align=center>I like to codeeeeee :P</li>
+  <li align=center>love to make cool projects</li>
+  <li align=center>Genderfluid or bigender :3</li>
+  <li align=center>Furryy</li>
   <br>
   
 <h1 align=center>Some of my socials :3</h1>
