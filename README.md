@@ -5,7 +5,6 @@
 <img src="assets/README/languages/CPP.svg" width=60>
 <img src="assets/README/languages/CSS.svg" width=60>
 <img src="assets/README/languages/HTML.svg" width=60>
-<img src="assets/README/languages/JAVA.svg" width=60>
 <img src="assets/README/languages/JAVASCRIPT.svg" width=60>
 <img src="assets/README/languages/PYTHON.svg" width=60>
 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" width=60 />
