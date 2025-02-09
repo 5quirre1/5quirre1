@@ -7,12 +7,18 @@
 </p>
 <p align="center">
   <img src="assets/README/languages/cpp.svg" width="60">
-  <img src="assets/README/languages/css.svg" width="60">
-  <img src="assets/README/languages/html.svg" width="60">
+  <img src="assets/README/languages/css.svg" width="70">
+  <img src="assets/README/languages/html.svg" width="70">
   <img src="assets/README/languages/js.svg" width="60">
   <img src="assets/README/languages/python.svg" width="60">
   <img src="assets/README/languages/Go_dancing!!!.gif" width="60">
   <img src="assets/README/languages/C.svg" width="60">
+  <img src="assets/README/languages/lua.svg" width="60">
+  <img src="assets/README/languages/ts.svg" width="60">
+  <img src="assets/README/languages/qbasic.png" width="60">
+
+
+
 </p>
 
 <h1 align="center">About Me :3</h1>
@@ -93,3 +99,4 @@
 <p align="center">
   <img src="https://forthebadge.com/images/badges/i-fucking-hate-java.svg">
 </p>
+
