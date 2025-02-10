@@ -16,6 +16,8 @@
   <img src="assets/README/languages/lua.svg" width="60">
   <img src="assets/README/languages/ts.svg" width="60">
   <img src="assets/README/languages/qbasic.png" width="60">
+  <img src="assets/README/languages/BASIC.png" width="60">
+  <!-- ^ I made this btw !!!-->
 
 
 
