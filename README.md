@@ -98,7 +98,15 @@
 </details>
 
 <h1 align="center">Notes</h1>
+
 <p align="center">
   <img src="https://forthebadge.com/images/badges/i-fucking-hate-java.svg">
 </p>
+
+<p align="center">Current song I'm listening to</p>
+
+<p align="center">
+  <img src="https://last-fm-ruby.vercel.app/api/playing.js">
+</p>
+
 
