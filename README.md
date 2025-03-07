@@ -3,7 +3,7 @@
 <h1 align="center">Haiiii, I'm Squirrel 🐿️</h1>
 <p align="center">
   <br>
-  <b>The languages I know !</b>
+  <b>The languages I use!</b>
 </p>
 <p align="center">
   <img src="assets/README/languages/cpp.svg" width="60">
@@ -11,12 +11,12 @@
   <img src="assets/README/languages/html.svg" width="70">
   <img src="assets/README/languages/js.svg" width="60">
   <img src="assets/README/languages/python.svg" width="60">
-  <img src="assets/README/languages/Go_dancing!!!.gif" width="60">
-  <img src="assets/README/languages/C.svg" width="60">
+  <!--<img src="assets/README/languages/Go_dancing!!!.gif" width="60"> (this was commented out cause I don't really use it)-->
+  <!--<img src="assets/README/languages/C.svg" width="60"> (this was commented out cause I don't really use it)-->
   <img src="assets/README/languages/lua.svg" width="60">
   <img src="assets/README/languages/ts.svg" width="60">
-  <img src="assets/README/languages/qbasic.png" width="60">
-  <img src="assets/README/languages/BASIC.png" width="60">
+  <!--<img src="assets/README/languages/qbasic.png" width="60"> (this was commented out cause I don't really use it)-->
+  <!--<img src="assets/README/languages/BASIC.png" width="60"> (this was commented out cause I don't really use it)-->
   <!-- ^ I made this btw !!!-->
 
 
