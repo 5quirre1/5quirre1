@@ -28,11 +28,11 @@
 <h1 align="center">About Me :3</h1>
 <ul align="center">
   <li>I'm 13 🍍</li>
-  <li>very freaking gay 🏳️‍🌈</li>
+  <li>gay</li>
   <li>I love to code a lot frfrfrfrfr</li>
   <li>Like to make really cool projects (most of the time)</li>
   <li>Genderfluid or bigender? 😭🌀</li>
-  <li>Furry 🐾🦊</li>
+  <!--<li>Furry 🐾🦊</li>-->
 </ul>
 <br>
 
