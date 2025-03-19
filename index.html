@@ -267,18 +267,18 @@
         }
 
         #modal {
-  z-index: 9999;
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(62, 9, 35, 0.76);
-  backdrop-filter: blur(6px);
-  justify-content: center;
-  align-items: center;
-}
+            z-index: 9999;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(62, 9, 35, 0.76);
+            backdrop-filter: blur(6px);
+            justify-content: center;
+            align-items: center;
+        }
 
         #modalContent {
             background: linear-gradient(135deg, rgba(35, 1, 44, 0.3), rgba(0, 0, 0, 0.1)), rgba(34, 4, 67, 0.1);
@@ -341,7 +341,7 @@
 
         #lastfm-widget {
             position: absolute;
-            bottom: 359px;
+            bottom: 500px;
             right: 15px;
             display: flex;
             flex-direction: column;
@@ -352,6 +352,12 @@
             width: 260px;
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        @media screen and (max-width: 1666px) {
+            #lastfm-widget {
+                bottom: 350px;
+            }
         }
 
         #lastfm-widget:hover {
