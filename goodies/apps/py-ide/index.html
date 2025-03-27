@@ -1,646 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <title>real good python ide frfr real ong frfrfrfr</title>
     <script src="https://cdn.jsdelivr.net/pyodide/v0.22.1/full/pyodide.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs/loader.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="icon" href="assets/icon.png" type="image/png">
     <style>
-        :root {
-            --color-bg-primary: #0f172a;
-            --color-bg-secondary: #1e293b;
-            --color-bg-tertiary: #2c3e50;
-            --color-text-primary: #e2e8f0;
-            --color-text-secondary: #94a3b8;
-            --color-accent-primary: #3b82f6;
-            --color-accent-secondary: #10b981;
-            --color-border: #334155;
-            --color-error: #ef4444;
-            --color-success: #22c55e;
-            --transition-speed: 0.3s;
-        }
+      :root {
+        --color-bg-primary: #0f172a;
+        --color-bg-secondary: #1e293b;
+        --color-bg-tertiary: #2c3e50;
+        --color-text-primary: #e2e8f0;
+        --color-text-secondary: #94a3b8;
+        --color-accent-primary: #3b82f6;
+        --color-accent-secondary: #10b981;
+        --color-border: #334155;
+        --color-error: #ef4444;
+        --color-success: #22c55e;
+        --transition-speed: 0.3s;
+      }
 
-        .theme-github-light {
-            --color-bg-primary: #ffffff;
-            --color-bg-secondary: #f6f8fa;
-            --color-bg-tertiary: #f0f3f6;
-            --color-text-primary: #24292f;
-            --color-text-secondary: #57606a;
-            --color-accent-primary: #0969da;
-            --color-accent-secondary: #1a7f37;
-            --color-border: #d0d7de;
-            --color-error: #cf222e;
-            --color-success: #2da44e;
-        }
+      .theme-github-light {
+        --color-bg-primary: #ffffff;
+        --color-bg-secondary: #f6f8fa;
+        --color-bg-tertiary: #f0f3f6;
+        --color-text-primary: #24292f;
+        --color-text-secondary: #57606a;
+        --color-accent-primary: #0969da;
+        --color-accent-secondary: #1a7f37;
+        --color-border: #d0d7de;
+        --color-error: #cf222e;
+        --color-success: #2da44e;
+      }
 
-        .theme-dracula {
-            --color-bg-primary: #282a36;
-            --color-bg-secondary: #21222c;
-            --color-bg-tertiary: #44475a;
-            --color-text-primary: #f8f8f2;
-            --color-text-secondary: #6272a4;
-            --color-accent-primary: #bd93f9;
-            --color-accent-secondary: #50fa7b;
-            --color-border: #44475a;
-            --color-error: #ff5555;
-            --color-success: #50fa7b;
-        }
+      .theme-dracula {
+        --color-bg-primary: #282a36;
+        --color-bg-secondary: #21222c;
+        --color-bg-tertiary: #44475a;
+        --color-text-primary: #f8f8f2;
+        --color-text-secondary: #6272a4;
+        --color-accent-primary: #bd93f9;
+        --color-accent-secondary: #50fa7b;
+        --color-border: #44475a;
+        --color-error: #ff5555;
+        --color-success: #50fa7b;
+      }
 
-        .theme-solarized-dark {
-            --color-bg-primary: #002b36;
-            --color-bg-secondary: #073642;
-            --color-bg-tertiary: #1c474f;
-            --color-text-primary: #93a1a1;
-            --color-text-secondary: #839496;
-            --color-accent-primary: #268bd2;
-            --color-accent-secondary: #2aa198;
-            --color-border: #586e75;
-            --color-error: #dc322f;
-            --color-success: #859900;
-        }
+      .theme-solarized-dark {
+        --color-bg-primary: #002b36;
+        --color-bg-secondary: #073642;
+        --color-bg-tertiary: #1c474f;
+        --color-text-primary: #93a1a1;
+        --color-text-secondary: #839496;
+        --color-accent-primary: #268bd2;
+        --color-accent-secondary: #2aa198;
+        --color-border: #586e75;
+        --color-error: #dc322f;
+        --color-success: #859900;
+      }
 
-        .theme-one-dark {
-            --color-bg-primary: #21252b;
-            --color-bg-secondary: #282c34;
-            --color-bg-tertiary: #2c313a;
-            --color-text-primary: #abb2bf;
-            --color-text-secondary: #5c6370;
-            --color-accent-primary: #61afef;
-            --color-accent-secondary: #98c379;
-            --color-border: #181a1f;
-            --color-error: #e06c75;
-            --color-success: #98c379;
-        }
+      .theme-one-dark {
+        --color-bg-primary: #21252b;
+        --color-bg-secondary: #282c34;
+        --color-bg-tertiary: #2c313a;
+        --color-text-primary: #abb2bf;
+        --color-text-secondary: #5c6370;
+        --color-accent-primary: #61afef;
+        --color-accent-secondary: #98c379;
+        --color-border: #181a1f;
+        --color-error: #e06c75;
+        --color-success: #98c379;
+      }
 
-        .theme-nord {
-            --color-bg-primary: #2e3440;
-            --color-bg-secondary: #3b4252;
-            --color-bg-tertiary: #434c5e;
-            --color-text-primary: #d8dee9;
-            --color-text-secondary: #81a1c1;
-            --color-accent-primary: #88c0d0;
-            --color-accent-secondary: #a3be8c;
-            --color-border: #4c566a;
-            --color-error: #bf616a;
-            --color-success: #a3be8c;
-        }
+      .theme-nord {
+        --color-bg-primary: #2e3440;
+        --color-bg-secondary: #3b4252;
+        --color-bg-tertiary: #434c5e;
+        --color-text-primary: #d8dee9;
+        --color-text-secondary: #81a1c1;
+        --color-accent-primary: #88c0d0;
+        --color-accent-secondary: #a3be8c;
+        --color-border: #4c566a;
+        --color-error: #bf616a;
+        --color-success: #a3be8c;
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scrollbar-width: thin;
-            scrollbar-color: var(--color-accent-primary) var(--color-bg-secondary);
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scrollbar-width: thin;
+        scrollbar-color: var(--color-accent-primary) var(--color-bg-secondary);
+      }
 
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
 
-        ::-webkit-scrollbar-track {
-            background: var(--color-bg-secondary);
-        }
+      ::-webkit-scrollbar-track {
+        background: var(--color-bg-secondary);
+      }
 
-        ::-webkit-scrollbar-thumb {
-            background-color: var(--color-accent-primary);
-            border-radius: 4px;
-        }
+      ::-webkit-scrollbar-thumb {
+        background-color: var(--color-accent-primary);
+        border-radius: 4px;
+      }
 
-        html,
-        body {
-            height: 100%;
-            font-family: 'Inter', 'system-ui', sans-serif;
-            background-color: var(--color-bg-primary);
-            color: var(--color-text-primary);
-            line-height: 1.6;
-            transition: all var(--transition-speed);
-        }
+      html,
+      body {
+        height: 100%;
+        font-family: 'Inter', 'system-ui', sans-serif;
+        background-color: var(--color-bg-primary);
+        color: var(--color-text-primary);
+        line-height: 1.6;
+        transition: all var(--transition-speed);
+      }
 
-        .app-container {
-            display: flex;
-            height: 100vh;
-            overflow: hidden;
-            max-width: 1920px;
-            margin: 0 auto;
-        }
+      .app-container {
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+        max-width: 1920px;
+        margin: 0 auto;
+      }
 
-        .sidebar {
-            width: 300px;
-            background-color: var(--color-bg-secondary);
-            border-right: 1px solid var(--color-border);
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
-            gap: 15px;
-        }
+      .sidebar {
+        width: 300px;
+        background-color: var(--color-bg-secondary);
+        border-right: 1px solid var(--color-border);
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+      }
 
-        .main-content {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-        }
+      .main-content {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
 
-        .code-section {
-            flex-grow: 1;
-            display: flex;
-            position: relative;
-        }
+      .code-section {
+        flex-grow: 1;
+        display: flex;
+        position: relative;
+      }
 
-        .code-editor-wrapper {
-            flex-grow: 1;
-            position: relative;
-        }
+      .code-editor-wrapper {
+        flex-grow: 1;
+        position: relative;
+      }
 
-        .code-editor {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: var(--color-bg-primary);
-            color: var(--color-text-primary);
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 14px;
-            padding: 20px;
-            border: none;
-            outline: none;
-            resize: none;
-            line-height: 1.5;
-            overflow: auto;
-            caret-color: var(--color-text-primary);
-            z-index: 2;
-            transition: all var(--transition-speed);
-        }
+      .code-editor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 12px;
-            border-radius: 6px;
-            border: none;
-            cursor: pointer;
-            transition: all var(--transition-speed);
-            font-weight: 500;
-            font-size: 0.875rem;
-        }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 12px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        transition: all var(--transition-speed);
+        font-weight: 500;
+        font-size: 0.875rem;
+      }
 
-        .btn-primary {
-            background-color: var(--color-accent-primary);
-            color: white;
-        }
+      .btn-primary {
+        background-color: var(--color-accent-primary);
+        color: white;
+      }
 
-        .btn-primary:hover {
-            opacity: 0.9;
-        }
+      .btn-primary:hover {
+        opacity: 0.9;
+      }
 
-        .btn-secondary {
-            background-color: var(--color-bg-tertiary);
-            color: var(--color-text-secondary);
-        }
+      .btn-secondary {
+        background-color: var(--color-bg-tertiary);
+        color: var(--color-text-secondary);
+      }
 
-        .btn-secondary:hover {
-            opacity: 0.9;
-        }
+      .btn-secondary:hover {
+        opacity: 0.9;
+      }
 
-        .input-group {
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
+      .input-group {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
 
-        .form-control {
-            flex-grow: 1;
-            padding: 8px;
-            background-color: var(--color-bg-tertiary);
-            border: 1px solid var(--color-border);
-            color: var(--color-text-primary);
-            border-radius: 6px;
-            font-size: 0.875rem;
-        }
+      .form-control {
+        flex-grow: 1;
+        padding: 8px;
+        background-color: var(--color-bg-tertiary);
+        border: 1px solid var(--color-border);
+        color: var(--color-text-primary);
+        border-radius: 6px;
+        font-size: 0.875rem;
+      }
 
-        .terminal-output {
-            background-color: var(--color-bg-secondary);
-            padding: 15px;
-            max-height: 300px;
-            overflow-y: auto;
-            font-family: 'JetBrains Mono', monospace;
-            border-top: 1px solid var(--color-border);
-        }
+      .terminal-output {
+        background-color: var(--color-bg-secondary);
+        padding: 15px;
+        max-height: 300px;
+        overflow-y: auto;
+        font-family: 'JetBrains Mono', monospace;
+        border-top: 1px solid var(--color-border);
+      }
 
-        .package-list {
-            background-color: var(--color-bg-tertiary);
-            padding: 10px;
-            border-radius: 6px;
-            max-height: 150px;
-            overflow-y: auto;
-        }
+      .package-list {
+        background-color: var(--color-bg-tertiary);
+        padding: 10px;
+        border-radius: 6px;
+        max-height: 150px;
+        overflow-y: auto;
+      }
 
-        .status-indicator {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.9rem;
-            color: var(--color-text-secondary);
-        }
+      .status-indicator {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.9rem;
+        color: var(--color-text-secondary);
+      }
 
-        .status-indicator i {
-            font-size: 1.2rem;
-        }
+      .status-indicator i {
+        font-size: 1.2rem;
+      }
 
-        .status-success {
-            color: var(--color-success);
-        }
+      .status-success {
+        color: var(--color-success);
+      }
 
-        .status-error {
-            color: var(--color-error);
-        }
+      .status-error {
+        color: var(--color-error);
+      }
 
-        .btn i {
-            font-size: 1rem;
-        }
+      .btn i {
+        font-size: 1rem;
+      }
 
-        .theme-selector {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
+      .theme-selector {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 15px;
+      }
 
-        .theme-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            border: 2px solid transparent;
-            cursor: pointer;
-            transition: all var(--transition-speed);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            overflow: hidden;
-        }
+      .theme-btn {
+        width: 40px;
+        height: 40px;
+        border-radius: 8px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        transition: all var(--transition-speed);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+      }
 
-        .theme-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            opacity: 0.7;
-            transition: all var(--transition-speed);
-        }
+      .theme-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0.7;
+        transition: all var(--transition-speed);
+      }
 
-        .theme-btn:hover::before {
-            opacity: 0.9;
-        }
+      .theme-btn:hover::before {
+        opacity: 0.9;
+      }
 
-        .theme-btn.active {
-            border-color: var(--color-accent-primary);
-            transform: scale(1.1);
-        }
+      .theme-btn.active {
+        border-color: var(--color-accent-primary);
+        transform: scale(1.1);
+      }
 
-        .theme-btn-dark::before {
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        }
+      .theme-btn-dark::before {
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      }
 
-        .theme-btn-github-light::before {
-            background: linear-gradient(135deg, #ffffff 0%, #f6f8fa 100%);
-        }
+      .theme-btn-github-light::before {
+        background: linear-gradient(135deg, #ffffff 0%, #f6f8fa 100%);
+      }
 
-        .theme-btn-dracula::before {
-            background: linear-gradient(135deg, #282a36 0%, #21222c 100%);
-        }
+      .theme-btn-dracula::before {
+        background: linear-gradient(135deg, #282a36 0%, #21222c 100%);
+      }
 
-        .theme-btn-dark .theme-btn-icon {
-            color: white;
-            font-size: 20px;
-        }
+      .theme-btn-dark .theme-btn-icon {
+        color: white;
+        font-size: 20px;
+      }
 
-        .theme-btn-github-light .theme-btn-icon {
-            color: black;
-            font-size: 20px;
-        }
+      .theme-btn-github-light .theme-btn-icon {
+        color: black;
+        font-size: 20px;
+      }
 
-        .theme-btn-dracula .theme-btn-icon {
-            color: #bd93f9;
-            font-size: 20px;
-        }
+      .theme-btn-dracula .theme-btn-icon {
+        color: #bd93f9;
+        font-size: 20px;
+      }
 
-        .theme-btn .theme-btn-icon {
-            z-index: 1;
-            position: relative;
-        }
+      .theme-btn .theme-btn-icon {
+        z-index: 1;
+        position: relative;
+      }
 
-        .theme-btn-solarized-dark::before {
-            background: linear-gradient(135deg, #002b36 0%, #073642 100%);
-        }
+      .theme-btn-solarized-dark::before {
+        background: linear-gradient(135deg, #002b36 0%, #073642 100%);
+      }
 
-        .theme-btn-one-dark::before {
-            background: linear-gradient(135deg, #21252b 0%, #282c34 100%);
-        }
+      .theme-btn-one-dark::before {
+        background: linear-gradient(135deg, #21252b 0%, #282c34 100%);
+      }
 
-        .theme-btn-nord::before {
-            background: linear-gradient(135deg, #2e3440 0%, #3b4252 100%);
-        }
+      .theme-btn-nord::before {
+        background: linear-gradient(135deg, #2e3440 0%, #3b4252 100%);
+      }
 
-        .theme-btn-solarized-dark .theme-btn-icon {
-            color: #268bd2;
-            font-size: 20px;
-        }
+      .theme-btn-solarized-dark .theme-btn-icon {
+        color: #268bd2;
+        font-size: 20px;
+      }
 
-        .theme-btn-one-dark .theme-btn-icon {
-            color: #61afef;
-            font-size: 20px;
-        }
+      .theme-btn-one-dark .theme-btn-icon {
+        color: #61afef;
+        font-size: 20px;
+      }
 
-        .theme-btn-nord .theme-btn-icon {
-            color: #88c0d0;
-            font-size: 20px;
-        }
-
+      .theme-btn-nord .theme-btn-icon {
+        color: #88c0d0;
+        font-size: 20px;
+      }
     </style>
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="app-container">
-        <aside class="sidebar">
-            <h2>python real code editor real (2025)</h2>
-
-            <div class="theme-selector">
-                <button class="theme-btn theme-btn-dark theme-btn active" data-theme="default">
-                    <i class="ri-moon-line theme-btn-icon"></i>
-                </button>
-                <button class="theme-btn theme-btn-github-light" data-theme="github-light">
-                    <i class="ri-sun-line theme-btn-icon"></i>
-                </button>
-                <button class="theme-btn theme-btn-dracula" data-theme="dracula">
-                    <i class="ri-ghost-line theme-btn-icon"></i>
-                </button>
-                <button class="theme-btn theme-btn-solarized-dark" data-theme="solarized-dark">
-                    <i class="ri-compass-line theme-btn-icon"></i>
-                </button>
-                <button class="theme-btn theme-btn-one-dark" data-theme="one-dark">
-                    <i class="ri-lightbulb-flash-line theme-btn-icon"></i>
-                </button>
-                <button class="theme-btn theme-btn-nord" data-theme="nord">
-                    <i class="ri-square-line theme-btn-icon"></i>
-                </button>
-            </div>
-            
-
-            <div class="input-group">
-                <input type="text" id="package-input" class="form-control" placeholder="Package name">
-                <button id="install-package" class="btn btn-primary">
-                    <i class="ri-download-cloud-line"></i>
-                </button>
-            </div>
-
-            <div class="package-list">
-                <strong>Installed Packages:</strong>
-                <div id="installed-packages">None</div>
-            </div>
-
-            <div class="status-section">
-                <div id="pyodide-status" class="status-indicator">
-                    <i class="ri-loader-4-line"></i> Loading Pyodide...
-                </div>
-            </div>
-        </aside>
-
-        <main class="main-content">
-            <section class="code-section">
-                <div class="code-editor-wrapper">
-                    <textarea id="code-editor" class="code-editor"
-                        placeholder="Write your Python code here...">
-"""
-
-HAIIII!!!! I made this "IDE" because I was sick of online ide's not having a lot of module (and I wanted to use Noma's module!!!!) so yea.. 
-
-Sadly, there isn't code highlighting so yea sorry..
-
-(PLZ DON'T THINK THAT THIS IS NOT BUGGY.. IT WAS MADE BY ME SO OFC IT'S BUGGY LMFAO :sob:)
-
-Made by Squirrel
-
-"""
-                    </textarea>
-                </div>
-            </section>
-
-            <div class="input-group" style="padding: 10px; background-color: var(--color-bg-secondary);">
-                <button id="run-code" class="btn btn-primary">
-                    <i class="ri-play-line"></i> Run
-                </button>
-                <button id="clear-output" class="btn btn-secondary">
-                    <i class="ri-delete-bin-line"></i> Clear
-                </button>
-            </div>
-
-            <pre id="terminal-output" class="terminal-output">no output yet (I think)</pre>
-
-            <div class="input-group" style="padding: 10px; background-color: var(--color-bg-secondary);">
-                <input type="text" id="command-input" class="form-control" placeholder="Enter Python command">
-                <button id="execute-command" class="btn btn-primary">
-                    <i class="ri-terminal-line"></i> Execute
-                </button>
-            </div>
-        </main>
+      <aside class="sidebar">
+        <h2>python real code editor real (2025)</h2>
+        <div class="theme-selector">
+          <button class="theme-btn theme-btn-dark theme-btn active" data-theme="default">
+            <i class="ri-moon-line theme-btn-icon"></i>
+          </button>
+          <button class="theme-btn theme-btn-github-light" data-theme="github-light">
+            <i class="ri-sun-line theme-btn-icon"></i>
+          </button>
+          <button class="theme-btn theme-btn-dracula" data-theme="dracula">
+            <i class="ri-ghost-line theme-btn-icon"></i>
+          </button>
+          <button class="theme-btn theme-btn-solarized-dark" data-theme="solarized-dark">
+            <i class="ri-compass-line theme-btn-icon"></i>
+          </button>
+          <button class="theme-btn theme-btn-one-dark" data-theme="one-dark">
+            <i class="ri-lightbulb-flash-line theme-btn-icon"></i>
+          </button>
+          <button class="theme-btn theme-btn-nord" data-theme="nord">
+            <i class="ri-square-line theme-btn-icon"></i>
+          </button>
+        </div>
+        <div class="input-group">
+          <input type="text" id="package-input" class="form-control" placeholder="Package name">
+          <button id="install-package" class="btn btn-primary">
+            <i class="ri-download-cloud-line"></i>
+          </button>
+        </div>
+        <div class="package-list">
+          <strong>Installed Packages:</strong>
+          <div id="installed-packages">None</div>
+        </div>
+        <div class="status-section">
+          <div id="pyodide-status" class="status-indicator">
+            <i class="ri-loader-4-line"></i> Loading Pyodide...
+          </div>
+        </div>
+      </aside>
+      <main class="main-content">
+        <section class="code-section">
+          <div class="code-editor-wrapper">
+            <div id="code-editor" class="code-editor"></div>
+          </div>
+        </section>
+        <div class="input-group" style="padding: 10px; background-color: var(--color-bg-secondary);">
+          <button id="run-code" class="btn btn-primary">
+            <i class="ri-play-line"></i> Run </button>
+          <button id="clear-output" class="btn btn-secondary">
+            <i class="ri-delete-bin-line"></i> Clear </button>
+        </div>
+        <pre id="terminal-output" class="terminal-output">no output yet (I think)</pre>
+        <div class="input-group" style="padding: 10px; background-color: var(--color-bg-secondary);">
+          <input type="text" id="command-input" class="form-control" placeholder="Enter Python command">
+          <button id="execute-command" class="btn btn-primary">
+            <i class="ri-terminal-line"></i> Execute </button>
+        </div>
+      </main>
     </div>
     <script>
-        async function initPyodide() {
-            const pyodide = await loadPyodide({
-                indexURL: "https://cdn.jsdelivr.net/pyodide/v0.22.1/full/"
-            });
-
-            await pyodide.loadPackage('micropip');
-
-            pyodide.runPython(`
+      async function initPyodide() {
+        const pyodide = await loadPyodide({
+          indexURL: "https://cdn.jsdelivr.net/pyodide/v0.22.1/full/"
+        });
+        await pyodide.loadPackage('micropip');
+        pyodide.runPython(`
 import sys
 import io
-
 class StreamCapture:
     def __init__(self):
         self.buffer = io.StringIO()
-    
     def write(self, text):
         self.buffer.write(text)
-    
     def flush(self):
         pass
-    
     def getvalue(self):
         return self.buffer.getvalue()
-
 sys.stdout = StreamCapture()
 sys.stderr = sys.stdout
 `);
-
-            return pyodide;
+        return pyodide;
+      }
+      const terminalOutput = document.getElementById('terminal-output');
+      const runCodeBtn = document.getElementById('run-code');
+      const clearOutputBtn = document.getElementById('clear-output');
+      const packageInput = document.getElementById('package-input');
+      const installPackageBtn = document.getElementById('install-package');
+      const installedPackagesList = document.getElementById('installed-packages');
+      const commandInput = document.getElementById('command-input');
+      const executeCommandBtn = document.getElementById('execute-command');
+      const themeButtons = document.querySelectorAll('.theme-btn');
+      let pyodide = null;
+      const installedPackages = new Set();
+      let outputHistory = [];
+      let currentOutputIndex = -1;
+      let isOutputWithExitPrompt = false;
+      themeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          themeButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+          const theme = button.dataset.theme;
+          document.body.className = theme ? `theme-${theme}` : '';
+        });
+      });
+      initPyodide().then(py => {
+        pyodide = py;
+        updatePyodideStatus('you can cook now !!!', true);
+      }).catch(error => {
+        updatePyodideStatus(`error loading Pyodide...: ${error}`, false);
+      });
+      runCodeBtn.addEventListener('click', () => {
+        if (!pyodide) {
+          updateOutput('Pyodide no load yet..');
+          return;
         }
-
-
-        const codeEditor = document.getElementById('code-editor');
-        const terminalOutput = document.getElementById('terminal-output');
-        const runCodeBtn = document.getElementById('run-code');
-        const clearOutputBtn = document.getElementById('clear-output');
-        const packageInput = document.getElementById('package-input');
-        const installPackageBtn = document.getElementById('install-package');
-        const installedPackagesList = document.getElementById('installed-packages');
-        const commandInput = document.getElementById('command-input');
-        const executeCommandBtn = document.getElementById('execute-command');
-        const themeButtons = document.querySelectorAll('.theme-btn');
-        let pyodide = null;
-        const installedPackages = new Set();
-        let outputHistory = [];
-        let currentOutputIndex = -1;
-        let isOutputWithExitPrompt = false;
-
-
-        codeEditor.addEventListener('keydown', (e) => {
-            if (e.key === 'Tab') {
-                e.preventDefault()
-                
-                const start = codeEditor.selectionStart;
-                const end = codeEditor.selectionEnd;
-                const value = codeEditor.value;
-
-                if (start === end) {
-                    codeEditor.value = value.slice(0, start) + '    ' + value.slice(start);
-                    codeEditor.setSelectionRange(start + 4, start + 4);
-                } else {
-                    const selectedText = value.slice(start, end);
-                    const indentedText = selectedText.split('\n').map(line => '    ' + line).join('\n');
-                    
-                    codeEditor.value = value.slice(0, start) + indentedText + value.slice(end);
-                    codeEditor.setSelectionRange(start, start + indentedText.length);
-                }
-            }
-        });
-
-        themeButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                themeButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
-
-                const theme = button.dataset.theme;
-                document.body.className = theme ? `theme-${theme}` : '';
-            });
-        });
-
-    
-        initPyodide().then(py => {
-            pyodide = py;
-            updatePyodideStatus('you can cook now !!!', true);
-        }).catch(error => {
-            updatePyodideStatus(`error loading Pyodide...: ${error}`, false);
-        });
-
-        runCodeBtn.addEventListener('click', () => {
-            if (!pyodide) {
-                updateOutput('Pyodide no load yet..');
-                return;
-            }
-
-            try {
-                pyodide.runPython(`
+        try {
+          pyodide.runPython(`
 sys.stdout.buffer = io.StringIO()
 sys.stderr.buffer = sys.stdout.buffer
 `);
+          pyodide.runPython(window.editor.getValue());
+          const captured_output = pyodide.runPython('sys.stdout.getvalue()');
+          updateOutput(captured_output.trim());
+          isOutputWithExitPrompt = true;
+        } catch (error) {
+          updateOutput(`error: ${error}`);
+          isOutputWithExitPrompt = true;
+        }
+      });
+      clearOutputBtn.addEventListener('click', () => {
+        terminalOutput.textContent = 'no output yet (I think)';
+        outputHistory = [];
+        currentOutputIndex = -1;
+        isOutputWithExitPrompt = false;
+      });
 
-                pyodide.runPython(codeEditor.value);
-                const captured_output = pyodide.runPython('sys.stdout.getvalue()');
-
-                updateOutput(captured_output.trim());
-                isOutputWithExitPrompt = true;
-            } catch (error) {
-                updateOutput(`error: ${error}`);
-                isOutputWithExitPrompt = true;
-            }
-        });
-
-        clearOutputBtn.addEventListener('click', () => {
+      function updateOutput(text) {
+        outputHistory.push(text);
+        currentOutputIndex = outputHistory.length - 1;
+        terminalOutput.textContent = text + "\n\nPress enter to exit..." || 'no output yet (I think)';
+      }
+      installPackageBtn.addEventListener('click', async () => {
+        if (!pyodide) {
+          updateOutput('Pyodide no load yet...');
+          return;
+        }
+        const packageName = packageInput.value.trim();
+        if (!packageName) return;
+        try {
+          const micropip = pyodide.pyimport('micropip');
+          await micropip.install(packageName);
+          installedPackages.add(packageName);
+          installedPackagesList.textContent = Array.from(installedPackages).join(', ');
+          updateOutput(`installed ${packageName}`);
+          packageInput.value = '';
+        } catch (error) {
+          updateOutput(`error installing package..: ${error}`);
+        }
+      });
+      executeCommandBtn.addEventListener('click', () => {
+        if (!pyodide) return;
+        const command = commandInput.value.trim();
+        if (!command) return;
+        try {
+          const result = pyodide.runPython(command);
+          updateOutput(result ? result.toString() : 'command worked');
+          commandInput.value = '';
+          isOutputWithExitPrompt = true;
+        } catch (error) {
+          updateOutput(`error: ${error}`);
+          isOutputWithExitPrompt = true;
+        }
+      });
+      commandInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          if (isOutputWithExitPrompt) {
             terminalOutput.textContent = 'no output yet (I think)';
-            outputHistory = [];
-            currentOutputIndex = -1;
             isOutputWithExitPrompt = false;
-        });
-
-        function updateOutput(text) {
-            outputHistory.push(text);
-            currentOutputIndex = outputHistory.length - 1;
-            terminalOutput.textContent = text + "\n\nPress enter to exit..." || 'no output yet (I think)';
+          } else {
+            executeCommandBtn.click();
+          }
         }
-
-        installPackageBtn.addEventListener('click', async () => {
-            if (!pyodide) {
-                updateOutput('Pyodide no load yet...');
-                return;
-            }
-
-            const packageName = packageInput.value.trim();
-            if (!packageName) return;
-
-            try {
-                const micropip = pyodide.pyimport('micropip');
-                await micropip.install(packageName);
-
-                installedPackages.add(packageName);
-                installedPackagesList.textContent = Array.from(installedPackages).join(', ');
-                updateOutput(`installed ${packageName}`);
-                packageInput.value = '';
-            } catch (error) {
-                updateOutput(`error installing package..: ${error}`);
-            }
-        });
-
-        executeCommandBtn.addEventListener('click', () => {
-            if (!pyodide) return;
-
-            const command = commandInput.value.trim();
-            if (!command) return;
-
-            try {
-                const result = pyodide.runPython(command);
-                updateOutput(result ? result.toString() : 'command worked');
-                commandInput.value = '';
-                isOutputWithExitPrompt = true;
-            } catch (error) {
-                updateOutput(`error: ${error}`);
-                isOutputWithExitPrompt = true;
-            }
-        });
-
-        commandInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                if (isOutputWithExitPrompt) {
-
-                    terminalOutput.textContent = 'no output yet (I think)';
-                    isOutputWithExitPrompt = false;
-                } else {
-                    executeCommandBtn.click();
-                }
-            }
-        });
-
-        document.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter' && isOutputWithExitPrompt) {
-                terminalOutput.textContent = 'no output yet (I think)';
-                isOutputWithExitPrompt = false;
-            }
-        });
-
-        function updatePyodideStatus(status, isSuccess) {
-            const statusEl = document.getElementById('pyodide-status');
-            statusEl.innerHTML = `<i class="ri-${isSuccess ? 'check-line' : 'close-line'}"></i> ${status}`;
-            statusEl.classList.toggle('status-success', isSuccess);
-            statusEl.classList.toggle('status-error', !isSuccess);
+      });
+      document.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter' && isOutputWithExitPrompt) {
+          terminalOutput.textContent = 'no output yet (I think)';
+          isOutputWithExitPrompt = false;
         }
+      });
 
+      function updatePyodideStatus(status, isSuccess) {
+        const statusEl = document.getElementById('pyodide-status');
+        statusEl.innerHTML = `
+								<i class="ri-${isSuccess ? 'check-line' : 'close-line'}"></i> ${status}`;
+        statusEl.classList.toggle('status-success', isSuccess);
+        statusEl.classList.toggle('status-error', !isSuccess);
+      }
+      require.config({
+        paths: {
+          'vs': 'https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.33.0/min/vs'
+        }
+      });
+      require(['vs/editor/editor.main'], function() {
+        window.editor = monaco.editor.create(document.getElementById('code-editor'), {
+          value: "HAIIII!!!! I made this \"IDE\" because I was sick of online ide's not having a lot of module (and I wanted to use Noma's module!!!!) so yea..\n\nSadly, there isn't code highlighting so yea sorry.. (Hahahah monaco fixed)\n\n(PLZ DON'T THINK THAT THIS IS NOT BUGGY.. IT WAS MADE BY ME SO OFC IT'S BUGGY LMFAO :sob:)\n\nMade by Squirrel",
+          language: 'python',
+          theme: 'vs-dark',
+          padding: {
+            top: 20
+          }
+        });
+      });
     </script>
-</body>
-
+      <!--I hope chrome os fucking kills itself
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"92718af199f94392","version":"2025.1.0","r":1,"token":"08eaee7990434d9497764696f8790d13","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
+      -->
+  </body>
 </html>
