@@ -29,6 +29,7 @@ PLZ GIVE CREDIT IF STEAL, I SPENT A LOT OF TIME ON THIS :sob:
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1005,6 +1006,18 @@ PLZ GIVE CREDIT IF STEAL, I SPENT A LOT OF TIME ON THIS :sob:
             }
         }
 
+        function saveToLocalGreg() {
+            localStorage.setItem('snapshotGallery', JSON.stringify(snapshotGallery));
+        }
+
+        function loadStuffFromLocal() {
+            const storedData = localStorage.getItem('snapshotGallery');
+            if (storedData) {
+                snapshotGallery = JSON.parse(storedData);
+                updateGallery();
+            }
+        }
+
         function takeSnapshot() {
             if (!isStreaming) return;
 
@@ -1033,6 +1046,7 @@ PLZ GIVE CREDIT IF STEAL, I SPENT A LOT OF TIME ON THIS :sob:
             };
 
             snapshotGallery.push(snapshot);
+            saveToLocalGreg();
             updateGallery();
 
             videoContainer.classList.add('shake');
@@ -1042,6 +1056,8 @@ PLZ GIVE CREDIT IF STEAL, I SPENT A LOT OF TIME ON THIS :sob:
 
             showToast('snapshot token!', 'success');
         }
+
+
 
         function updateGallery() {
             galleryEl.innerHTML = '';
@@ -1273,6 +1289,8 @@ PLZ GIVE CREDIT IF STEAL, I SPENT A LOT OF TIME ON THIS :sob:
         });
 
         window.addEventListener('load', init);
+        window.onload = loadStuffFromLocal;
     </script>
 </body>
+
 </html>
