@@ -108,7 +108,7 @@
 <p align="center">Current song I'm listening to</p>
 
 <p align="center">
-  <img src="https://last-fm-ruby.vercel.app/api/playing.js">
+  <img src="https://last-fm-ruby.vercel.app/?username=Squirre1Z">
 </p>
 
 
