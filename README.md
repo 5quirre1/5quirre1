@@ -39,9 +39,6 @@
 
 <h1 align="center">Socials</h1>
 <p align="center">
-  <a href="https://bsky.app/profile/5quirre1.bsky.social">
-    <img src="https://freakybob.site/images/Bluesky.png" height="50">
-  </a>
   <a href="https://pikidiary.lol/@squirrel">
     <img src="/assets/README/icons/piki.png" height="50">
   </a>
