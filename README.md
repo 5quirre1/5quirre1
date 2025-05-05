@@ -1,112 +1,112 @@
 <!-- Love you all, fr! <3 -->
 
-<h1 align="center">Haiiii, I'm Squirrel 🐿️</h1>
-<p align="center">
+<div align="center">
+  
+  # :heart: Haiiii, I'm Squirrel :3
+  
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=F7418F&center=true&vCenter=true&width=500&lines=Minor+(13-15);I+LOVE+PYTHON+AND+C%23!!!!!;Open+Source;Self-Taught+:3;programming+IS+my+passion+:333" alt="wow" />
+
   <br>
-  <b>The languages I use!</b>
-</p>
-<p align="center">
-  <img src="assets/README/languages/cpp.svg" width="60">
-  <img src="assets/README/languages/css.svg" width="70">
-  <img src="assets/README/languages/html.svg" width="70">
-  <img src="assets/README/languages/js.svg" width="60">
-  <img src="assets/README/languages/python.svg" width="60">
+  
+  ## 🛠️ Languages I Use
+
+  <div>
+    <img src="assets/README/languages/cpp.svg" width="60" alt="C++" title="C++">
+    <img src="assets/README/languages/css.svg" width="70" alt="CSS" title="CSS">
+    <img src="assets/README/languages/html.svg" width="70" alt="HTML" title="HTML">
+    <img src="assets/README/languages/js.svg" width="60" alt="JavaScript" title="JavaScript">
+    <img src="assets/README/languages/python.svg" width="60" alt="Python" title="Python">
+    <img src="assets/README/languages/sgc++.png" width="60" alt="SG C++" title="SGC++">
+    <img src="assets/README/languages/csharp.svg" width="60" alt="C#" title="C#">
+  </div>
+  
   <!--<img src="assets/README/languages/Go_dancing!!!.gif" width="60"> (this was commented out cause I don't really use it)-->
   <!--<img src="assets/README/languages/C.svg" width="60"> (this was commented out cause I don't really use it)-->
   <!--<img src="assets/README/languages/lua.svg" width="60"> (this was commented out cause I don't really use it)-->
   <!-- <img src="assets/README/languages/ts.svg" width="60"> (this was commented out cause I don't really use it)-->
-  <img src="assets/README/languages/sgc++.png" width="60">
-  <img src="assets/README/languages/csharp.svg" width="60">
   <!--<img src="assets/README/languages/qbasic.png" width="60"> (this was commented out cause I don't really use it)-->
   <!--<img src="assets/README/languages/BASIC.png" width="60"> (this was commented out cause I don't really use it)-->
   <!-- ^ I made this btw !!!-->
-  
 
+## 💫 About Me :3
 
+<table>
+  <tr>
+    <td width="60%" style="vertical-align: top; border: none;">
+      <div style="text-align: left; padding: 10px;">
+        <b>
+        <p>My first """coding journey""" was learning how to code with html and css. Since then, I've learned more programming and how to improve my web dev. will finish later </p>
+        </b>
+      </div>
+    </td>
+    <td width="40%" style="border: none;">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=5quirre1&theme=radical&show_icons=true&hide_border=true&layout=compact&bg_color=0D1117&title_color=F85D7F&text_color=FFFFFF&icon_color=F85D7F&border_radius=10&card_width=320" alt="AHHH">
+    </td>
+  </tr>
+</table>
 
-</p>
+  ## 🌐 Socials
 
-<h1 align="center">About Me :3</h1>
-<ul align="center">
-  <li>I'm 13 🍍</li>
-  <li>gay</li>
-  <li>I love to code a lot frfrfrfrfr</li>
-  <li>Like to make really cool projects (most of the time)</li>
-  <li>Genderfluid or bigender? 😭🌀</li>
-  <!--<li>Furry 🐾🦊</li>-->
-</ul>
-<br>
-
-<h1 align="center">Socials</h1>
-<p align="center">
   <a href="https://pikidiary.lol/@squirrel">
-    <img src="/assets/README/icons/piki.png" height="50">
+    <img src="/assets/README/icons/piki.png" height="50" alt="Piki Diary">
   </a>
-</p>
-<p align="center">More socials coming soon...</p>
+  
+  <p><i>More socials coming soon...</i></p>
 
-<h1 align="center">My Most Used Languages</h1>
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=5quirre1&theme=radical&show_icons=true&hide_border=true&layout=compact" alt="5quirre1's GitHub Stats">
-</p>
+  ## 🎵 Currently Listening To
+  
+  <img src="https://last-fm-ruby.vercel.app/?username=Squirre1Z" alt="Last.fm Now Playing">
 
-<h1 align="center">Other Cool Stuff</h1>
-<p align="center">
+  ## 🌟 Other Cool Stuff
+  
   <a href="https://discord.gg/T9z27hv7FN">
-    <img src="/assets/README/icons/discord.png" height="50">
+    <img src="/assets/README/icons/discord.png" height="50" alt="Discord">
+    <br>
+    <b>The Freakcord Server :3</b>
   </a>
-  <br>
-  <b>The Freakcord Server :3</b>
-</p>
 
-<details align="center">
-  <summary>Some of My Favorite Websites</summary>
-  <br>
-  <a href="https://freakybob.site">
-    <img src="https://freakybob.site/images/FreakybobDOTsite.png" width="70">
-  </a>
-  <a href="https://blog.freakybob.site">
-    <img src="https://freakybob.site/images/freakyblog.png" width="70">
-  </a>
-  <a href="https://freakybrowse.freakybob.site">
-    <img src="https://freakybrowse.freakybob.site/icons/icon.png" width="70">
-  </a>
-  <a href="https://swag.freakybob.site/">
-    <img src="https://github.com/nomaakip.png" width="70">
-  </a>
-  <a href="https://wish.freakybob.site">
-    <img src="https://github.com/wish13yt.png" width="70">
-  </a>
-  <a href="https://squirrel.freakybob.site">
-    <img src="https://squirrel.freakybob.site/assets/WEBSITE/boykisser.png" width="70">
-  </a>
-  <a href="https://greg.com">
-    <img src="/assets/README/icons/greg.jpeg" width="69" height="70">
-  </a>
-</details>
+  <details>
+    <summary><b>🔍 Some of My Favorite Websites</b></summary>
+    <br>
+    <div>
+      <a href="https://freakybob.site">
+        <img src="https://freakybob.site/images/FreakybobDOTsite.png" width="70" alt="Freaky Bob Site">
+      </a>
+      <a href="https://blog.freakybob.site">
+        <img src="https://freakybob.site/images/freakyblog.png" width="70" alt="Freaky Blog">
+      </a>
+      <a href="https://freakybrowse.freakybob.site">
+        <img src="https://freakybrowse.freakybob.site/icons/icon.png" width="70" alt="Freaky Browse">
+      </a>
+      <a href="https://swag.freakybob.site/">
+        <img src="https://github.com/nomaakip.png" width="70" alt="Swag">
+      </a>
+      <a href="https://wish.freakybob.site">
+        <img src="https://github.com/wish13yt.png" width="70" alt="Wish">
+      </a>
+      <a href="https://squirrel.freakybob.site">
+        <img src="https://squirrel.freakybob.site/assets/WEBSITE/boykisser.png" width="70" alt="Squirrel">
+      </a>
+      <a href="https://greg.com">
+        <img src="/assets/README/icons/greg.jpeg" width="69" height="70" alt="Greg">
+      </a>
+    </div>
+  </details>
 
-<details align="center">
-  <summary>Ways to Contact Me</summary>
-  <p align="center">
-    <a href="https://discord.com/users/1127731486485921813">
-      <img src="assets/README/languages/DISCORD.svg" height="75">
-    </a>
-    <a href="mailto:squirrelhomebrew@gmail.com">
-      <img src="assets/README/icons/svgs/Gmail.svg" height="75">
-    </a>
-  </p>
-</details>
+  <details>
+    <summary><b>📬 Ways to Contact Me</b></summary>
+    <p>
+      <a href="https://discord.com/users/1127731486485921813">
+        <img src="assets/README/languages/DISCORD.svg" height="75" alt="Discord">
+      </a>
+      <a href="mailto:squirrelhomebrew@gmail.com">
+        <img src="assets/README/icons/svgs/Gmail.svg" height="75" alt="Email">
+      </a>
+    </p>
+  </details>
 
-<h1 align="center">Notes</h1>
-
-<p align="center">
-  <img src="https://forthebadge.com/images/badges/i-fucking-hate-java.svg">
-</p>
-
-<p align="center">Current song I'm listening to</p>
-
-<p align="center">
-  <img src="https://last-fm-ruby.vercel.app/?username=Squirre1Z">
-</p>
-
-
+  ## 📝 Notes
+  
+  <img src="https://forthebadge.com/images/badges/i-fucking-hate-java.svg" alt="I fucking hate Java">
+  
+</div>
