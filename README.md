@@ -13,8 +13,8 @@
   <img src="assets/README/languages/python.svg" width="60">
   <!--<img src="assets/README/languages/Go_dancing!!!.gif" width="60"> (this was commented out cause I don't really use it)-->
   <!--<img src="assets/README/languages/C.svg" width="60"> (this was commented out cause I don't really use it)-->
-  <img src="assets/README/languages/lua.svg" width="60">
-  <img src="assets/README/languages/ts.svg" width="60">
+  <!--<img src="assets/README/languages/lua.svg" width="60"> (this was commented out cause I don't really use it)-->
+  <!-- <img src="assets/README/languages/ts.svg" width="60"> (this was commented out cause I don't really use it)-->
   <img src="assets/README/languages/sgc++.png" width="60">
   <img src="assets/README/languages/csharp.svg" width="60">
   <!--<img src="assets/README/languages/qbasic.png" width="60"> (this was commented out cause I don't really use it)-->
