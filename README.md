@@ -4,7 +4,7 @@
   
   # :heart: Haiiii, I'm Squirrel :3
   
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=F7418F&center=true&vCenter=true&width=500&lines=Minor+(13-15);I+LOVE+PYTHON+AND+C%23!!!!!;Open+Source;Self-Taught+:3;programming+IS+my+passion+:333" alt="wow" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=F7418F&center=true&vCenter=true&width=500&lines=Minor+(13-15);I+LOVE+PYTHON+AND+C%23!!!!!;Open+Source;Self-Taught+:3;programming+IS+my+passion+:333;bi-gender;gay+llala" alt="wow" />
 
   <br>
   
@@ -35,7 +35,7 @@
     <td width="60%" style="vertical-align: top; border: none;">
       <div style="text-align: left; padding: 10px;">
         <b>
-        <p>My first """coding journey""" was learning how to code with html and css. Since then, I've learned more programming and how to improve my web dev. will finish later </p>
+        <p>uhhh i don't know what to put here LMFAO</p>
         </b>
       </div>
     </td>
