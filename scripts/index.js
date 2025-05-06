@@ -101,34 +101,46 @@ function getLevenshteinDistance(a, b) {
 
     return tmp[a.length][b.length];
 }
-function updateClock() {
-    const now = new Date();
-    const options = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
-    const time = now.toLocaleTimeString();
-    const date = now.toLocaleDateString(undefined, options);
 
-    document.getElementById('clock').textContent = `${date} | ${time}`;
-
-    const holidays = {
-        'Dec 25': 'MERRY CHRISTMAS!!!',
-        'Jan 1': 'HAPPY NEW YEAR!!!',
-        'Feb 14': 'HAPPY VALENTINE\'S DAY!!!',
-        'Mar 17': 'HAPPY ST. PATRICK\'S DAY!!!',
-        'Apr 1': 'HAPPY APRIL FOOL\'S DAY!!!',
-        'May 25': 'HAPPY MEMORIAL DAY!!!',
-        'Jul 4': 'HAPPY INDEPENDENCE DAY!!!',
-        'Oct 31': 'HAPPY HALLOWEEN!!!',
-        'Nov 11': 'HAPPY VETERANS DAY!!!',
-        'Nov 22': 'HAPPY THANKSGIVING!!!',
-
-    };
-
-    const monthDay = date.split(', ')[1];
-    const hour = now.getHours();
-    if (holidays[monthDay] && (hour >= 0 && hour < 2)) {
-        document.getElementById('clock').textContent = holidays[monthDay];
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    
+    if (menu.style.display === "block") {
+        menu.style.transform = "translateX(-100%)";
+        setTimeout(function() {
+            menu.style.display = "none";
+        }, 400);
+    } else {
+        menu.style.display = "block";
+        setTimeout(function() {
+            menu.style.transform = "translateX(0)";
+        }, 10);
     }
 }
 
-setInterval(updateClock, 1000);
-updateClock();
+document.addEventListener("DOMContentLoaded", function() {
+    var menuButton = document.getElementById("menuButton");
+    if (menuButton) {
+        menuButton.addEventListener("click", toggleMenu);
+    }
+    
+    updateClock();
+    setInterval(updateClock, 1000);
+});
+
+function updateClock() {
+    var clockElement = document.getElementById("clock");
+    if (clockElement) {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        
+        var timeString = hours + ':' + minutes + ' ' + ampm;
+        clockElement.textContent = timeString;
+    }
+}
