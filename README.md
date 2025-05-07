@@ -35,12 +35,12 @@
     <td width="60%" style="vertical-align: top; border: none;">
       <div style="text-align: left; padding: 10px;">
         <b>
-        <p>uhhh i don't know what to put here LMFAO</p>
+        <p>i love tv girl and not doing my school work because i'm coding :heart:</p>
         </b>
       </div>
     </td>
     <td width="40%" style="border: none;">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=5quirre1&theme=radical&show_icons=true&hide_border=true&layout=compact&bg_color=0D1117&title_color=F85D7F&text_color=FFFFFF&icon_color=F85D7F&border_radius=10&card_width=320" alt="AHHH">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=5quirre1&layout=compact&hide_border=true&bg_color=1e1e2f&title_color=8be9fd&text_color=f8f8f2&icon_color=ff79c6&border_radius=12&card_width=350&card_height=400" alt="AHHH">
     </td>
   </tr>
 </table>
