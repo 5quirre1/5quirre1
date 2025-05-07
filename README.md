@@ -55,7 +55,7 @@
 
   ## 🎵 Currently Listening To
   
-  <img src="https://last-fm-ruby.vercel.app/?username=Squirre1Z](https://last-fm-ruby.vercel.app/?username=Squirre1Z&bg=240046&cardBg=3C096C&primary=FFFFFF&secondary=E0AAFF&accent=9D4EDD&playing=9D4EDD&recently=FF5E5B&round=24&titleSize=22" alt="Last.fm Now Playing">
+  <img src="https://last-fm-ruby.vercel.app/?username=Squirre1Z?username=Squirre1Z&bg=240046&cardBg=3C096C&primary=FFFFFF&secondary=E0AAFF&accent=9D4EDD&playing=9D4EDD&recently=FF5E5B&round=24&titleSize=22" alt="Last.fm Now Playing">
 
   ## 🌟 Other Cool Stuff
   
