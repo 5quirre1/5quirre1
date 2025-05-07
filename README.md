@@ -48,14 +48,14 @@
   ## 🌐 Socials
 
   <a href="https://pikidiary.lol/@squirrel">
-    <img src="/assets/README/icons/piki.png" height="50" alt="Piki Diary">
+    <img src="/assets/README/icons/piki.png" height="50" alt="PikiDiary">
   </a>
   
   <p><i>More socials coming soon...</i></p>
 
   ## 🎵 Currently Listening To
   
-  <img src="https://last-fm-ruby.vercel.app/?username=Squirre1Z" alt="Last.fm Now Playing">
+  <img src="[https://last-fm-ruby.vercel.app/?username=Squirre1Z](https://last-fm-ruby.vercel.app/?username=Squirre1Z&bg=240046&cardBg=3C096C&primary=FFFFFF&secondary=E0AAFF&accent=9D4EDD&playing=9D4EDD&recently=FF5E5B&round=24&titleSize=22" alt="Last.fm Now Playing">
 
   ## 🌟 Other Cool Stuff
   
