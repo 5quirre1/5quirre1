@@ -104,8 +104,10 @@
     </p>
   </details>
 
-  ## 📝 Notes
+  ## 📝 Badge things
   
   <img src="https://forthebadge.com/images/badges/i-fucking-hate-java.svg" alt="I fucking hate Java">
+
+  ![i like coding..](https://img.shields.io/badge/-hyper%20coder%20or%20smth-%23ff79c6?style=for-the-badge)
   
 </div>
