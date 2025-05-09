@@ -640,9 +640,20 @@
         </div>
     </footer>
 
-    <audio autoplay loop src="https://squirrel.freakybob.site/assets/WEBSITE/background-music/code-music.mp3"></audio>
+    <audio id="bg-music" loop src="https://squirrel.freakybob.site/assets/WEBSITE/background-music/code-music.mp3" type="audio/mp3"></audio>
 
     <script>
+        const audio = document.getElementById('bg-music');
+        let isPlaying = false;
+        audio.pause();
+        
+        document.addEventListener('click', function() {
+            if (!isPlaying) {
+                audio.play();
+                isPlaying = true;
+            }
+        }, { once: true });
+        
         document.querySelectorAll('.card').forEach(card => {
             card.addEventListener('mousemove', function (e) {
                 const rect = this.getBoundingClientRect();
