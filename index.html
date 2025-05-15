@@ -164,22 +164,18 @@
             text-align: center;
         }
 
-        .blog {
-            background: none;
-            font-family: "Poppins", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            font-size: 1.2em;
-            text-align: center;
-            color: #FFBF00;
-            text-decoration: none;
-            position: relative;
-            left: 23%;
-            top: -10px;
-            transition: color 0.3s ease;
+        #ok {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 10px;
         }
 
-        .languages {
+        .blog,
+        .about2,
+        .languages,
+        .sitemap {
             background: none;
             font-family: "Poppins", sans-serif;
             font-weight: 700;
@@ -189,31 +185,17 @@
             color: #FFBF00;
             text-decoration: none;
             position: relative;
-            left: 17%;
             top: -10px;
             transition: color 0.3s ease;
         }
 
         .blog:hover,
         .about2:hover,
-        .languages:hover {
+        .languages:hover,
+        .sitemap:hover {
             color: #FF7D27;
         }
 
-        .about2 {
-            background: none;
-            font-family: "Poppins", sans-serif;
-            font-weight: 700;
-            font-style: normal;
-            font-size: 1.2em;
-            text-align: center;
-            color: #FFBF00;
-            text-decoration: none;
-            position: relative;
-            left: 49%;
-            top: -10px;
-            transition: color 0.3s ease;
-        }
 
         #music-by {
             font-size: 0.9;
@@ -562,10 +544,11 @@
 
             .blog,
             .languages,
-            .about2 {
+            .about2,
+            .sitemap {
                 position: relative;
                 left: 0;
-                top: 16px;
+                top: -7px;
                 font-size: 1em;
                 margin: 10px auto;
                 text-align: center;
@@ -664,10 +647,12 @@
                     </a>
                 </div>
                 <h1 class="about">Web Designer and random stuff programmer</h1>
-
-                <a href="https://squirrel.freakybob.site/blogs/" class="blog">Blog Posts</a>
-                <a href="https://squirrel.freakybob.site/about" class="about2">About</a>
-                <a href="https://squirrel.freakybob.site/code" class="languages">Code Stuff</a>
+                <div id="ok">
+                    <a href="https://squirrel.freakybob.site/blogs/" class="blog">Blog Posts</a>
+                    <a href="https://squirrel.freakybob.site/about" class="about2">About</a>
+                    <a href="https://squirrel.freakybob.site/code" class="languages">Code Stuff</a>
+                    <a href="https://squirrel.freakybob.site/sitemap" class="sitemap">Sitemap</a>
+                </div>
             </div>
         </div>
     </header>
@@ -686,8 +671,7 @@
     <script src="scripts/index.js"></script>
 
     <p id="music-by">
-        Music by <a
-            href="https://open.spotify.com/artist/77GScanT4sKODxSqR8WYlx?si=Xg3D9D_CTVevbE322wGN-g">6Cloud!!!
+        Music by <a href="https://open.spotify.com/artist/77GScanT4sKODxSqR8WYlx?si=Xg3D9D_CTVevbE322wGN-g">6Cloud!!!
             <!--Chauvel</a> from <a
             href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=176570">Pixabay</a>-->
     </p>
