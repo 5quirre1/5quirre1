@@ -1079,6 +1079,13 @@ body {
     margin-top: 1rem;
 }
 
+#users-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-top: 1rem;
+}
+
 .user-item {
     display: flex;
     align-items: center;
