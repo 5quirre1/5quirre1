@@ -264,6 +264,35 @@
             color: #ff7bdd;
         }
 
+        .load-time-widget {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #70220553, #370a6e69), #ae34ff5c;
+            border: 1px solid rgba(244, 36, 227, 0.15);
+            backdrop-filter: blur(10px);
+            color: rgb(235, 216, 235);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-family: "Poppins", sans-serif;
+            font-size: 0.9em;
+            box-shadow: 0 4px 15px rgba(46, 2, 73, 0.4);
+            opacity: 0;
+            transform: translateX(-120%);
+            transition: opacity 0.5s ease-out, transform 0.7s ease-out;
+            z-index: 1000;
+        }
+
+        .load-time-widget.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .load-time-widget.hide {
+            opacity: 0;
+            transform: translateX(-120%);
+        }
+
         @media (max-width: 768px) {
             .container {
                 padding: 30px 15px;
@@ -292,6 +321,13 @@
             .path-breadcrumb {
                 font-size: 0.8em;
                 padding: 8px;
+            }
+
+            .load-time-widget {
+                bottom: 10px;
+                left: 10px;
+                font-size: 0.8em;
+                padding: 8px 12px;
             }
         }
 
@@ -327,6 +363,13 @@
 
             .footer {
                 font-size: 0.8em;
+            }
+
+            .load-time-widget {
+                bottom: 5px;
+                left: 5px;
+                font-size: 0.7em;
+                padding: 6px 10px;
             }
         }
     </style>
@@ -372,20 +415,25 @@
     <a href="#" class="back-to-top">
         <i class="fa-solid fa-arrow-up"></i>
     </a>
-    <audio id="bg-music" loop src="https://squirrel.freakybob.site/assets/WEBSITE/background-music/sitemap.mp3" type="audio/mp3"></audio>
-
+    <audio id="bg-music" loop src="https://squirrel.freakybob.site/assets/WEBSITE/background-music/sitemap.mp3"
+        type="audio/mp3">
+    </audio>
+    <script src="scripts/loadTime.js"></script>
+    <div id="load-time-widget" class="load-time-widget">
+        Page loaded in <span id="load-time-value"></span> ms
+    </div>
     <script>
         const audio = document.getElementById('bg-music');
         let isPlaying = false;
         audio.pause();
-        
-        document.addEventListener('click', function() {
+
+        document.addEventListener('click', function () {
             if (!isPlaying) {
                 audio.play();
                 isPlaying = true;
             }
         }, { once: true });
-        
+
         document.addEventListener('DOMContentLoaded', function () {
             const owner = '5quirre1';
             const repo = '5quirre1';
