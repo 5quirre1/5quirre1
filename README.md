@@ -84,7 +84,7 @@
         <img src="https://github.com/wish13yt.png" width="70" alt="Wish">
       </a>
       <a href="https://squirrel.freakybob.site">
-        <img src="https://squirrel.freakybob.site/assets/WEBSITE/boykisser.png" width="70" alt="Squirrel">
+        <img src="https://squirrel.freakybob.site/assets/WEBSITE/petergriffin_csharp.png" width="70" alt="Squirrel">
       </a>
       <a href="https://greg.com">
         <img src="/assets/README/icons/greg.jpeg" width="69" height="70" alt="Greg">
