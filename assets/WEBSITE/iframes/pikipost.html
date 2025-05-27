@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--code stolen from https://graybox.lol/ and refurbished !!111-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: 'MS PGothic', sans-serif;
+            -webkit-font-smoothing: none;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            background-color: #0000;
+            margin: 0;
+            padding-top: 8px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .article-cont {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 8px;
+            flex-grow: 1;
+        }
+
+        .article-card {
+            width: 100%;
+            background-color: #F2F2F2;
+            padding: 8px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 8px;
+            position: relative;
+            height: fit-content;
+            border-radius: 8px;
+        }
+
+        .pfp-container {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            border-radius: 50%;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+        }
+
+        .article-pfp {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .article-col {
+            flex-grow: 1;
+            width: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto 1fr;
+            cursor: pointer;
+        }
+
+        .post-content-area {
+            grid-column: 1 / -1;
+            grid-row: 1;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            white-space: normal;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .post-content-area img,
+        .post-content-area video,
+        .post-content-area iframe {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 8px auto;
+            border-radius: 8px;
+            object-fit: contain;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .divider {
+            width: 100%;
+            height: 16px;
+        }
+
+        .article-col>div:last-child span {
+            font-size: 11px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            color: #888;
+        }
+
+        .fill-space {
+            color: #ffffff;
+            background-color: #f2f2f2;
+            height: auto;
+            flex-grow: 1;
+            margin-top: 8px;
+            text-align: center;
+            line-height: 12px;
+            font-size: smaller;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            padding: 8px;
+        }
+
+        .fill-space.bottom {
+            flex-grow: 0;
+            height: 12px;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="article-cont">
+    </div>
+
+    <div id="fillSpace" class="fill-space">
+        You're all caught up!
+    </div>
+
+    <script>
+        let userPfpUrl = '';
+
+        async function fetchPosts() {
+            try {
+                const response = await fetch('https://pikidiary-api.vercel.app?username=squirrel');
+                if (!response.ok) {
+                    throw new Error(`error: ${response.status}`);
+                }
+                const data = await response.json();
+                userPfpUrl = data.pfp;
+                renderPosts(data.posts);
+            } catch (error) {
+                console.error('Error fetching posts:', error);
+                const articleCont = document.querySelector('.article-cont');
+                articleCont.innerHTML = '<div style="text-align: center; color: red; padding: 20px;">Failed to load posts. Please try again later.</div>';
+            }
+        }
+
+        function stripLinks(content) {
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = content;
+            const links = tempDiv.getElementsByTagName('a');
+
+            for (let i = links.length - 1; i >= 0; i--) {
+                const link = links[i];
+                link.replaceWith(document.createTextNode(link.textContent));
+            }
+            return tempDiv.innerHTML;
+        }
+
+        function renderPosts(posts) {
+            const articleCont = document.querySelector('.article-cont');
+            articleCont.innerHTML = '';
+
+            if (!posts || posts.length === 0) {
+                articleCont.innerHTML = '<div style="text-align: center; color: #555; padding: 20px;">No posts to display.</div>';
+                checkFillSpace();
+                return;
+            }
+
+            posts.forEach(post => {
+                const articleCard = document.createElement('div');
+                articleCard.className = 'article-card';
+
+                const processedContent = stripLinks(post.content);
+
+                const pfpContainer = document.createElement('div');
+                pfpContainer.className = 'pfp-container';
+                const pfpImg = document.createElement('img');
+                pfpImg.src = userPfpUrl || 'https://placehold.co/48x48/cccccc/333333?text=PFP';
+                pfpImg.alt = 'Profile Picture';
+                pfpImg.className = 'article-pfp';
+                pfpImg.onerror = () => pfpImg.src = 'https://placehold.co/48x48/cccccc/333333?text=PFP';
+                pfpContainer.appendChild(pfpImg);
+
+                const articleCol = document.createElement('div');
+                articleCol.className = 'article-col';
+                articleCol.style.cursor = 'pointer';
+                articleCol.onclick = () => window.open(`https://pikidiary.lol/posts/${post.id}`, '_blank');
+
+                articleCol.innerHTML = `
+                    <div class="post-content-area">
+                        ${processedContent}
+                    </div>
+                    <div style="grid-column: 1 / -1; grid-row: 2;">
+                        <div class="divider" style="width: 100%; height: 16px;"></div>
+                    </div>
+                    <div style="grid-column: 1 / 3; grid-row: 3;">
+                        <div class="divider" style="100%; height: 8px;"></div>
+                    </div>
+                    <div style="grid-column: 3 / -1; grid-row: 3; position: relative;">
+                        <span style="font-size: 11px; position: absolute; bottom: 0; right: 0; color: #888;">${post.createdAt} &#x25C2;&#x25C2;</span>
+                    </div>
+                `;
+
+                articleCard.appendChild(pfpContainer);
+                articleCard.appendChild(articleCol);
+                articleCont.appendChild(articleCard);
+            });
+
+            checkFillSpace();
+        }
+
+        function checkFillSpace() {
+            const fillSpace = document.getElementById('fillSpace');
+            if (document.body.scrollHeight > window.innerHeight) {
+                fillSpace.classList.add('bottom');
+            } else {
+                fillSpace.classList.remove('bottom');
+                fillSpace.style.height = Math.max(0, window.innerHeight - document.body.scrollHeight) + 'px';
+            }
+        }
+
+        window.onload = fetchPosts;
+        window.addEventListener('resize', checkFillSpace);
+    </script>
+
+</body>
+
+</html>
