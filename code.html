@@ -356,6 +356,35 @@
             background-color: rgba(255, 255, 255, 0.2);
         }
 
+        .load-time-widget {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: linear-gradient(135deg, #70220553, #370a6e69), #ae34ff5c;
+            border: 1px solid rgba(244, 36, 227, 0.15);
+            backdrop-filter: blur(10px);
+            color: rgb(235, 216, 235);
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-family: "Poppins", sans-serif;
+            font-size: 0.9em;
+            box-shadow: 0 4px 15px rgba(46, 2, 73, 0.4);
+            opacity: 0;
+            transform: translateX(-120%);
+            transition: opacity 0.5s ease-out, transform 0.7s ease-out;
+            z-index: 1000;
+        }
+
+        .load-time-widget.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .load-time-widget.hide {
+            opacity: 0;
+            transform: translateX(-120%);
+        }
+
         .skill-dot.active {
             background-image: var(--primary-gradient);
         }
@@ -391,6 +420,13 @@
                 left: 15px;
                 padding: 8px 15px;
                 font-size: 0.9rem;
+            }
+
+            .load-time-widget {
+                bottom: 10px;
+                left: 10px;
+                font-size: 0.8em;
+                padding: 8px 12px;
             }
         }
     </style>
@@ -488,7 +524,8 @@
                         <h3>Pikidiary API</h3>
                     </div>
                     <div class="card-body">
-                        <p>A fanmade remake of the api that used to be in <a href="https://pikidiary.lol">pikidiary</a></p>
+                        <p>A fanmade remake of the api that used to be in <a href="https://pikidiary.lol">pikidiary</a>
+                        </p>
                         <a href="https://github.com/5quirre1/pikidiaryAPI-remake/" class="card-link">
                             <i class="fab fa-github"></i> View on GitHub
                         </a>
@@ -651,20 +688,25 @@
         </div>
     </footer>
 
-    <audio id="bg-music" loop src="https://squirrel.freakybob.site/assets/WEBSITE/background-music/code-music.mp3" type="audio/mp3"></audio>
-
+    <audio id="bg-music" loop src="https://squirrel.freakybob.site/assets/WEBSITE/background-music/code-music.mp3"
+        type="audio/mp3">
+    </audio>
+    <script src="scripts/loadTime.js"></script>
+    <div id="load-time-widget" class="load-time-widget">
+        Page loaded in <span id="load-time-value"></span> ms
+    </div>
     <script>
         const audio = document.getElementById('bg-music');
         let isPlaying = false;
         audio.pause();
-        
-        document.addEventListener('click', function() {
+
+        document.addEventListener('click', function () {
             if (!isPlaying) {
                 audio.play();
                 isPlaying = true;
             }
         }, { once: true });
-        
+
         document.querySelectorAll('.card').forEach(card => {
             card.addEventListener('mousemove', function (e) {
                 const rect = this.getBoundingClientRect();
