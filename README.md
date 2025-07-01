@@ -35,7 +35,7 @@
     <td width="60%" style="vertical-align: top; border: none;">
       <div style="text-align: left; padding: 10px;">
         <b>
-        <p>i love tv girl and not doing my school work because i'm coding :heart:</p>
+        <p>i am good at coding when i want to be 💔</p>
         </b>
       </div>
     </td>
