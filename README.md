@@ -40,7 +40,7 @@
       </div>
     </td>
     <td width="40%" style="border: none;">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=5quirre1&layout=compact&hide_border=true&bg_color=1e1e2f&title_color=8be9fd&text_color=f8f8f2&icon_color=ff79c6&border_radius=12&card_width=350&card_height=400" alt="AHHH">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=5quirre1&hide_border=true&bg_color=1e1e2f&title_color=8be9fd&text_color=f8f8f2&icon_color=ff79c6&border_radius=12&card_width=350&card_height=400" alt="AHHH">
     </td>
   </tr>
 </table>
