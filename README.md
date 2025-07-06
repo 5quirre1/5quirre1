@@ -17,7 +17,7 @@
   <img src="assets/README/languages/js.svg" width="60" alt="JavaScript" title="JavaScript">
   <img src="assets/README/languages/python.svg" width="60" alt="Python" title="Python">
   <img src="assets/README/languages/csharp.svg" width="60" alt="C#" title="C#">
-  <img src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Fuchsia.png" width="60" alt="Golang" title="Go">
+  <img src="assets/README/languages/golang.svg" width="70" alt="Golang" title="Go">
 </div>
 
 ---
