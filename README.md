@@ -16,9 +16,10 @@
     <img src="assets/README/languages/html.svg" width="70" alt="HTML" title="HTML">
     <img src="assets/README/languages/js.svg" width="60" alt="JavaScript" title="JavaScript">
     <img src="assets/README/languages/python.svg" width="60" alt="Python" title="Python">
-    <img src="assets/README/languages/sgc++.png" width="60" alt="SG C++" title="SGC++">
     <img src="assets/README/languages/csharp.svg" width="60" alt="C#" title="C#">
+    <img src="https://go.dev/blog/go-brand/Go-Logo/PNG/Go-Logo_Fuchsia.png" width="60" alt="Golang" title="Go">
   </div>
+
   
   <!--<img src="assets/README/languages/Go_dancing!!!.gif" width="60"> (this was commented out cause I don't really use it)-->
   <!--<img src="assets/README/languages/C.svg" width="60"> (this was commented out cause I don't really use it)-->
