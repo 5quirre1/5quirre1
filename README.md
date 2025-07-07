@@ -28,7 +28,7 @@
   
 **soon :tm:**
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=5quirre1&layout=compact&hide_border=true&bg_color=1e1e2f&title_color=8be9fd&text_color=f8f8f2&icon_color=ff79c6&border_radius=12&card_width=350&card_height=200" alt="Top Languages">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=5quirre1&layout=donut&langs_count=6&theme=github_dark&hide_border=true&bg_color=00000000&border_radius=20" alt="Top Languages">
 
 </div>
 
