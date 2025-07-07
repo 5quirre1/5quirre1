@@ -46,9 +46,10 @@
 
 <div align="center">
   
-  <a href="https://pikidiary.lol/@squirrel">
-    <img src="/assets/README/icons/piki.png" height="50" alt="PikiDiary">
-  </a>
+  <a href="https://pikidiary.lol/@squirrel"><img src="/assets/README/icons/piki.png" height="50" alt="pikidiary"/></a>
+  &nbsp;
+  &nbsp;
+  <a href="https://yooho.us/userinfo.php?uid=4"><img src="https://yooho.us/themes/default/xoops-logo.png" height="50" alt="yooho"/></a>
 
   <p><i>More socials coming soon...</i></p>
 
