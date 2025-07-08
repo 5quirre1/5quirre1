@@ -60,30 +60,10 @@
 ## Other Cool Stuff
 
 <details>
-  <summary><strong> Some of My Favorite Websites</strong></summary>
+  <summary><strong>guess what</strong></summary>
   <br>
   <div align="center">
-    <a href="https://freakybob.site">
-      <img src="https://freakybob.site/images/FreakybobDOTsite.png" width="70" alt="Freaky Bob Site">
-    </a>
-    <a href="https://blog.freakybob.site">
-      <img src="https://freakybob.site/images/freakyblog.png" width="70" alt="Freaky Blog">
-    </a>
-    <a href="https://freakybrowse.freakybob.site">
-      <img src="https://freakybrowse.freakybob.site/icons/icon.png" width="70" alt="Freaky Browse">
-    </a>
-    <a href="https://swag.freakybob.site/">
-      <img src="https://github.com/nomaakip.png" width="70" alt="Swag">
-    </a>
-    <a href="https://wish.freakybob.site">
-      <img src="https://github.com/wish13yt.png" width="70" alt="Wish">
-    </a>
-    <a href="https://squirrel.freakybob.site">
-      <img src="https://squirrel.freakybob.site/assets/WEBSITE/petergriffin_csharp.png" width="70" alt="Squirrel">
-    </a>
-    <a href="https://greg.com">
-      <img src="/assets/README/icons/greg.jpeg" width="69" height="70" alt="Greg">
-    </a>
+     chicken butt 📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎📎
   </div>
 </details>
 
