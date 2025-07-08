@@ -90,7 +90,7 @@
   
   ![i like coding..](https://img.shields.io/badge/-hyper%20coder%20or%20smth-%23152f4f?style=for-the-badge)
   
-  ![Profile Views](https://komarev.com/ghpvc/?username=5quirre1&color=blueviolet&style=for-the-badge&label=Profile+Views)
+  ![Profile Views](https://komarev.com/ghpvc/?username=5quirre1&color=blueviolet&style=for-the-badge&label=Profile+Views)<br>since 7/7/25
 
 </div>
 
