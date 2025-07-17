@@ -37,7 +37,7 @@
 ## Currently Listening To
 
 <div align="center">
-  <img src="https://last-fm-ruby.vercel.app/?username=Squirre1Z&bg=240046&cardBg=3C096C&primary=FFFFFF&secondary=E0AAFF&accent=9D4EDD&playing=9D4EDD&recently=FF5E5B&round=24&titleSize=18" alt="Last.fm Now Playing">
+  <img src="https://lfm.graybox.lol/?username=squirre1Z&width=333&height=333" alt="Last.fm Now Playing">
 </div>
 
 ---
