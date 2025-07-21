@@ -10,16 +10,46 @@
 
 ## Languages I Use
 
-<div align="center">
-  <img src="assets/README/languages/cpp.svg" width="60" alt="C++" title="C++">
-  <img src="assets/README/languages/css.svg" width="70" alt="CSS" title="CSS">
-  <img src="assets/README/languages/html.svg" width="70" alt="HTML" title="HTML">
-  <img src="assets/README/languages/js.svg" width="60" alt="JavaScript" title="JavaScript">
-  <img src="assets/README/languages/python.svg" width="60" alt="Python" title="Python">
-  <img src="assets/README/languages/csharp.svg" width="60" alt="C#" title="C#">
-  <img src="assets/README/languages/golang.svg" width=80" alt="Golang" title="Go">
-  <img src="assets/README/languages/ejs.png" width="70" alt="EJS" title="EJS">
-</div>
+<table align="center" cellpadding="15" cellspacing="10">
+  <tr>
+    <td align="center" width="96">
+      <img src="assets/README/languages/cpp.svg" width="48" height="48" alt="C++" />
+      <br><strong>C++</strong>
+    </td>
+    <td align="center" width="96">
+      <img src="assets/README/languages/css.svg" width="48" height="48" alt="CSS" />
+      <br><strong>CSS</strong>
+    </td>
+    <td align="center" width="96">
+      <img src="assets/README/languages/html.svg" width="48" height="48" alt="HTML" />
+      <br><strong>HTML</strong>
+    </td>
+    <td align="center" width="96">
+      <img src="assets/README/languages/js.svg" width="48" height="48" alt="JavaScript" />
+      <br><strong>JavaScript</strong>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="96">
+      <img src="assets/README/languages/python.svg" width="48" height="48" alt="Python" />
+      <br><strong>Python</strong>
+    </td>
+    <td align="center" width="96">
+      <img src="assets/README/languages/csharp.svg" width="48" height="48" alt="C#" />
+      <br><strong>C#</strong>
+    </td>
+    <td align="center" width="96">
+      <img src="assets/README/languages/golang.svg" width="48" height="48" alt="Go" />
+      <br><strong>Go</strong>
+    </td>
+    <td align="center" width="96">
+      <img src="assets/README/languages/ejs.png" width="48" height="48" alt="EJS" />
+      <br><strong>EJS</strong>
+    </td>
+  </tr>
+</table>
+
+
 
 ---
 
