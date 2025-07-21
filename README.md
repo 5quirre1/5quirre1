@@ -18,7 +18,7 @@
   <img src="assets/README/languages/python.svg" width="60" alt="Python" title="Python">
   <img src="assets/README/languages/csharp.svg" width="60" alt="C#" title="C#">
   <img src="assets/README/languages/golang.svg" width="70" alt="Golang" title="Go">
-  <img src="assets/README/languages/ejs.svg" width="70" alt="EJS" title="EJS">
+  <img src="assets/README/languages/ejs.png" width="70" alt="EJS" title="EJS">
 </div>
 
 ---
