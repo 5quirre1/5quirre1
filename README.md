@@ -42,10 +42,6 @@
       <img src="assets/README/languages/golang.svg" width="48" height="48" alt="Go" />
       <br><strong>Go</strong>
     </td>
-    <td align="center" width="96">
-      <img src="assets/README/languages/ejs.png" width="48" height="48" alt="EJS" />
-      <br><strong>EJS</strong>
-    </td>
   </tr>
 </table>
 
