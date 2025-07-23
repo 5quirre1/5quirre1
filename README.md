@@ -69,7 +69,8 @@
 ## Currently Listening To
 
 <div align="center">
-  <img src="https://allowcors.nomaakip.workers.dev/?url=https://lfm.graybox.lol/?username=squirre1Z&width=333&height=333" alt="last">
+  <!-- switching back cause jax's didn't work :P -->
+  <img src="https://last-fm-ruby.vercel.app/?username=Squirre1Z" alt="last">
 </div>
 
 ---
