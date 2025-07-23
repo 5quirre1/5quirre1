@@ -69,7 +69,7 @@
 ## Currently Listening To
 
 <div align="center">
-  <img src="https://lfm.graybox.lol/?username=squirre1Z&width=333&height=333" alt="Last.fm Now Playing">
+  <img src="https://allowcors.nomaakip.workers.dev/?url=https://lfm.graybox.lol/?username=squirre1Z&width=333&height=333" alt="last">
 </div>
 
 ---
