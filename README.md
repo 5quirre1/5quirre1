@@ -82,9 +82,6 @@
   <a href="https://pikidiary.lol/@squirrel"><img src="/assets/README/icons/piki.png" height="50" alt="pikidiary"/></a>
   &nbsp;
   &nbsp;
-  <a href="https://yooho.us/userinfo.php?uid=4"><img src="https://yooho.us/themes/default/xoops-logo.png" height="50" alt="yooho"/></a>
-  &nbsp;
-  &nbsp;
   <a href="https://bsky.app/profile/5quirre1.bsky.social"><img src="assets/README/icons/bluesky.png" height="50" alt="yooho"/></a>
   
 
