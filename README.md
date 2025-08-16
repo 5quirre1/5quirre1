@@ -1,9 +1,9 @@
 <!--<3-->
-# Haiiii, I'm Squirrel :3
+# Haiiii, I'm Squirrel :P
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&random=true&color=F7418F&center=true&vCenter=true&width=500&lines=Minor+(13-15);I+LOVE+PYTHON+AND+C%23!!!!!;Open+Source+(sorta);Self-Taught+:3;programming+IS+my+passion+:333;bi-gender;gay+llala;he+greg+on+my+boys+til+I+YAYAYAYAYAYA;love+u+pookie+(hyper+:3);i'm+a+closeted+emo)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&random=true&color=F7418F&center=true&vCenter=true&width=500&lines=Minor+(13-15);I+LOVE+PYTHON+AND+C%23!!!!!;Open+Source+(sorta);Self-Taught;programming+IS+my+passion;gay+;love+u+pookie+(hyper);i'm+a+closeted+emo)](https://git.io/typing-svg)
 
 </div>
 
@@ -54,7 +54,7 @@
 
 ---
 
-## About Me :3
+## About Me
 
 <div align="center">
   
