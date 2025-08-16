@@ -70,7 +70,7 @@
 
 <div align="center">
   <!-- switching back cause jax's didn't work :P -->
-  <img src="https://last-fm-ruby.vercel.app/?username=Squirre1Z" alt="last">
+  <img src="https://last-fm-ruby.vercel.app/?username=Squirre1Z&width=400&height=179" alt="last">
 </div>
 
 ---
