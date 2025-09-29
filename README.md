@@ -60,7 +60,7 @@
   
 **soon :tm:**
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=5quirre1&layout=donut&langs_count=6&theme=github_dark&hide_border=true&bg_color=00000000&border_radius=20&sssassdssdsssssdsssssssss" alt="Top Languages">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=5quirre1&layout=donut&langs_count=6&theme=github_dark&hide_border=true&bg_color=00000000&border_radius=20&sdssassdssdsssssdsssssssss" alt="Top Languages">
 
 </div>
 
