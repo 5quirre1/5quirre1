@@ -43,9 +43,13 @@
       <img src="assets/README/languages/golang.svg" width="48" height="48" alt="Go" />
       <br><strong>Go</strong>
     </td>
-    <td align="center" width="96">
+    <!--<td align="center" width="96">
       <img src="assets/README/languages/rust-.png" width="48" height="48" alt="Rust" />
       <br><strong>Rust</strong>
+    </td>-->
+    <td align="center" width="96">
+      <img src="https://fs.freakybob.site/uploads/ugX8LB.png" width="48" height="48" alt="Nyra" />
+      <br><strong>Nyra</strong>
     </td>
   </tr>
 </table>
