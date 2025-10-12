@@ -1,23 +1,12 @@
-* {
-	box-sizing: border-box;
-	font-family: Ellipsis, Cyrillic, "ＭＳ Pゴシック", "MS PGothic", sans-serif;
-}
-
-body {
-    color: white;
-    background-color: #706677;
-}
-
 #lfm-widget {
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
     padding: 5px 10px;
     background: #4d4d4d;
     height: 110px;
     min-width: 300px;
     box-shadow: 0px 0px 10px black;
-    position: fixed;
+    position: absolute;
     bottom: 10px;
     right: 10px;
 }
@@ -38,7 +27,6 @@ body {
 .lfm-cover-cont {
     height: 50px;
     width: 50px;
-    border-radius: 8px;
 }
 
 .lfm-info {
@@ -56,13 +44,13 @@ body {
     display: block;
 }
 
-.lfm-info-title.marquee span {
+.lfm-info-title.lastmarquee span {
     display: inline-block;
     padding-left: 100%;
     animation: marquee 10s linear infinite;
 }
 
-.lfm-info-title.marquee:hover span {
+.lfm-info-title.lastmarquee:hover span {
     animation-play-state: paused;
 }
 
