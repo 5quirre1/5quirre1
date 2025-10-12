@@ -1,80 +1,50 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>squirrel</title>
     <link rel="stylesheet" href="/assets/site/css/last-fm.css">
+    <link rel="stylesheet" href="/assets/site/css/style.css">
 </head>
 
 <body>
-    <h1>i have decided to delete all this website contents.</h1>
-    <p>i always hated this website's design and just didn't really work on it.</p>
-    &nbsp;<br>
-    <p>i will most likely be using my freakycities website lawlllll</p>
-    &nbsp;<br>
-    &nbsp;<br>
     <hr>
-    <h1>happy birthday freakybob.site!!! - 11:07 pm 8/19/25</h1>
-    <p>on this day, i bought freakybob.site,,.,.,. ughh</p>
+    <header class="header-bar">
+        <div class="header-left">
+            <h1 title="squirele">squirrel.freakybob.site</h1>
+        </div>
+        <h1 title="my current time" id="local-time"></h1>
+    </header>
 
-    <div id="lfm-widget">
-        <div class="lfm-cover-blur" aria-hidden="true">
-            <img src="assets/site/img/lfm.png" alt="" id="lfm-blur-img">
-        </div>
+    <section class="about-section">
+        <h1 title="about me">about me</h1>
+        <p>
+            hi, i'm squirrel and uh i sorta like to program,., also i play 2nd clarinet!! blah blah blah more stuff here
+        </p>
+    </section>
 
-        <div class="lfm-widget-main">
-            <div class="lfm-cover">
-                <img class="lfm-cover-cont" src="assets/site/img/lfm.png" alt="logo" id="lfm-cover-img">
-            </div>
-            <div class="lfm-info">
-                <span class="lfm-info-title">sing</span>
-                <span class="lfm-info-artist">dd</span>
-            </div>
+    <section class="socials-section">
+        <h1 title="socials">socials</h1>
+        <div class="social-links">
+            &nbsp;<a style="color: #abd022" href="https://pikidiary.lol/@squirrel" target="_blank">PikiDiary</a>
+            <a href="https://github.com/5quirre1" target="_blank">GitHub</a>
+            <a style="color: #1185fe" href="https://bsky.app/profile/5quirre1.bsky.social" target="_blank">BlueSky</a>
         </div>
-        <div class="lfm-footer">
-            <div class="lfm-footer-status">
-                <span class="lfm-footer-status-text">Recently Played</span>
-            </div>
-            <img src="assets/site/img/lfm2.png" alt="lastfm" class="lastfm-logo">
-        </div>
+    </section>
+
+    <hr>
+
+    <div id="lfm-widget-container"></div>
+
+    <div class="bottom-left-message">
+        freakybob.site <span id="cur-year"></span> - no rights reserved LMFAO
     </div>
+    <script>document.getElementById("cur-year").textContent = new Date().getFullYear();</script>
 
-    <script>
-        // https://nomaakip.xyz/
-        // squirrel was here,,., hell yeah squirrel made the widget #better!! - hacks.guide
-        function applyMarquee(el, text) {
-            el.classList.remove("marquee");
-            el.innerHTML = text;
-
-            if (el.scrollWidth > el.clientWidth) {
-                el.classList.add("marquee");
-                el.innerHTML = `<span>${text}</span>`;
-            }
-        }
-
-        function getRecentTrack() {
-            fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=squirre1z&api_key=07826e86965e2f6721b3bc1f0f2a61d1&format=json&limit=1')
-                .then(response => response.json())
-                .then(data => {
-                    const track = data.recenttracks.track[0];
-                    const imgUrl = track.image[3]["#text"] || "/img/lfm.png";
-
-                    const titleEl = document.querySelector(".lfm-info-title");
-                    const artistEl = document.querySelector(".lfm-info-artist");
-
-                    applyMarquee(titleEl, track.name);
-                    artistEl.textContent = track.artist["#text"];
-
-                    document.getElementById("lfm-cover-img").src = imgUrl;
-                    document.getElementById("lfm-blur-img").src = imgUrl;
-
-                    if (track["@attr"] && track["@attr"].nowplaying === "true") {
-                        document.querySelector(".lfm-footer-status-text").textContent = "Currently Playing";
-                    } else {
-                        document.querySelector(".lfm-footer-status-text").textContent = "Recently Played";
-                    }
-                });
-        }
-
-        setInterval(getRecentTrack, 20000);
-        getRecentTrack(); 
-    </script>
+    <script src="assets/site/js/last-fm.js"></script>
+    <script src="assets/site/js/time.js"></script>
 </body>
+
+</html>
