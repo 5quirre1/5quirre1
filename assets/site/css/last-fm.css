@@ -4,8 +4,10 @@
 }
 
 body {
-	background-color: #706677;
+    color: white;
+    background-color: #706677;
 }
+
 #lfm-widget {
     display: flex;
     flex-direction: column;
