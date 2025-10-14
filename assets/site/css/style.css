@@ -26,6 +26,17 @@ hr {
     margin: 15px 0;
 }
 
+a {
+    color: #FFD27F;
+    text-decoration: none;
+    border-bottom: 1px dashed #FFD27F;
+}
+
+a:hover {
+    color: #FF6F3C;
+    border-bottom: 1px solid #FF6F3C;
+}
+
 /***************************/
 
 /*header stuff */
@@ -61,17 +72,6 @@ hr {
     gap: 15px;
 }
 
-.social-links a {
-    color: #FFD27F;
-    text-decoration: none;
-    border-bottom: 1px dashed #FFD27F;
-}
-
-.social-links a:hover {
-    color: #FF6F3C;
-    border-bottom: 1px solid #FF6F3C;
-}
-
 /* about me */
 .about-section {
     padding: 20px 15px;
@@ -89,6 +89,26 @@ hr {
     text-indent: 1.5em;
 }
 
+.about-section ul {
+    list-style-type: disc;
+    margin-left: 3em;
+    padding-left: 1em;
+    margin-top: 8px;
+    color: #FFD27F;
+    line-height: 1.6;
+}
+
+.about-section li {
+    margin-bottom: 5px;
+    text-indent: 0;
+}
+
+.about-section b {
+    color: #FFB347;
+}
+
+
+/* bottom left message*/
 .bottom-left-message {
     position: absolute;
     bottom: 10px;
