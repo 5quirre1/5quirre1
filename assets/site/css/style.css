@@ -29,11 +29,11 @@ hr {
 }
 
 .hr-right {
-    animation: slide-right 1s linear infinite;
+    animation: slide-right 3s linear infinite;
 }
 
 .hr-left {
-    animation: slide-left 1s linear infinite;
+    animation: slide-left 3s linear infinite;
 }
 
 @keyframes slide-right {
