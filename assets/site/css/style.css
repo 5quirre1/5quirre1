@@ -22,9 +22,28 @@ h1 {
 
 hr {
     border: none;
-    height: 1px;
-    background-color: #D9A066;
+    height: 6px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='6'%3E%3Cpath d='M0 3 Q10 0 20 3 T40 3' stroke='%23D9A066' fill='transparent' stroke-width='3'/%3E%3C/svg%3E") repeat-x;
+    background-size: auto 100%;
     margin: 15px 0;
+}
+
+.hr-right {
+    animation: slide-right 1s linear infinite;
+}
+
+.hr-left {
+    animation: slide-left 1s linear infinite;
+}
+
+@keyframes slide-right {
+    0% { background-position: 0 0; }
+    100% { background-position: 40px 0; }
+}
+
+@keyframes slide-left {
+    0% { background-position: 40px 0; }
+    100% { background-position: 0 0; }
 }
 
 a {
