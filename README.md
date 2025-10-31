@@ -35,18 +35,12 @@
       <img src="assets/README/languages/python.svg" width="48" height="48" alt="Python" />
       <br><strong>Python</strong>
     </td>
+    <!--
     <td align="center" width="96">
       <img src="assets/README/languages/csharp.svg" width="48" height="48" alt="C#" />
       <br><strong>C#</strong>
     </td>
-    <td align="center" width="96">
-      <img src="assets/README/languages/golang.svg" width="48" height="48" alt="Go" />
-      <br><strong>Go</strong>
-    </td>
-    <!--<td align="center" width="96">
-      <img src="assets/README/languages/rust-.png" width="48" height="48" alt="Rust" />
-      <br><strong>Rust</strong>
-    </td>-->
+    idk i don't really use it-->
   </tr>
 </table>
 
