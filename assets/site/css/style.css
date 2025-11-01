@@ -138,14 +138,9 @@ a:hover {
     pointer-events: none;
 }
 
-/* links section */
-.links-section {
+/* swag */
+.swagring-section {
     padding: 20px 15px;
-}
-
-.link-items {
-    display: flex;
-    gap: 15px;
 }
 
 
