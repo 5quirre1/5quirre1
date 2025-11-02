@@ -63,8 +63,7 @@
 ## Currently Listening To
 
 <div align="center">
-  <!-- switching back cause jax's didn't work :P -->
-  <img src="https://last-fm-ruby.vercel.app/?username=Squirre1Z&width=400&height=179" alt="last">
+  <img src="https://lfm.graybox.lol/?username=squirre1Z&height=170&width=250" alt="last">
 </div>
 
 ---
