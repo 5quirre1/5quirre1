@@ -84,6 +84,73 @@
                     </div>
                 </div>
             </div>
+
+            <div class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Other</div>
+                </div>
+                <div class="window-body has-space">
+                    <section class="tabs" style="max-width: 100%;">
+                        <menu role="tablist" aria-label="Tabs">
+                            <button role="tab" aria-controls="tab-socials" aria-selected="true">Socials</button>
+                            <button role="tab" aria-controls="tab-status">Status</button>
+                        </menu>
+
+                        <article role="tabpanel" id="tab-socials">
+                            <ul style="margin: 0; padding-left: 1rem;">
+                                <li><a href="https://pikidiary.lol/@squirrel" target="_blank">PikiDiary</a></li>
+                                <li><a href="https://github.com/5quirre1" target="_blank">GitHub</a></li>
+                            </ul>
+                        </article>
+
+
+                        <article role="tabpanel" id="tab-status" hidden>
+                            <div class="status" style="display: flex; flex-direction: column; gap: 0.5rem;">
+
+                                <div style="display: flex; gap: 0.6rem; align-items: center;">
+                                    <img src="https://piki-stuff.vercel.app/pfp/squirrel" alt="pfp"
+                                        style="width: 48px; height: 48px; image-rendering: pixelated;">
+                                    <div style="display: flex; flex-direction: column; font-size: 0.85rem;">
+
+                                        <div
+                                            style="display: flex; align-items: center; gap: 0.25rem; white-space: nowrap;">
+                                            <span><strong>squirrel</strong> /</span>
+                                            <small><span class="status-date"
+                                                    data-date="2025-11-15T13:17:00">...</span></small>
+                                        </div>
+
+                                        <span>it's my birthday today<br>so i go thrift shopping</span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </article>
+                    </section>
+
+                </div>
+            </div>
+
+            <script>
+                // tab
+                document.querySelectorAll('menu[role="tablist"] button[role="tab"]').forEach((tab, i) => {
+                    tab.addEventListener('click', () => {
+                        const tablist = tab.parentElement;
+                        const tabs = tablist.querySelectorAll('button[role="tab"]');
+                        const panels = tablist.parentElement.querySelectorAll('[role="tabpanel"]');
+
+                        tabs.forEach(t => {
+                            t.setAttribute('aria-selected', 'false');
+                        });
+                        panels.forEach(p => {
+                            p.hidden = true;
+                        });
+
+                        tab.setAttribute('aria-selected', 'true');
+                        panels[i].hidden = false;
+                    });
+                });
+            </script>
+
         </div>
 
         <!--right-->
@@ -133,10 +200,12 @@
 
                 <div class="window-body has-space"
                     style="padding: 0; overflow: hidden; height: 102px; position: relative;">
+
                     <div id="christmas-countdown">
                         <span id="christmas-number">hold on...</span>
                         <span style="font-size: 0.85rem;">days until Christmas</span>
                     </div>
+
                     <img id="christmas-bg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                 </div>
             </div>
