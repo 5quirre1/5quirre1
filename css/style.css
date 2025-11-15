@@ -137,7 +137,7 @@ body.win7 {
 
 .changelog-window {
     width: 15.625rem;
-    max-height: 10rem; /* preview height */
+    max-height: 10rem;
     transition: max-height 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -149,12 +149,11 @@ body.win7 {
 }
 
 .changelog-window.active .window-body {
-    max-height: 15rem; /* internal scroll area */
+    max-height: 15rem;
     overflow-y: auto;
     overflow-x: hidden;
 }
 
-/* hide scrollbar */
 .changelog-window.active .window-body::-webkit-scrollbar {
     width: 0;
 }
@@ -179,3 +178,4 @@ body.win7 {
         grid-template-columns: 1fr;
     }
 }
+
