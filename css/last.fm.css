@@ -1,5 +1,9 @@
+.window-body.lastfm.has-space {
+    padding: 0;
+}
+
 .lastfm-widget {
-    background-color: rgb(73, 73, 73);
+    background-color: rgb(57, 21, 69);
     color: white;
     position: relative;
     display: flex;
@@ -27,7 +31,7 @@
     position: absolute;
     inset: 0;
     z-index: 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.397), rgba(0, 0, 0, 0.403));
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7));
 }
 
 .lastfm-widget > .lastfm-info,
