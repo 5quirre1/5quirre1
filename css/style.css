@@ -51,40 +51,21 @@ body.win7 {
 .window-body {
     position: relative;
     padding: 0.5rem;
-    overflow: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .changelog-window {
     width: 15.625rem;
     max-height: 10rem;
-    transition: max-height 0.3s ease;
     display: flex;
     flex-direction: column;
-}
-
-.changelog-window .window-body {
-    overflow: hidden;
     transition: max-height 0.3s ease;
 }
 
-.changelog-window.active .window-body {
-    max-height: 15rem;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
-
-.changelog-window.active .window-body::-webkit-scrollbar {
+.changelog-window .window-body::-webkit-scrollbar {
     width: 0;
-}
-
-.changelog-window.active .window-body {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.changelog-window.minimized .window-body {
-    display: none;
-    max-height: 0;
 }
 
 .contacts-grid {
@@ -101,6 +82,26 @@ body.win7 {
     height: 45px;
     object-fit: contain;
     image-rendering: auto;
+}
+
+#christmas-countdown {
+    position: absolute;
+    top: 50%;
+    right: 3.5rem;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 0 0 0.3rem black;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+}
+
+#christmas-countdown span:nth-child(2) {
+    font-size: 0.85rem;
 }
 
 @media (max-width: 900px) {
