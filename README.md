@@ -9,42 +9,9 @@
 
 ---
 
-## Languages I Use
+## my website
 
-<table align="center" cellpadding="15" cellspacing="10">
-  <tr>
-    <td align="center" width="96">
-      <img src="assets/README/languages/cpp.svg" width="48" height="48" alt="C++" />
-      <br><strong>C++</strong>
-    </td>
-    <td align="center" width="96">
-      <img src="assets/README/languages/css.svg" width="48" height="48" alt="CSS" />
-      <br><strong>CSS</strong>
-    </td>
-    <td align="center" width="96">
-      <img src="assets/README/languages/html.svg" width="48" height="48" alt="HTML" />
-      <br><strong>HTML</strong>
-    </td>
-    <td align="center" width="96">
-      <img src="assets/README/languages/js.svg" width="48" height="48" alt="JavaScript" />
-      <br><strong>JavaScript</strong>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="96">
-      <img src="assets/README/languages/python.svg" width="48" height="48" alt="Python" />
-      <br><strong>Python</strong>
-    </td>
-    <!--
-    <td align="center" width="96">
-      <img src="assets/README/languages/csharp.svg" width="48" height="48" alt="C#" />
-      <br><strong>C#</strong>
-    </td>
-    idk i don't really use it-->
-  </tr>
-</table>
-
-
+<img width="1919" height="916" alt="image" src="https://github.com/user-attachments/assets/76e92372-f701-479f-a574-973a65008a51" />
 
 ---
 
