@@ -52,8 +52,6 @@ body.win7 {
     position: relative;
     padding: 0.5rem;
     overflow-y: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
 .changelog-window {
@@ -61,11 +59,6 @@ body.win7 {
     max-height: 10rem;
     display: flex;
     flex-direction: column;
-    transition: max-height 0.3s ease;
-}
-
-.changelog-window .window-body::-webkit-scrollbar {
-    width: 0;
 }
 
 .contacts-grid {
