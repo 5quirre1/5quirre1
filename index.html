@@ -49,7 +49,7 @@
                 </div>
                 <div class="window-body has-space has-scrollbar">
                     <div class="changelog-list">
-                        <p><b>[NEWEST]</b> 11/17/25 - new status ui and stuff!!! very swag.</p>
+                        <p><b>[NEWEST]</b> 11/17/25 - added an about page and also a Pages tab to put links from the website into</p>
                         <p>11/17/25 - changed some order, moved contact to tabs and changed some
                             styling!!</p>
                         <p>11/15/25 - added scrollbar to changelog</p>
@@ -81,12 +81,19 @@
                 <div class="window-body has-space">
                     <section class="tabs" style="max-width: 100%;">
                         <menu role="tablist" aria-label="Tabs">
-                            <button role="tab" aria-controls="tab-socials" aria-selected="true">Socials</button>
+                            <button role="tab" aria-controls="tab-links" aria-selected="true">Pages</button>
+                            <button role="tab" aria-controls="tab-socials">Socials</button>
                             <button role="tab" aria-controls="tab-contacts">Contact</button>
                             <button role="tab" aria-controls="tab-status">Status</button>
                         </menu>
 
-                        <article role="tabpanel" id="tab-socials">
+                        <article role="tabpanel" id="tab-links">
+                            <ul style="margin: 0; padding-left: 1rem;">
+                                <li><a href="/about" target="_blank">About</a></li>
+                            </ul>
+                        </article>
+
+                        <article role="tabpanel" id="tab-socials" hidden>
                             <ul style="margin: 0; padding-left: 1rem;">
                                 <li><a href="https://pikidiary.lol/@squirrel" target="_blank">PikiDiary</a></li>
                                 <li><a href="https://github.com/5quirre1" target="_blank">GitHub</a></li>
