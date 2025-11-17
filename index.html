@@ -43,19 +43,20 @@
                 </div>
             </div>
 
-            <div class="window glass">
+            <div class="window changelog-window">
                 <div class="title-bar">
-                    <div class="title-bar-text">Contant</div>
+                    <div class="title-bar-text">Changelog</div>
                 </div>
-                <div class="window-body has-space">
-                    <p>if you ever need to contact me, here are some ways and stuff!!</p>
-                    <div class="contacts-grid">
-                        <a href="https://discord.com/users/1127731486485921813" target="_blank"><img
-                                src="img/discord.png" alt="discord"></a>
-                        <a href="mailto:squirrelhomebrew@gmail.com" target="_blank"><img src="img/mail.png"
-                                alt="email"></a>
+                <div class="window-body has-space has-scrollbar">
+                    <div class="changelog-list">
+                        <p><b>[NEWEST]</b> 11/17/25 - changed some order, moved contact to tabs and changed some styling!!</p>
+                        <p>11/15/25 - added scrollbar to changelog</p>
+                        <p>11/15/25 - added a new window with tabs</p>
+                        <p>11/15/25 - added a christmas counter / removed minimization for changelog</p>
+                        <p>11/14/25 - added contacts and just another box</p>
+                        <p>11/14/25 - just a small little update and fix</p>
+                        <p>11/14/25 - rewrote my website!!!! still under w.i.p but i'll continue working on it :DD</p>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -71,22 +72,6 @@
                 </div>
             </div>
 
-            <div class="window changelog-window">
-                <div class="title-bar">
-                    <div class="title-bar-text">Changelog</div>
-                </div>
-                <div class="window-body has-space has-scrollbar">
-                    <div class="changelog-list">
-                        <p><b>[NEWEST]</b> 11/15/25 - added scrollbar to changelog</p>
-                        <p>11/15/25 - added a new window with tabs</p>
-                        <p>11/15/25 - added a christmas counter / removed minimization for changelog</p>
-                        <p>11/14/25 - added contacts and just another box</p>
-                        <p>11/14/25 - just a small little update and fix</p>
-                        <p>11/14/25 - rewrote my website!!!! still under w.i.p but i'll continue working on it :DD</p>
-                    </div>
-                </div>
-            </div>
-
             <div class="window glass">
                 <div class="title-bar">
                     <div class="title-bar-text">Other</div>
@@ -95,6 +80,7 @@
                     <section class="tabs" style="max-width: 100%;">
                         <menu role="tablist" aria-label="Tabs">
                             <button role="tab" aria-controls="tab-socials" aria-selected="true">Socials</button>
+                            <button role="tab" aria-controls="tab-contacts">Contact</button>
                             <button role="tab" aria-controls="tab-status">Status</button>
                         </menu>
 
@@ -105,25 +91,31 @@
                             </ul>
                         </article>
 
+                        <article role="tabpanel" id="tab-contacts" hidden>
+                            <p>if you ever need to contact me, here are some ways and stuff!!</p>
+                            <div class="contacts-grid" style="margin-top: 0.5rem;">
+                                <a href="https://discord.com/users/1127731486485921813" target="_blank">
+                                    <img src="img/discord.png" alt="discord">
+                                </a>
+                                <a href="mailto:squirrelhomebrew@gmail.com" target="_blank">
+                                    <img src="img/mail.png" alt="email">
+                                </a>
+                            </div>
+                        </article>
 
                         <article role="tabpanel" id="tab-status" hidden>
                             <div class="status" style="display: flex; flex-direction: column; gap: 0.5rem;">
-
                                 <div style="display: flex; gap: 0.6rem; align-items: center;">
                                     <img src="https://piki-stuff.vercel.app/pfp/squirrel" alt="pfp"
                                         style="width: 48px; height: 48px; image-rendering: pixelated;">
                                     <div style="display: flex; flex-direction: column; font-size: 0.85rem;">
-
                                         <div
                                             style="display: flex; align-items: center; gap: 0.25rem; white-space: nowrap;">
                                             <span><strong>squirrel</strong> /</span>
-                                            <small><span class="status-date"
-                                                    data-date="2025-11-17T9:15:00">...</span></small>
+                                            <small><span class="status-date" data-date="2025-11-17T09:47:00">...</span>
                                         </div>
-
-                                        <span>idk</span>
+                                        <span>swag.</span>
                                     </div>
-
                                 </div>
                             </div>
                         </article>
@@ -133,7 +125,6 @@
             </div>
 
             <script>
-                // tab
                 document.querySelectorAll('menu[role="tablist"] button[role="tab"]').forEach((tab, i) => {
                     tab.addEventListener('click', () => {
                         const tablist = tab.parentElement;
@@ -157,6 +148,17 @@
 
         <!--right-->
         <div class="column">
+            <div class="window glass">
+                <div class="title-bar">
+                    <div class="title-bar-text">My time - <span id="my-time"></span></div>
+                </div>
+                <div class="window-body has-space" style="display: flex; justify-content: center; align-items: center;">
+                    <iframe src="https://free.timeanddate.com/clock/ia5nov68/n3353/szw110/szh110/cf100/hnce1ead6"
+                        frameborder="0" width="110" height="110">
+                    </iframe>
+                </div>
+            </div>
+
             <div class="window glass">
                 <div class="title-bar">
                     <div class="title-bar-text">Last.FM</div>
@@ -184,17 +186,6 @@
 
             <div class="window glass">
                 <div class="title-bar">
-                    <div class="title-bar-text">My time - <span id="my-time"></span></div>
-                </div>
-                <div class="window-body has-space" style="display: flex; justify-content: center; align-items: center;">
-                    <iframe src="https://free.timeanddate.com/clock/ia5nov68/n3353/szw110/szh110/cf100/hnce1ead6"
-                        frameborder="0" width="110" height="110">
-                    </iframe>
-                </div>
-            </div>
-
-            <div class="window glass">
-                <div class="title-bar">
                     <div class="title-bar-text">
                         <span id="christmas-title-number">...</span> Days Until Christmas
                     </div>
@@ -211,6 +202,7 @@
                     <img id="christmas-bg" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                 </div>
             </div>
+
             <script>
                 const allBgs = [
                     'img/christmas/christmas.jpg',
@@ -230,6 +222,12 @@
             <div class="title-bar-text">©2025 squirrel - <a href="https://khang-nd.github.io/7.css"
                     target="_blank">7.css</a> / <a href="https://nomaakip.xyz"
                     title="some inspo was taken from her grid design!!" target="_blank">nomaakip</a></div>
+
+            <img src="img/aol-aol-guy.gif" style="
+                height: 20px;
+                image-rendering: pixelated;
+                margin-left: 0.5rem;
+            ">
         </div>
     </div>
     <script src="js/button-window-thingie.js"></script>
