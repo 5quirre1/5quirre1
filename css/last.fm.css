@@ -3,7 +3,7 @@
 }
 
 .lastfm-widget {
-    background-color: rgb(114, 84, 124);
+    background-color: rgba(0, 0, 0, 0.477);
     color: white;
     position: relative;
     display: flex;
@@ -71,14 +71,13 @@
     margin-top: auto;
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
-    color: #aaa;
+    color: #ffffff;
 }
 
 .marquee span {
     display: inline-block;
     animation: marquee 8s linear infinite;
 }
-
 
 @keyframes marquee {
     0% { transform: translateX(100%); }
