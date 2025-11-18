@@ -1,6 +1,6 @@
 body.win7 {
     padding: 2.5rem;
-    background: url("../img/retro.jpg") no-repeat center center fixed;
+    background: url("../img/retro.png") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -163,3 +163,4 @@ body.win7 {
         grid-template-columns: 1fr;
     }
 }
+
