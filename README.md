@@ -11,7 +11,8 @@
 
 ## my website
 
-<img width="1919" height="916" alt="image" src="https://github.com/user-attachments/assets/76e92372-f701-479f-a574-973a65008a51" />
+<img width="1918" height="909" alt="image" src="https://github.com/user-attachments/assets/1b81fb0a-3b37-4d20-a091-60ed0104963d" />
+
 
 ---
 
