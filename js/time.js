@@ -39,22 +39,6 @@ function christmas() {
     if (titleNumber) titleNumber.textContent = days;
 }
 
-document.querySelectorAll('.status-date').forEach(el => {
-    const rawDate = el.getAttribute('data-date');
-    const d = new Date(rawDate);
-    el.textContent = d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-    el.title = d.toLocaleString('en-US', {
-        weekday: 'short',
-        year: 'numeric',
-        month: 'short',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
-        hour12: true
-    });
-});
-
 christmas();
 setInterval(upTheTitle, 1000);
 upTheTitle();
