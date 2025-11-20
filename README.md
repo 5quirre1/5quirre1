@@ -81,10 +81,6 @@
 
 <div align="center">
   
-  <img src="https://forthebadge.com/images/badges/i-fucking-hate-java.svg" alt="I fucking hate Java">
-  
-  ![i like coding..](https://img.shields.io/badge/pizza%23152f4f?style=for-the-badge)
-  
   ![Profile Views](https://komarev.com/ghpvc/?username=5quirre1&color=blueviolet&style=for-the-badge&label=Profile+Views)<br>since 7/7/25
 
 </div>
