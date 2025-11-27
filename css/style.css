@@ -162,6 +162,12 @@ body.win7 {
     object-fit: cover;
 }
 
+.aol-gif {
+    height: 20px;
+    image-rendering: pixelated;
+    margin-left: 0.5rem;
+}
+
 @media (max-width: 900px) {
     .row {
         grid-template-columns: 1fr;
