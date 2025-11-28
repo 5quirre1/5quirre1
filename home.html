@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/7.css/dist/7.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/last.fm.css">
+    <link rel="stylesheet" href="css/swagplayer.css">
 </head>
 
 <body class="win7 has-scrollbar">
@@ -27,7 +28,8 @@
                 <div class="window-body has-space">
                     <p>welcome to my very cool site!!!!<br><br>sorry for all the aeroness i'm just testing out other
                         designs and plus i also really like windows 7's ui LOL</p>
-                    <small>if needed, here's my <a href="mailto:squirrelhomebrew@gmail.com" target="_blank">email</a></small>
+                    <small>if needed, here's my <a href="mailto:squirrelhomebrew@gmail.com"
+                            target="_blank">email</a></small>
                 </div>
             </div>
 
@@ -50,6 +52,11 @@
                         <a href="https://pikidiary.lol" target="_blank" data-title="pikidiary.lol">
                             <img src="https://f.feridinha.com/d8kH4.png" alt="pikidiary.lol" class="button-img">
                         </a>
+                        <a href="https://mattware.nekoweb.org/" target="_blank" data-title="mattware.nekoweb.org"><img
+                                src="https://mattware.nekoweb.org/assets/img/buttons/mattware1.png">
+                        </a>
+                        <a href="" target="_blank" data-title="nothing"><img src="img/btn/static.gif">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -65,7 +72,11 @@
                 </div>
                 <div class="window-body has-space has-scrollbar">
                     <div class="changelog-list">
-                        <p><b>[NEWEST]</b> 11/27/25 - made a bootscreen, webrings page, moved everything to home.html to
+                        <p><b>[NEWEST]</b> 11/27/25 - added a work in progress music player (swagplayer)</p>
+                        <p>11/27/25 - added <a href="https://mattware.nekoweb.org/">mattware.nekoweb.org</a> to the cool
+                            sites list and
+                            fixed some stuff</p>
+                        <p>11/27/25 - made a bootscreen, webrings page, moved everything to home.html to
                             have index be a warning page or smth (idk what to call it) and just a bunch more!!</p>
                         <p>11/18/25 - made the status NOT hard coded and made it come from <a
                                 href="https://status.cafe/users/squirrel">status.cafe</a></p>
@@ -120,8 +131,9 @@
 
                         <article role="tabpanel" id="tab-links">
                             <ul style="margin: 0; padding-left: 1rem;">
+                                <li><a href="https://squirrel.atabook.org/">Guestbook</a></li>
                                 <li><a href="/about">About</a></li>
-                                <li><a href="/webrings.html">Webrings</a></li>
+                                <li><a href="/webrings">Webrings</a></li>
                             </ul>
                         </article>
 
@@ -130,7 +142,8 @@
                                 <li><a href="https://pikidiary.lol/@squirrel" target="_blank">PikiDiary</a></li>
                                 <li><a href="https://github.com/5quirre1" target="_blank">GitHub</a></li>
                                 <li><a href="https://status.cafe/users/squirrel" target="_blank">Status.Cafe</a></li>
-                                <li><a href="https://discord.com/users/1127731486485921813" target="_blank">Discord</a></li>
+                                <li><a href="https://discord.com/users/1127731486485921813" target="_blank">Discord</a>
+                                </li>
                             </ul>
                         </article>
 
@@ -201,7 +214,7 @@
                     });
                 });
             </script>
-
+    
         </div>
 
         <!--right-->
@@ -265,7 +278,7 @@
                 </div>
 
                 <div class="window-body has-space"
-                    style="padding: 0; overflow: hidden; height: 102px; position: relative;">
+                    style="padding: 0; overflow: hidden; height: 65px; position: relative;">
 
                     <div id="christmas-countdown">
                         <span id="christmas-number">hold on...</span>
@@ -276,17 +289,49 @@
                 </div>
             </div>
 
-            <script>
-                const allBgs = [
-                    'img/christmas/christmas.jpg',
-                    'img/christmas/christmas.webp',
-                    'img/christmas/christmas2.webp',
-                    'img/christmas/christmas3.png',
-                    'img/christmas/christmas4.jpg',
-                ];
-                const randin = Math.floor(Math.random() * allBgs.length);
-                document.getElementById('christmas-bg').src = allBgs[randin];
-            </script>
+            <div class="window glass" id="swagplayer">
+                <div class="title-bar">
+                    <div class="title-bar-text">SwagPlayer</div>
+                    <div class="title-bar-controls">
+                        <button aria-label="Minimize"></button>
+                        <button aria-label="Maximize"></button>
+                        <button aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="window-body">
+                    <div class="swag-top">
+                        <div class="song-marquee">
+                            <div id="swag-marquee" class="scroll-text">Now Playing: .....</div>
+                        </div>
+
+                        <div class="player-buttons">
+                            <img id="swag-back" src="img/swagplayer/back.png">
+                            <img id="swag-play" src="img/swagplayer/play.png">
+                            <img id="swag-next" src="img/swagplayer/next.png">
+                        </div>
+                    </div>
+
+                    <div class="swag-controls">
+                        <div class="volume-control">
+                            <label for="swag-volume" id="swag-volume-display">50%</label>
+                            <input type="range" id="swag-volume" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+
+                        <div class="progress-container">
+                            <div role="progressbar" id="swag-progress" class="animate">
+                                <div style="width: 0%;"></div>
+                            </div>
+
+                            <div id="swag-time">
+                                <span id="swag-time-current">0:00</span>
+                                <span id="swag-time-total">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <audio id="swag-audio"></audio>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -309,6 +354,9 @@
     <script src="js/time.js"></script>
     <script src="js/status.js"></script>
     <script src="js/startup.js"></script>
+    <script src="js/christmas-image.js"></script>
+    <script src="js/swagplayer.js"></script>
+
 </body>
 
 </html>
