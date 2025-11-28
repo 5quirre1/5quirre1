@@ -56,7 +56,7 @@ body.win7 {
 
 .changelog-window {
     width: 15.625rem;
-    max-height: 10rem;
+    max-height: 12rem;
     display: flex;
     flex-direction: column;
 }
@@ -166,6 +166,10 @@ body.win7 {
     height: 20px;
     image-rendering: pixelated;
     margin-left: 0.5rem;
+}
+
+.column .window.glass {
+    width: 15.625rem;
 }
 
 @media (max-width: 900px) {
