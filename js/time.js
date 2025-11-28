@@ -39,11 +39,6 @@ function christmas() {
     if (titleNumber) titleNumber.textContent = days;
 }
 
-function updateEverything() {
-    upTheTitle();
-    christmas();
-}
-
-updateEverything();
-setInterval(updateEverything, 1000);
-
+christmas();
+setInterval(upTheTitle, 1000);
+upTheTitle();
