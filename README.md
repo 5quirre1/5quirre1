@@ -11,7 +11,8 @@
 
 ## my website
 
-<img width="1918" height="909" alt="image" src="https://github.com/user-attachments/assets/1b81fb0a-3b37-4d20-a091-60ed0104963d" />
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/bf44f4bb-0a9f-41c9-98da-69417fd478d0" />
+
 
 
 ---
@@ -97,3 +98,4 @@
   <img src="assets/README/languages/BASIC.png" width="60">
   ^ I made this btw !!!
 -->
+
