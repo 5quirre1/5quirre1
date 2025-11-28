@@ -9,7 +9,7 @@ function applyMarquee(el, text) {
 
 async function getRecentTrack() {
     try {
-        const res = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=squirre1z&api_key=07826e86965e2f6721b3bc1f0f2a61d1&format=json&limit=1');
+        const res = await fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=squirre1z&api_key=4204a2d9b89f985f6b47c29f913dd463&format=json&limit=1');
         const data = await res.json();
         const track = data.recenttracks.track[0];
         const imgUrl = track.image[3]["#text"] || "img/lfm.png";
@@ -36,3 +36,4 @@ async function getRecentTrack() {
 
 setInterval(getRecentTrack, 20000);
 getRecentTrack();
+
