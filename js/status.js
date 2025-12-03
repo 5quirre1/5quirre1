@@ -10,7 +10,12 @@ async function loadStatCaf() {
         const pfpUrl = xml.querySelector("icon")?.textContent;
         const entry = xml.querySelector("entry");
         if (!entry) return;
-        const content = entry.querySelector("content")?.textContent || "(no status)";
+        let content = entry.querySelector("content")?.textContent || "(no status)";
+        // decode escape codes so it's npot ugly
+        const decoder = document.createElement("textarea");
+        decoder.innerHTML = content;
+        content = decoder.value;
+        content = content.replace(/<[^>]*>/g, "");
         const published = entry.querySelector("published")?.textContent;
         const msgEl = document.querySelector(".status-message");
         if (msgEl) msgEl.textContent = content;
