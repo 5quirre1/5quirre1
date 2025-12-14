@@ -1,0 +1,101 @@
+.about-body p {
+    margin-bottom: 0.6rem;
+    line-height: 1.4;
+}
+
+.about-body p:first-child {
+    font-size: 1rem;
+}
+
+.about-divider {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 0.5rem 0;
+}
+
+.about-footer {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+}
+
+.me-window {
+    width: 14rem;
+}
+
+.me-body {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+.pfp-wrapper {
+    position: relative;
+}
+
+.pfp,
+.frame {
+    width: 32px;
+    height: 32px;
+}
+
+.pfp {
+    object-fit: cover;
+}
+
+.frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.me-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.me-name-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.me-name {
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.me-pronouns {
+    font-size: 0.75rem;
+    color: #555;
+    font-style: italic;
+}
+
+.me-fieldset {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.4rem;
+    border: 1px solid #aaa;
+}
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.social-grid a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease;
+}
+
+.social-grid a img:hover {
+    transform: scale(1.2);
+}
