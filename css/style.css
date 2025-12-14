@@ -131,25 +131,6 @@ body.win7 {
     word-break: break-word;
 }
 
-#startup-overlay {
-    align-items: center;
-    background: black;
-    display: flex;
-    height: 100%;
-    inset: 0;
-    justify-content: center;
-    position: fixed;
-    transition: opacity 0.6s ease;
-    width: 100%;
-    z-index: 5000;
-}
-
-#startup-overlay video {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-}
-
 .aol-gif {
     height: 20px;
     image-rendering: pixelated;
