@@ -139,7 +139,8 @@
                 </div>
                 <div class="window-body has-space has-scrollbar">
                     <div class="changelog-list">
-                        <p><b>[NEWEST]</b> 12/8/25 - added my own button and stuff</p>
+                        <p><b>[NEWEST]</b> 12/14/25 - rewritting the site a bit ig</p>
+                        <p>12/8/25 - added my own button and stuff</p>
                         <p>11/28/25 - added a increment iframe!!</p>
                         <p>11/28/25 - made the cool sites list a marquee thingie and also redid the swagplayer ui</p>
                         <p>11/28/25 - BOUGHT SQUIRRELZ.XYZ!!!!!</p>
@@ -239,28 +240,6 @@
                                 </div>
                             </div>
                         </article>
-
-                        <article role="tabpanel" id="tab-settings" hidden>
-                            <div class="group">
-                                <div>
-                                    <input type="checkbox" id="bootscreenSettingThing">
-                                    <label for="bootscreenSettingThing">Show Bootscreen</label>
-                                </div>
-                            </div>
-
-                            <section style="display: flex; justify-content: flex-end; gap: 6px">
-                                <button id="saveSettings">Save</button>
-                            </section>
-                        </article>
-
-                        <script>
-                            const bootscreenCheckbox = document.getElementById('bootscreenSettingThing');
-                            bootscreenCheckbox.checked = localStorage.getItem('skipBootscreen') !== 'true';
-                            document.getElementById('saveSettings').addEventListener('click', () => {
-                                localStorage.setItem('skipBootscreen', bootscreenCheckbox.checked ? 'false' : 'true');
-                                location.reload();
-                            });
-                        </script>
                     </section>
 
                 </div>
@@ -285,8 +264,6 @@
                     });
                 });
             </script>
-
-
         </div>
 
         <!--right-->
@@ -376,18 +353,12 @@
         </div>
     </div>
 
-    <div id="startup-overlay">
-        <video id="startup-video" src="/media/video/startup.mp4" autoplay muted playsinline>
-        </video>
-    </div>
     <script src="js/button-window-thingie.js"></script>
     <script src="js/last.fm.js"></script>
     <script src="js/time.js"></script>
     <script src="js/status.js"></script>
-    <script src="js/startup.js"></script>
     <script src="js/christmas-image.js"></script>
 
 </body>
 
 </html>
-
