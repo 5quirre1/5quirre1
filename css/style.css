@@ -1,7 +1,9 @@
+
 body.win7 {
     background: url("../img/retro.png") no-repeat center center fixed;
     background-size: cover;
     padding: 2.5rem;
+    --w7-w-bg: #805ba5;
 }
 
 .window.no-scroll .window-body {
@@ -137,7 +139,7 @@ body.win7 {
     margin-left: 0.5rem;
 }
 
-.column .window.glass {
+.column .window {
     width: 15.625rem;
 }
 
