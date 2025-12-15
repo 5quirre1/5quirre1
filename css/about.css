@@ -75,6 +75,11 @@
     font-style: italic;
 }
 
+.me-flag {
+    width: 15px;
+    height: 15px;
+}
+
 .me-fieldset {
     font-size: 0.7rem;
     padding: 0.2rem 0.4rem;
