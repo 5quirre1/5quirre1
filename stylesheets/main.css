@@ -75,12 +75,12 @@ figcaption {
     color: #555;
 }
 
-.text-flip-container {
+.text-change-container {
     display: inline-block;
     position: relative;
 }
 
-.text-flip-container img {
+.text-change-container img {
     position: absolute;
     left: -28px;
     top: 0;
