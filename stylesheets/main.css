@@ -15,6 +15,15 @@ hr {
     margin: 10px auto 0 auto;
 }
 
+a {
+    text-decoration: none;
+    color: #3D3D3D;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 .links {
     margin-top: 15px;
 }
@@ -22,13 +31,9 @@ hr {
 .links a {
     display: inline-block;
     margin: 0 15px;
-    text-decoration: none;
     font-size: 18px;
 }
 
-.links a:hover {
-    text-decoration: underline;
-}
 
 .container {
     display: flex;

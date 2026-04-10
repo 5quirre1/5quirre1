@@ -1,3 +1,4 @@
 @import "main.css";
 @import "tooltip.css";
-@import "side.css";
+@import "components/side.css";
+@import "components/about.css";

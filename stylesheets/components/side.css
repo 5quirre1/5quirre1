@@ -65,13 +65,14 @@
     to { transform: rotate(15deg); }
 }
 
+.side-links a,
+#lastfm-text a {
+    text-decoration: none;
+}
+
 .side-links a:hover,
 #lastfm-text a:hover {
     text-decoration: underline;
-}
-
-#lastfm-text a {
-    text-decoration: none;
 }
 
 .blinkies {
