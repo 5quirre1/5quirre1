@@ -85,3 +85,33 @@
     width: 150px;
     height: 20px;
 }
+
+.button-share {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 300px;
+}
+
+.button-share-inner {
+    display: flex;
+    gap: 0;
+}
+
+.button-share-inner img {
+    height: 31px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.button-share-inner textarea {
+    flex: 1;
+    height: 31px;
+    font-size: 10px;
+    font-family: monospace;
+    resize: none;
+    border: 1px solid #ccc;
+    padding: 2px 4px;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
