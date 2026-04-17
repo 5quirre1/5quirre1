@@ -1,0 +1,45 @@
+.misc-dropdown {
+    display: none;
+    overflow: hidden;
+    transition: max-height 0.35s ease-in-out, opacity 0.25s ease;
+    max-height: 0;
+    opacity: 0;
+    background: transparent;
+    width: 100%;
+}
+
+.misc-dropdown-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 12px 20px 16px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px 24px;
+    border-top: 1px solid #eee;
+}
+
+.misc-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.misc-links a {
+    display: inline-block;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+    color: #3D3D3D;
+    padding: 4px 0;
+}
+
+.misc-links a:hover {
+    text-decoration: underline;
+    color: #3D3D3D;
+}
+
+hr {
+    margin-bottom: 0;
+}
