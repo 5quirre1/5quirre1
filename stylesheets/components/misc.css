@@ -1,11 +1,16 @@
 .misc-dropdown {
-    display: none;
-    overflow: hidden;
-    transition: max-height 0.35s ease-in-out, opacity 0.25s ease;
     max-height: 0;
     opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.25s ease;
+    display: none;
     background: transparent;
     width: 100%;
+}
+
+.misc-dropdown.open {
+    display: block;
+    opacity: 1;
 }
 
 .misc-dropdown-inner {
