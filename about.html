@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about me</title>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/misc.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700&family=Yusei+Magic&display=swap"
         rel="stylesheet">
 </head>
-
 <body>
     <header>
         <h1>welcome to <b><i>squirrelz.xyz</i></b> !</h1>
@@ -21,9 +20,19 @@
     <div class="links">
         <a href="/">home</a>
         <a href="/about">about me</a>
+        <a href="" id="miscTrigger">misc</a>
     </div>
 
     <hr>
+
+    <div class="misc-dropdown" id="miscDropdown">
+        <div class="misc-dropdown-inner">
+            <div class="misc-links">
+                <a aria-disabled="true" href="/misc/interests">interests [WIP]</a>
+            </div>
+
+        </div>
+    </div>
 
     <div class="container">
         <section class="section main">
@@ -132,6 +141,6 @@
     <script src="js/hereyougobarrett.js"></script>
     <script src="js/about.js"></script>
     <script src="js/tooltip.js"></script>
+    <script src="js/misc.js"></script>
 </body>
-
 </html>
