@@ -24,6 +24,14 @@ a:hover {
     text-decoration: underline;
 }
 
+a[aria-disabled="true"] {
+    color: #aaa;
+    pointer-events: none;
+    cursor: not-allowed;
+    text-decoration: none;
+    opacity: 0.6;
+}
+
 .links {
     margin-top: 15px;
 }
