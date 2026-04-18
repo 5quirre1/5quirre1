@@ -1,0 +1,95 @@
+.amazing-albums {
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+}
+
+.amazing-albums-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.amazing-albums-content img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+.amazing-albums:hover .amazing-albums-content {
+    animation-play-state: paused;
+}
+
+.interests-side {
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.interests-side .about-card {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.interests-albums-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    width: 100%;
+}
+
+.interests-albums-caption {
+    font-size: 12px;
+    color: #888;
+}
+
+.interests-music-info .side-info {
+    width: 100%;
+    margin-top: 0;
+}
+
+.interests-music-info .side-label {
+    min-width: 64px;
+}
+
+.interests-warning {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #888;
+}
+
+.interests-warning img {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 30px;
+    margin-top: 18px;
+}
+
+.interests-section {
+    min-width: 0;
+}
+
+.interests-heading {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 14px;
+    margin: 0 0 6px 0;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #eee;
+}
+
+.interests-list {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: #3D3D3D;
+}

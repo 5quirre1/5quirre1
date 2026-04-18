@@ -14,25 +14,8 @@
 </head>
 
 <body>
-    <header>
-        <h1>welcome to <b><i>squirrelz.xyz</i></b> !</h1>
-    </header>
 
-    <div class="links">
-        <a href="/">home</a>
-        <a href="/about">about me</a>
-        <a href="" id="miscTrigger">misc</a>
-    </div>
-
-    <hr>
-
-    <div class="misc-dropdown" id="miscDropdown">
-        <div class="misc-dropdown-inner">
-            <div class="misc-links">
-                <a aria-disabled="true" href="/misc/interests">interests [WIP]</a>
-            </div>
-        </div>
-    </div>
+    <include src="/components/header.html"></include>
 
     <div class="container">
         <section class="section main">
@@ -98,13 +81,7 @@
                         <img src="assets/blinkies/underconstruction.gif">
                     </div>
                     <div class="side-row button-share-row">
-                        <div class="button-share">
-                            <div class="button-share-inner">
-                                <img data-tip="link to my site!!!" src="squirrelz.png">
-                                <textarea readonly
-                                    spellcheck="false"><a href="https://squirrelz.xyz" title="squirrelz"><img src="https://squirrelz.xyz/squirrelz.png"></a></textarea>
-                            </div>
-                        </div>
+                        <include src="/components/link_my_button.html">
                     </div>
                     <div class="side-row">
                         <img src="assets/icons/monitor.png">
@@ -115,19 +92,9 @@
         </section>
     </div>
 
-    <a data-tip="vanillamilkshake" href="https://vanillamilkshake.neocities.org"><img
-            src="https://files.catbox.moe/ij4w4u.png" width="88" height="31"></a>
-    <a data-tip="nomaakip" href="https://nomaakip.xyz"><img src="https://nomaakip.xyz/img/buttons/button2.png"
-            alt="button"></a>
-    <a href="https://crislzy.xyz/?button" data-tip="crislzy"><img src="https://crislzy.xyz/media/buttons/88x31.gif"></a>
-    <a href="https://mattware.nekoweb.org/" data-tip="mattware"><img
-            src="https://mattware.nekoweb.org/assets/img/buttons/mattware.gif"></a>
-    <a data-tip="wish13yt" href="https://wish13yt.github.io/"><img
-            src="https://wish13yt.github.io/media/button-light.png"></a>
-    <a data-tip="jbc" href="https://jbc.lol"><img src="https://jbc.lol/imgs/buttons/jbtn.svg" alt="jb's site" style="image-rendering: pixelated;"/></a>
-    <a data-tip="weirdlookingstar" href="https://weirdlookingstar.neocities.org"><img src="https://i.postimg.cc/SNvqjDhg/button.gif"></a>
-    <a data-tip="mpax235" href="https://mpax235.freakybob.site"><img src="https://mpax235.freakybob.site/assets/images/buttons/sitebutton.png" alt="mpax235's Website"></a>
+    <include src="/components/buttons.html"></include>
 
+    <script src="js/lib/include.js"></script>
     <script src="js/color-animation-thingie.js"></script>
     <script src="js/tooltip.js"></script>
     <script src="js/side-info.js"></script>

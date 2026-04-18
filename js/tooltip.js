@@ -2,11 +2,16 @@ let tooltip = null;
 let active = false;
 
 function initTooltip() {
-    tooltip = document.createElement('div');
-    tooltip.className = 'tooltip';
-    document.body.appendChild(tooltip);
+    if (!tooltip) {
+        tooltip = document.createElement('div');
+        tooltip.className = 'tooltip';
+        document.body.appendChild(tooltip);
+    }
 
     document.querySelectorAll('[data-tip]').forEach(el => {
+        if (el.dataset.tooltipBound) return;
+        el.dataset.tooltipBound = "1";
+
         el.addEventListener('mouseenter', e => {
             tooltip.textContent = el.dataset.tip;
             active = true;
@@ -15,6 +20,7 @@ function initTooltip() {
                 if (active) tooltip.style.opacity = 1;
             }, 50);
         });
+
         el.addEventListener('mousemove', moveTooltip);
         el.addEventListener('mouseleave', () => {
             active = false;
@@ -29,3 +35,4 @@ function moveTooltip(e) {
 }
 
 document.addEventListener('DOMContentLoaded', initTooltip);
+document.addEventListener('includesLoaded', initTooltip);
