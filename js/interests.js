@@ -3,9 +3,18 @@ function initAmazingAlbumsShit() {
     const container = document.querySelector('.amazing-albums');
     if (!content || !container) return;
 
-    const imgs = Array.from(content.querySelectorAll('img'));
-    const count = imgs.length;
-    if (count < 2) return;
+    const links = Array.from(content.querySelectorAll('a'));
+    const count = links.length;
+    if (count < 2) return;    
+    const shuffledIndices = [...Array(count).keys()].sort(() => Math.random() - 0.5);
+    
+    while (content.firstChild) {
+        content.removeChild(content.firstChild);
+    }
+    
+    shuffledIndices.forEach(index => {
+        content.appendChild(links[index]);
+    });
 
     const size = 150;
     const animName = 'album-alternate-dyn';
