@@ -36,13 +36,11 @@
     font-family: 'Radio Canada', sans-serif;
     font-size: 16px;
     text-decoration: none;
-    color: #3D3D3D;
     padding: 4px 0;
 }
 
 .misc-links a:hover {
     text-decoration: underline;
-    color: #3D3D3D;
 }
 
 hr {
