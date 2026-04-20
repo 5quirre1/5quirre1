@@ -19,57 +19,21 @@
     <div class="container">
         <section class="section main">
             <div class="text">
-                <h1 class="about-heading">my interests!!</h1>
-                <p>i have a bunch of interests in stuff like music, games, fandoms and i guess other random
-                    shit?? i really like to go thrifting and find some cool stuff (like cameras, phones, consoles or
-                    tech in general). i'm a chud and like to use ao3 to read gay shit and uhh yea i guess that's just some simple stuff LMFAO</p>
-
-
-                <div class="interests-grid">
-                    <div class="interests-section">
-                        <h2 class="interests-heading">games</h2>
-                        <ul class="interests-list">
-                            <li>slendytubbies</li>
-                            <li>cry of fear</li>
-                            <li>garry's mod</li>
-                            <li>tomodachi life</li>
-                        </ul>
-                    </div>
-                    <div class="interests-section">
-                        <h2 class="interests-heading">fandoms</h2>
-                        <ul class="interests-list">
-                            <li>slendytubbies</li>
-                            <li>slendytubbies</li>
-                            <li>slendytubbies</li>
-                            <li data-tip="yes i'm a woke evil furry CHUD">furry</li>
-                        </ul>
-                    </div>
-                </div>
+                <include src="components/interests/text.html"></include>
             </div>
+
             <div class="side interests-side">
-                <div class="about-card interests-albums-card">
+                <div class="interests-photo-albums">
+                    <div class="interests-photo-wrap">
+                        <img id="random-photo" data-tip="these are random btw....,." src="" alt="some random photo i took">
+                        <small class="interests-photo-caption">random photos i took</small>
+                    </div>
                     <div class="interests-albums-wrap">
                         <div class="amazing-albums">
-                            <include src="components/albums.html"></include>
+                            <include src="components/interests/albums.html"></include>
                         </div>
                         <small class="interests-albums-caption">some albums i like</small>
                     </div>
-                </div>
-                <div class="about-card interests-music-info">
-                    <div class="side-info">
-                        <div class="side-row">
-                            <span class="side-label">fav. genre</span>
-                            <span data-tip="post hardcore really">emo</span>
-                        </div>
-                        <div class="side-row">
-                            <span class="side-label">fav. artist</span>
-                            <span data-tip="i can't make up my mind LMFAO">idk</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-card interests-warning">
-                    <img src="/assets/icons/warning.png">
-                    <small>i was SUPER lazy with this</small>
                 </div>
             </div>
         </section>
@@ -80,7 +44,9 @@
     <script src="/js/lib/include.js"></script>
     <script src="/js/tooltip.js"></script>
     <script src="/js/misc.js"></script>
-    <script src="/js/interests.js"></script>
+    <script src="/js/misc/interests/albums.js"></script>
+    <script src="/js/misc/interests/rand-photo.js"></script>
+
 </body>
 
 </html>

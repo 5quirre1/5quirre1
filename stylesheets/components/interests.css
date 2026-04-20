@@ -6,7 +6,6 @@
 
 .amazing-albums-content {
     display: flex;
-    flex-direction: row;
 }
 
 .amazing-albums-content img {
@@ -22,13 +21,37 @@
 }
 
 .interests-side {
-    width: 150px;
+    width: 300px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.interests-photo-albums {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.interests-photo-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
     flex-shrink: 0;
 }
 
-.interests-side .about-card {
-    width: 100%;
-    box-sizing: border-box;
+.interests-photo-wrap img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.interests-photo-caption {
+    font-size: 12px;
+    color: #888;
 }
 
 .interests-albums-wrap {
@@ -36,7 +59,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 5px;
-    width: 100%;
+    flex-shrink: 0;
 }
 
 .interests-albums-caption {
@@ -44,27 +67,38 @@
     color: #888;
 }
 
-.interests-music-info .side-info {
-    width: 100%;
-    margin-top: 0;
+.interests-text-scroll {
+    height: 120px;
+    overflow-y: scroll !important;
+    transition: height 0.25s ease;
 }
 
-.interests-music-info .side-label {
-    min-width: 64px;
+.interests-text-scroll:hover {
+    height: 220px;
 }
 
-.interests-warning {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    color: #888;
+.interests-text-scroll::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
 }
 
-.interests-warning img {
-    width: 14px;
-    height: 14px;
-    flex-shrink: 0;
+.interests-text-scroll::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    border-radius: 0;
+}
+
+.interests-text-scroll::-webkit-scrollbar-thumb:hover {
+    background: #c0c0c0;
+}
+
+.interests-text-scroll p {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.interests-text-scroll p:last-child {
+    margin-bottom: 0;
 }
 
 .interests-grid {
@@ -90,6 +124,6 @@
     margin: 0;
     padding-left: 18px;
     font-size: 14px;
-    line-height: 1.8;
+    line-height: 1.2;
     color: #3D3D3D;
 }

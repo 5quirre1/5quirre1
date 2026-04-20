@@ -1,30 +1,23 @@
 function initAmazingAlbumsShit() {
     const content = document.querySelector('.amazing-albums-content');
     const container = document.querySelector('.amazing-albums');
+
     if (!content || !container) return;
 
-    const links = Array.from(content.querySelectorAll('a'));
-    const count = links.length;
-    if (count < 2) return;    
-    const shuffledIndices = [...Array(count).keys()].sort(() => Math.random() - 0.5);
-    
-    while (content.firstChild) {
-        content.removeChild(content.firstChild);
-    }
-    
-    shuffledIndices.forEach(index => {
-        content.appendChild(links[index]);
-    });
+    const links = Array.from(content.children);
+    if (links.length < 2) return;
+
+    const shuffled = [...links].sort(() => Math.random() - 0.5);
+    content.replaceChildren(...shuffled);
 
     const size = 150;
+    const count = links.length;
     const animName = 'album-alternate-dyn';
-
-    const existing = document.getElementById(animName);
-    if (existing) existing.remove();
-
-    const positions = [];
-    for (let i = 0; i < count; i++) positions.push(i);
-    for (let i = count - 2; i >= 0; i--) positions.push(i);
+    document.getElementById(animName)?.remove();
+    
+    const forward = [...Array(count).keys()];
+    const reverse = [...forward].reverse().slice(1, -1);
+    const positions = [...forward, ...reverse];
 
     const steps = positions.length;
 
@@ -32,15 +25,17 @@ function initAmazingAlbumsShit() {
     const holdDuration = 2.2;
 
     const totalDuration = steps * (slideDuration + holdDuration);
+    const stepPercent = 100 / steps;
+    const ratio = slideDuration / (slideDuration + holdDuration);
 
     let frames = '';
 
     positions.forEach((idx, i) => {
         const tx = -(idx * size);
 
-        const start = (i / steps) * 100;
-        const mid = start + (slideDuration / (slideDuration + holdDuration)) * (100 / steps);
-        const end = ((i + 1) / steps) * 100;
+        const start = i * stepPercent;
+        const mid = start + ratio * stepPercent;
+        const end = (i + 1) * stepPercent;
 
         frames += `
             ${start}% { transform: translateX(${tx}px); }
@@ -51,6 +46,7 @@ function initAmazingAlbumsShit() {
 
     const style = document.createElement('style');
     style.id = animName;
+
     style.textContent = `
         @keyframes ${animName} {
             ${frames}

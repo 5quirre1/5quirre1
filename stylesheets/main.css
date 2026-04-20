@@ -17,7 +17,7 @@ hr {
 
 a {
     text-decoration: none;
-    color: #3D3D3D;
+    color: #6b4e6b;
 }
 
 a:hover {
@@ -41,7 +41,6 @@ a[aria-disabled="true"] {
     margin: 0 15px;
     font-size: 18px;
 }
-
 
 .container {
     display: flex;
