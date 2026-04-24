@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/components/gallery.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700&family=Yusei+Magic&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <include src="/components/header.html"></include>
+
+    <div class="container">
+        <section class="section main">
+            <div class="text gallery-texty">
+                <p>this page has just a bunch of photos and possibly some videos that i have taken!!<br>
+                    <small>p.s. i might not really caption EVERYTHING but i'll try to caption random stuff</small>
+                </p>
+                <hr>
+
+                <div class="gallery-bar">
+                    <div class="gallery-stats">
+                        <span id="stat-total">*loading*</span>
+                        <span id="stat-months">*loading*</span>
+                        <span id="stat-years">*loading*</span>
+                    </div>
+                    <div class="gallery-filter">
+                        <label for="gallery-date-filter">date</label>
+                        <select id="gallery-date-filter">
+                            <option value="all">all</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="gallery-grid" id="gallery-grid">
+                    <p class="gallery-empty">loading...</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="gallery-lightbox" id="gallery-lightbox">
+        <span class="gallery-lightbox-close" id="gallery-lightbox-close">✕</span>
+        <div class="gallery-lightbox-img-wrap">
+            <img id="gallery-lightbox-prev" class="gallery-lightbox-arrow" src="/assets/icons/arrow-left.png" alt="prev">
+            <img id="gallery-lightbox-img" src="" alt="">
+            <img id="gallery-lightbox-next" class="gallery-lightbox-arrow" src="/assets/icons/arrow-right.png" alt="next">
+        </div>
+        <div class="gallery-lightbox-footer">
+            <span class="gallery-lightbox-counter" id="gallery-lightbox-counter"></span>
+            <span class="gallery-lightbox-meta" id="gallery-lightbox-meta"></span>
+        </div>
+    </div>
+
+    <include src="/components/buttons.html"></include>
+
+    <script src="/js/lib/include.js"></script>
+    <script src="/js/misc.js"></script>
+    <script src="/js/tooltip.js"></script>
+    <script src="/js/misc/gallery/gallery.js"></script>
+</body>
+
+</html>
