@@ -17,10 +17,12 @@ let currentPhotos = [];
 let currentIndex = 0;
 
 function formatDate(dateStr) {
-    const parts = dateStr.split('-');
-    return parts.length === 3
-        ? `${parts[1]}/${parts[2]}/${parts[0]}`
-        : `${parts[1]}/??/${parts[0]}`;
+    const parts = (dateStr || '').split('-')
+    const year  = parts[0] || '??';
+    const month = parts[1] || '??';
+    const day   = parts[2] || '??';
+
+    return `${month}/${day}/${year}`;
 }
 
 function formatMonthYear(dateStr) {
