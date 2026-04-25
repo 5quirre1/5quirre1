@@ -1,13 +1,22 @@
-const photos = [
-    '/assets/misc/photos-i-took/2026/102_0952.JPG',
-    '/assets/misc/photos-i-took/2026/102_0978.JPG',
-    '/assets/misc/photos-i-took/2026/102_0979.JPG',
-    '/assets/misc/photos-i-took/2026/102_1007.JPG',
-    '/assets/misc/photos-i-took/2026/PIC_0179.JPG',
-    '/assets/misc/photos-i-took/2026/PIC_0222.JPG',
-    '/assets/misc/photos-i-took/2026/PIC_0290.JPG',
-    '/assets/misc/photos-i-took/2026/PIC_0388.JPG',
-    '/assets/misc/photos-i-took/2026/PIC_0400.JPG',
-];
+fetch('components/gallery/photos.json')
+    .then(r => r.json())
+    .then(photos => {
+        const valid = photos.filter(p => p.src);
 
-document.getElementById('random-photo').src = photos[Math.floor(Math.random() * photos.length)];
+        const pick = valid[Math.floor(Math.random() * valid.length)];
+
+        const img = document.getElementById('random-photo');
+        img.src = pick.src;
+
+        const captionEl = document.querySelector('.interests-photo-caption');
+
+        if (pick.caption && pick.caption.trim() !== "") {
+            maybeMarquee(captionEl, pick.caption);
+        } else {
+            maybeMarquee(captionEl, "random photo i took");
+        }
+    })
+    .catch(() => {
+        const captionEl = document.querySelector('.interests-photo-caption');
+        maybeMarquee(captionEl, "failed to load photo");
+    });

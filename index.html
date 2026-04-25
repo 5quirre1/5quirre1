@@ -55,11 +55,30 @@
                     <img src="assets/misc/photos-i-took/2026/PIC_0290.JPG">
                     <figcaption>a picture i took at a park on easter 2026</figcaption>
                 </figure>
-
+                
+                <!--thank you wish (https://wish13yt.github.io/) for giving layout ideas!!!!!!! -->
                 <div class="side-info">
+                    <div class="site-stats">
+                        <div class="site-stat">
+                            <span class="site-stat-label">visits </span>
+                            <span class="site-stat-number" id="stat-visits">-</span>
+                        </div>
+                        <div class="site-stat">
+                            <span class="site-stat-label">unique </span>
+                            <span class="site-stat-number" id="stat-unique">-</span>
+                        </div>
+                        <div class="site-stat">
+                            <span class="site-stat-label">online </span>
+                            <span class="site-stat-number" id="stat-online">-</span>
+                        </div>
+                    </div>
                     <div class="side-row">
                         <span class="side-label">time</span>
-                        <span id="local-time"></span>
+                        <span id="local-time-main"></span>
+                        <span> | </span>
+                        <span class="side-marquee-wrap">
+                            <span id="local-time-extra"></span>
+                        </span>
                     </div>
 
                     <div class="side-row">
@@ -93,11 +112,12 @@
     </div>
 
     <include src="/components/buttons.html"></include>
-    
+
     <script src="https://sc.squirrelz.xyz/track.js?key=squirrel"></script>
-    
+
     <script src="js/lib/include.js"></script>
     <script src="js/color-animation-thingie.js"></script>
+    <script src="js/maybemarquee.js"></script>
     <script src="js/tooltip.js"></script>
     <script src="js/side-info.js"></script>
     <script src="js/misc.js"></script>

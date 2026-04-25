@@ -1,15 +1,5 @@
 const CHUNGUSMEID = '1484384790735093831';
 
-function maybeMarquee(el) {
-    el.style.display = 'inline-block';
-    el.style.whiteSpace = 'nowrap';
-    requestAnimationFrame(() => {
-        if (el.scrollWidth > el.parentElement.clientWidth) {
-            el.classList.add('marquee-text');
-        }
-    });
-}
-
 fetch(`https://api.lanyard.rest/v1/users/${CHUNGUSMEID}`)
     .then(r => r.json())
     .then(d => {

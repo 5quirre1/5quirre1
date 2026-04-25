@@ -1,32 +1,71 @@
 function updateTime() {
-    const time = new Date().toLocaleTimeString('en-US', {
+    const now = new Date();
+
+    const laFormatter = new Intl.DateTimeFormat('en-US', {
         timeZone: 'America/Los_Angeles',
         hour: 'numeric',
         minute: '2-digit',
         second: '2-digit',
-        hour12: true
+        hour12: true,
+        timeZoneName: 'short'
     });
-    document.getElementById('local-time').textContent = time;
+
+    const parts = laFormatter.formatToParts(now);
+
+    let timeStr = "";
+    let tzName = "";
+
+    for (const p of parts) {
+        if (p.type !== "timeZoneName") {
+            timeStr += p.value;
+        } else {
+            tzName = p.value;
+        }
+    }
+
+    const laTime = new Date(now.toLocaleString("en-US", { timeZone: "America/Los_Angeles" }));
+    const localTime = new Date();
+
+    const diffMs = laTime - localTime;
+    const diffHours = diffMs / (1000 * 60 * 60);
+
+    let diffText = "";
+
+    if (Math.abs(diffHours) < 0.1) {
+        diffText = "you have the same timezone!!";
+    } else {
+        const rounded = Math.round(diffHours);
+        if (rounded > 0) {
+            diffText = `${rounded}h ahead of you`;
+        } else {
+            diffText = `${Math.abs(rounded)}h behind you`;
+        }
+    }
+
+    document.getElementById('local-time-main').textContent = `${timeStr} ${tzName}`;
+    maybeMarquee(document.getElementById('local-time-extra'), diffText);
 }
+
 updateTime();
 setInterval(updateTime, 1000);
 
-function maybeMarquee(el, text, links) {
-    if (links) {
-        el.innerHTML = links;
-    } else {
-        el.textContent = text;
-    }
-    el.style.display = 'inline-block';
-    el.style.whiteSpace = 'nowrap';
-
-    requestAnimationFrame(() => {
-        const wrap = el.parentElement;
-        if (el.scrollWidth > wrap.clientWidth) {
-            el.classList.add('marquee-text');
-        }
-    });
+function fetchStats() {
+    fetch('https://sc.squirrelz.xyz/api/v1/stats?key=squirrel')
+        .then(r => r.json())
+        .then(d => {
+            document.getElementById('stat-visits').textContent = d.total_visits ?? '-';
+            document.getElementById('stat-unique').textContent = d.unique_visitors ?? '-';
+            document.getElementById('stat-online').textContent = d.on_site ?? '-';
+        })
+        .catch(() => {
+            ['stat-visits', 'stat-unique', 'stat-online'].forEach(id => {
+                document.getElementById(id).textContent = '-';
+            });
+        });
 }
+fetchStats();
+setInterval(fetchStats, 30000);
+
 
 fetch('https://status.cafe/users/squirrel/status.json')
     .then(r => r.json())

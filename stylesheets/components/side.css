@@ -2,12 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: 300px;
 }
 
 .side-info {
     margin-top: 10px;
     font-size: 14px;
-    width: 300px;
+    width: 100%;
 }
 
 .side-row {
@@ -75,8 +76,36 @@
     text-decoration: underline;
 }
 
+.site-stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.site-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+}
+
+.site-stat-number {
+    font-size: 14px;
+    font-weight: 600;
+    color: #3D3D3D;
+    line-height: 1;
+}
+
+.site-stat-label {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
 .blinkies {
-    margin-top: 10px;
+    margin-top: 4px;
     display: flex;
     width: 300px;
 }
@@ -84,6 +113,11 @@
 .blinkies img {
     width: 150px;
     height: 20px;
+}
+
+.button-share-row {
+    margin-top: 2px;
+    margin-bottom: -10px;
 }
 
 .button-share {

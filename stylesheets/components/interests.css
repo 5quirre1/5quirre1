@@ -40,6 +40,8 @@
     align-items: flex-start;
     gap: 5px;
     flex-shrink: 0;
+    width: 150px;
+    overflow: hidden;
 }
 
 .interests-photo-wrap img {
