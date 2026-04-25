@@ -37,6 +37,16 @@ function formatCount(num, word) {
     return `<strong>${num}</strong> ${word}${num === 1 ? '' : 's'}`;
 }
 
+function maybeMarquee(el) {
+    el.style.display = 'inline-block';
+    requestAnimationFrame(() => {
+        el.classList.toggle(
+            'marquee-text',
+            el.scrollWidth > el.parentElement.clientWidth
+        );
+    });
+}
+
 function openLightbox(index) {
     currentIndex = index;
     const photo = currentPhotos[currentIndex];
