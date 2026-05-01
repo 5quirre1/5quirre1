@@ -1,0 +1,303 @@
+.blog-side {
+    width: 300px;
+    flex-shrink: 0;
+    font-size: 14px;
+}
+
+.blog-side-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #888;
+    width: 300px;
+}
+
+.blog-side-bar strong {
+    color: #3D3D3D;
+    font-weight: 600;
+}
+
+.blog-filter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.blog-filter label {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.blog-filter select {
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 13px;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
+    color: #3D3D3D;
+    padding: 2px 4px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.blog-filter select:hover {
+    border-bottom-color: #aaa;
+}
+
+.blog-side-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 170px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 300px;
+}
+
+.blog-card {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    width: 300px;
+    box-sizing: border-box;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.blog-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.blog-card-thumb {
+    width: 300px;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+    background: #f5f5f5;
+}
+
+.blog-card-thumb-placeholder {
+    width: 300px;
+    height: 120px;
+    background: #f0f0f0;
+}
+
+.blog-card-body {
+    width: 300px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.blog-card-title-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.blog-card-new {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+}
+
+.blog-card-title {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 12px;
+    color: #3D3D3D;
+    flex-shrink: 0;
+    max-width: 55%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.blog-card-sep {
+    color: #ccc;
+    font-size: 11px;
+    flex-shrink: 0;
+}
+
+.blog-card-date {
+    font-size: 11px;
+    color: #aaa;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.blog-card-desc-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.blog-card-desc {
+    font-size: 12px;
+    color: #888;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.blog-card:hover .blog-card-title {
+    text-decoration: underline;
+}
+
+.blog-side hr {
+    width: 300px;
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 6px 0;
+}
+
+.blog-empty {
+    font-size: 13px;
+    color: #888;
+    padding: 10px 0;
+    text-align: center;
+    width: 300px;
+}
+
+.blog-post-wrap {
+    max-width: 620px;
+    width: 100%;
+    text-align: left;
+}
+
+.blog-post-header {
+    margin-bottom: 20px;
+}
+
+.blog-post-header-top {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 8px;
+}
+
+.blog-post-header-hr {
+    width: 100% !important;
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 0;
+}
+
+.blog-post-back {
+    font-size: 13px;
+    color: #888;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.blog-post-back:hover {
+    color: #3D3D3D;
+    text-decoration: none;
+}
+
+.blog-post-bar-sep {
+    font-size: 13px;
+    color: #ddd;
+    flex-shrink: 0;
+}
+
+.blog-post-title-wrap {
+    flex: 1;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.blog-post-title-marquee {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 13px;
+    color: #3D3D3D;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.blog-post-bar-date {
+    font-size: 11px;
+    color: #aaa;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.blog-post-body {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #3D3D3D;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.blog-post-body h1,
+.blog-post-body h2,
+.blog-post-body h3 {
+    font-family: 'Yusei Magic', sans-serif;
+    font-weight: 400;
+    margin: 24px 0 10px 0;
+}
+
+.blog-post-body h1 { font-size: 18px; }
+.blog-post-body h2 { font-size: 16px; }
+.blog-post-body h3 { font-size: 14px; }
+
+.blog-post-body p { margin: 0 0 14px 0; }
+
+.blog-post-body img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 14px 0;
+}
+
+.blog-post-body ul,
+.blog-post-body ol {
+    margin: 0 0 14px 0;
+    padding-left: 20px;
+    line-height: 1.9;
+}
+
+.blog-post-body blockquote {
+    margin: 0 0 14px 0;
+    padding: 6px 14px;
+    border-left: 2px solid #eee;
+    color: #888;
+    font-style: italic;
+}
+
+.blog-post-body code {
+    font-family: monospace;
+    font-size: 13px;
+    background: #f5f5f5;
+    padding: 1px 4px;
+}
+
+.blog-post-body pre {
+    background: #f5f5f5;
+    padding: 12px;
+    overflow-x: auto;
+    margin: 0 0 14px 0;
+}
+
+.blog-post-body pre code {
+    background: none;
+    padding: 0;
+}
