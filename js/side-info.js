@@ -66,11 +66,36 @@ function fetchStats() {
 fetchStats();
 setInterval(fetchStats, 30000);
 
+function linksOnly(html) {
+    const temp = document.createElement('div');
+    temp.innerHTML = html;
 
+    temp.querySelectorAll('*').forEach(node => {
+        if (node.tagName !== 'A') {
+            node.replaceWith(document.createTextNode(node.textContent));
+        } else {
+            const href = node.getAttribute('href') || '';
+            if (!href.startsWith('http://') && !href.startsWith('https://')) {
+                node.removeAttribute('href');
+            }
+            node.setAttribute('target', '_blank');
+            node.setAttribute('rel', 'noopener noreferrer');
+        }
+    });
+
+    return temp.innerHTML;
+}
 fetch('https://status.cafe/users/squirrel/status.json')
     .then(r => r.json())
-    .then(d => maybeMarquee(document.getElementById('status-text'), d.content || 'no status'))
-    .catch(() => document.getElementById('status-text').textContent = 'unavailable');
+    .then(d => {
+        const el = document.getElementById('status-text');
+        const content = d.content || 'no status';
+
+        maybeMarquee(el, null, linksOnly(content));
+    })
+    .catch(() => {
+        document.getElementById('status-text').textContent = 'unavailable';
+    });
 
 fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=squirre1z&api_key=4204a2d9b89f985f6b47c29f913dd463&format=json&limit=1')
     .then(r => r.json())
