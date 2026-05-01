@@ -28,7 +28,7 @@ fetch(`https://api.lanyard.rest/v1/users/${CHUNGUSMEID}`)
         if (customStatus) {
             emojiEl.textContent = customStatus.emoji?.name ?? '';
             textEl.textContent = customStatus.state || '';
-            maybeMarquee(textEl);
+            maybeMarquee(textEl, textEl.textContent);
         } else {
             emojiEl.textContent = '';
             textEl.textContent = 'no status';
