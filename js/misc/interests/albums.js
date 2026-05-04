@@ -1,8 +1,26 @@
-function initAmazingAlbumsShit() {
+async function loadAlbums() {
+    const res = await fetch('/misc/components/interests/albums.json');
+    if (!res.ok) throw new Error('Failed to load albums JSON');
+    return await res.json();
+}
+
+function renderAlbums(albums, content) {
+    content.innerHTML = albums.map(album => `
+        <a data-tip="${album.tip}" href="${album.href}">
+            <img src="${album.img}">
+        </a>
+    `).join('');
+}
+
+async function initAmazingAlbumsShit() {
     const content = document.querySelector('.amazing-albums-content');
     const container = document.querySelector('.amazing-albums');
 
     if (!content || !container) return;
+
+    const albums = await loadAlbums();
+
+    renderAlbums(albums, content);
 
     const links = Array.from(content.children);
     if (links.length < 2) return;
@@ -14,7 +32,7 @@ function initAmazingAlbumsShit() {
     const count = links.length;
     const animName = 'album-alternate-dyn';
     document.getElementById(animName)?.remove();
-    
+
     const forward = [...Array(count).keys()];
     const reverse = [...forward].reverse().slice(1, -1);
     const positions = [...forward, ...reverse];
@@ -67,6 +85,8 @@ function initAmazingAlbumsShit() {
     container.addEventListener('mouseleave', () => {
         content.style.animationPlayState = 'running';
     });
+
+    initTooltip();
 }
 
 document.addEventListener('includesLoaded', initAmazingAlbumsShit);
