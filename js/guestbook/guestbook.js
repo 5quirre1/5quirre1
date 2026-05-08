@@ -8,6 +8,13 @@ const statusEl = document.getElementById('gb-status');
 const colorInput = document.getElementById('gb-color-input');
 const colorPreview = document.getElementById('gb-color-preview');
 
+document.getElementById('gb-name').disabled = true;
+document.getElementById('gb-site').disabled = true;
+document.getElementById('gb-message').disabled = true;
+document.getElementById('gb-color-input').disabled = true;
+submitBtn.disabled = true;
+statusEl.textContent = 'guestbook is read only right now.';
+
 colorInput.addEventListener('input', () => {
     colorPreview.style.background = colorInput.value;
 });
@@ -140,7 +147,7 @@ ${replyHtml}
         })
         .catch(() => {
             loadingEl.textContent =
-                "guestbook is down because of the retarded edgy fags spamming my shit with some bullshit LOL";
+                "couldn't load messages..";
         });
 }
 
