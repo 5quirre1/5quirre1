@@ -137,7 +137,7 @@ ${replyHtml}
             });
         })
         .catch(() => {
-            loadingEl.textContent = 'guestbook is down because of the retarded edgy fags spamming my shit with some bullshit LOL';
+            loadingEl.textContent = "guestbook is down because of the retarded edgy fags spamming my shit with some bullshit LOL";
         }};
 }
 
