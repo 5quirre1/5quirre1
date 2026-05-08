@@ -1,0 +1,258 @@
+.gb-texty {
+    max-width: 860px;
+    width: 100%;
+    text-align: center;
+}
+
+.gb-texty>p {
+    margin: 0 0 14px 0;
+}
+
+.gb-texty hr {
+    margin: 18px auto;
+    width: 100%;
+}
+
+.gb-main {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+}
+
+.gb-composer,
+.gb-messages-side {
+    flex: 1;
+    min-width: 0;
+    max-width: calc(50% - 30px);
+}
+
+.gb-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.gb-form-row {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e8e8e8;
+}
+
+.gb-form-row label {
+    font-size: 10px;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 6px 12px 5px;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fafafa;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.gb-color-swatch {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    cursor: pointer;
+    border: 1px solid #d0d0d0;
+    display: inline-block;
+}
+
+.gb-color-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.gb-form-row input,
+.gb-form-row textarea {
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 14px;
+    border: 0;
+    outline: none;
+    padding: 8px 12px;
+    background: transparent;
+    color: #3D3D3D;
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.gb-form-row textarea {
+    height: 90px;
+    line-height: 1.6;
+}
+
+.gb-form-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.gb-submit {
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 13px;
+    color: #3D3D3D;
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 7px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.gb-submit:hover {
+    border-color: #999;
+}
+
+.gb-submit:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.gb-status {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+}
+
+.gb-messages-side {
+    display: flex;
+    flex-direction: column;
+}
+
+.gb-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 340px;
+    overflow-y: scroll;
+}
+
+.gb-messages-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.gb-post {
+    border: 1px solid #eee;
+    padding: 10px 12px;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.gb-post-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.gb-post-icon {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    display: block;
+}
+
+.gb-post-name {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0;
+    overflow: visible;
+}
+
+.gb-name-url {
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 11px;
+    max-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition:
+        max-width 0.3s ease,
+        margin-left 0.3s ease;
+    opacity: 0;
+    margin-left: 0;
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.gb-post-name:hover .gb-name-url {
+    max-width: 180px;
+    opacity: 1;
+    margin-left: 5px;
+}
+
+.gb-post-date {
+    font-size: 11px;
+    color: #bbb;
+    white-space: nowrap;
+}
+
+.gb-post-message {
+    font-size: 14px;
+    color: #3D3D3D;
+    line-height: 1.7;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.gb-reply {
+    margin-top: 2px;
+    border: 1px solid #eee;
+    padding: 8px 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.gb-reply-header {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.gb-reply-name {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 12px;
+    color: #888;
+}
+
+.gb-reply-date {
+    font-size: 11px;
+    color: #bbb;
+}
+
+.gb-reply-message {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.6;
+    word-wrap: break-word;
+}
+
+.gb-footer {
+    margin-top: 14px;
+    font-size: 12px;
+    color: #aaa;
+    text-align: center;
+    width: 100%;
+}
+
+.gb-footer strong {
+    color: #3D3D3D;
+    font-weight: 600;
+}
