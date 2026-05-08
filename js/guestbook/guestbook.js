@@ -71,8 +71,10 @@ function loadPosts() {
             listEl.querySelectorAll('.gb-dynamic').forEach(el => el.remove());
 
             const posts = Array.isArray(data) ? data : Object.values(data).reverse();
-            const statLabel = document.getElementById('gb-stat-label')
+
+            const statLabel = document.getElementById('gb-stat-label');
             const count = posts.length;
+
             statCount.textContent = count;
             statLabel.textContent = count === 1 ? 'message' : 'messages';
 
@@ -137,8 +139,9 @@ ${replyHtml}
             });
         })
         .catch(() => {
-            loadingEl.textContent = "guestbook is down because of the retarded edgy fags spamming my shit with some bullshit LOL";
-        }};
+            loadingEl.textContent =
+                "guestbook is down because of the retarded edgy fags spamming my shit with some bullshit LOL";
+        });
 }
 
 loadPosts();
