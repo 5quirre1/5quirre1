@@ -137,8 +137,8 @@ ${replyHtml}
             });
         })
         .catch(() => {
-            loadingEl.textContent = 'could not load messages.';
-        });
+            loadingEl.textContent = 'guestbook is down because of the retarded edgy fags spamming my shit with some bullshit LOL';
+        }};
 }
 
 loadPosts();
