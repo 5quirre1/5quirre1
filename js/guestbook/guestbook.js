@@ -60,8 +60,8 @@ function safeDate(d) {
     return isNaN(date.getTime()) ? new Date() : date;
 }
 
-document.getElementById('gb-pinned-date').textContent =
-    fmt(new Date()).split(',')[0];
+const PINNED_DATE = '2026-05-07T23:03:00';
+document.getElementById('gb-pinned-date').textContent = fmt(new Date(PINNED_DATE));
 
 function loadPosts() {
     fetch(SCRIPT_URL)
