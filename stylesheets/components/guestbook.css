@@ -257,11 +257,3 @@
     color: #3D3D3D;
     font-weight: 600;
 }
-
-.gb-turnstile {
-    width: 100%;
-}
-
-.gb-turnstile iframe {
-    width: 100% !important;
-}

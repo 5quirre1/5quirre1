@@ -1,5 +1,4 @@
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx4aTQ2epOi_afXIRjU54SALrEvZh0aZvJ2LPsggaURhAMLgcg-tJEr4Ag3rGazEUkw/exec';
-const SITE_KEY = '0x4AAAAAADIp1p2xoPO0lVSa';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz3SZzVolV4mbg_1fxUbJ--Xv4hrNxxCtDBVuNKA69Ggd0mE08RqnzdHoeoGxIYc9I6/exec';
 
 const listEl = document.getElementById('gb-list');
 const loadingEl = document.getElementById('gb-loading');
@@ -10,7 +9,6 @@ const statusEl = document.getElementById('gb-status');
 const colorInput = document.getElementById('gb-color-input');
 const colorPreview = document.getElementById('gb-color-preview');
 
-let turnstileWidget = null;
 let clientIp = 'unknown';
 
 (async function () {
@@ -18,36 +16,18 @@ let clientIp = 'unknown';
         clientIp = (await fetch('https://api64.ipify.org').then(r => r.text())).trim();
     } catch {
         clientIp = 'unknown';
+        console.error("getting the ip didn't work.");
     }
 })();
 
 colorInput.addEventListener('input', () => colorPreview.style.background = colorInput.value);
 colorPreview.addEventListener('click', () => colorInput.click());
 
-document.addEventListener('includesLoaded', () => {
-    const container = document.getElementById('gb-turnstile');
-    if (!container || !window.turnstile) return;
-    turnstileWidget = turnstile.render(container, {
-        sitekey: SITE_KEY,
-        theme: 'light',
-        size: 'normal'
-    });
-});
-
 function fmt(iso) {
     const d = new Date(iso);
     if (isNaN(d.getTime())) return '';
     return `${d.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })}, ` +
         `${d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })}`;
-}
-
-function escHtml(str) {
-    return String(str ?? '')
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
-        .replace(/'/g, '&#039;');
 }
 
 function safeColor(c) {
@@ -62,9 +42,6 @@ function cleanUrl(url) {
     } catch { return null; }
 }
 
-const PINNED_DATE = '2026-05-07T23:03:00';
-document.getElementById('gb-pinned-date').textContent = fmt(new Date(PINNED_DATE));
-
 function buildPost(p) {
     const post = document.createElement('div');
     post.className = 'gb-post gb-dynamic';
@@ -73,9 +50,8 @@ function buildPost(p) {
     const href = cleanUrl(p.site);
     const siteDisplay = href ? href.replace(/^https?:\/\//, '').replace(/\/$/, '') : '';
 
-    const nameEl = document.createElement('span');
-    nameEl.className = 'gb-post-name';
-    nameEl.style.color = color;
+    const header = document.createElement('div');
+    header.className = 'gb-post-header';
 
     if (href) {
         const a = document.createElement('a');
@@ -94,45 +70,26 @@ function buildPost(p) {
         urlSpan.textContent = siteDisplay;
 
         a.append(nameSpan, urlSpan);
-        nameEl.replaceWith(a);
-
-        post.innerHTML = '';
-        const header = document.createElement('div');
-        header.className = 'gb-post-header';
-        header.append(a);
-
-        const dateSpan = document.createElement('span');
-        dateSpan.className = 'gb-post-date';
-        dateSpan.textContent = fmt(new Date(p.date));
-
-        header.appendChild(dateSpan);
-
-        const msgDiv = document.createElement('div');
-        msgDiv.className = 'gb-post-message';
-        msgDiv.textContent = p.message;
-
-        post.append(header, msgDiv);
+        header.appendChild(a);
     } else {
-        const header = document.createElement('div');
-        header.className = 'gb-post-header';
-
         const nameSpan = document.createElement('span');
         nameSpan.className = 'gb-post-name';
         nameSpan.style.color = color;
         nameSpan.textContent = p.name;
-
-        const dateSpan = document.createElement('span');
-        dateSpan.className = 'gb-post-date';
-        dateSpan.textContent = fmt(new Date(p.date));
-
-        header.append(nameSpan, dateSpan);
-
-        const msgDiv = document.createElement('div');
-        msgDiv.className = 'gb-post-message';
-        msgDiv.textContent = p.message;
-
-        post.append(header, msgDiv);
+        header.appendChild(nameSpan);
     }
+
+    const dateSpan = document.createElement('span');
+    dateSpan.className = 'gb-post-date';
+    dateSpan.textContent = fmt(new Date(p.date));
+
+    header.appendChild(dateSpan);
+
+    const msgDiv = document.createElement('div');
+    msgDiv.className = 'gb-post-message';
+    msgDiv.textContent = p.message;
+
+    post.append(header, msgDiv);
 
     if (p.reply) {
         const replyDiv = document.createElement('div');
@@ -140,11 +97,6 @@ function buildPost(p) {
 
         const replyHeader = document.createElement('div');
         replyHeader.className = 'gb-reply-header';
-
-        const acorn = document.createElement('img');
-        acorn.src = '/assets/icons/acorn.png';
-        acorn.className = 'gb-post-icon';
-        acorn.setAttribute('data-tip', 'squirrel');
 
         const rName = document.createElement('span');
         rName.className = 'gb-reply-name';
@@ -154,7 +106,7 @@ function buildPost(p) {
         rDate.className = 'gb-reply-date';
         rDate.textContent = p.replyDate ? fmt(new Date(p.replyDate)) : '';
 
-        replyHeader.append(acorn, rName, rDate);
+        replyHeader.append(rName, rDate);
 
         const rMsg = document.createElement('div');
         rMsg.className = 'gb-reply-message';
@@ -187,8 +139,6 @@ function loadPosts() {
             }
 
             posts.forEach(p => listEl.appendChild(buildPost(p)));
-
-            if (window.initTooltip) initTooltip();
         })
         .catch(() => {
             if (loadingEl) loadingEl.textContent = "couldn't load messages..";
@@ -208,16 +158,10 @@ submitBtn.addEventListener('click', async () => {
         return;
     }
 
-    const token = turnstileWidget !== null ? turnstile.getResponse(turnstileWidget) : '';
-    if (!token) {
-        statusEl.textContent = 'please complete the captcha.';
-        return;
-    }
-
     submitBtn.disabled = true;
     statusEl.textContent = 'signing.......';
 
-    const payload = JSON.stringify({ name, message, site, color, token, ip: clientIp });
+    const payload = JSON.stringify({ name, message, site, color, ip: clientIp });
 
     try {
         await fetch(SCRIPT_URL, {
@@ -229,9 +173,8 @@ submitBtn.addEventListener('click', async () => {
 
         statusEl.textContent = 'signed!! reloading...';
         setTimeout(() => location.reload(), 1500);
-    } catch (err) {
+    } catch {
         statusEl.textContent = 'something went wrong, try again.';
-        if (turnstileWidget !== null) turnstile.reset(turnstileWidget);
         submitBtn.disabled = false;
     }
 });
