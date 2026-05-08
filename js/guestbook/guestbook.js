@@ -1,44 +1,47 @@
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzlBvQvuzQAY5k70iyQGYl_0PmRxBWdM2L4kP73go7uKskGKBzTyjx9mBoL2FX5jgz1/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx4aTQ2epOi_afXIRjU54SALrEvZh0aZvJ2LPsggaURhAMLgcg-tJEr4Ag3rGazEUkw/exec';
+const SITE_KEY = '0x4AAAAAADIp1p2xoPO0lVSa';
 
 const listEl = document.getElementById('gb-list');
 const loadingEl = document.getElementById('gb-loading');
 const statCount = document.getElementById('gb-stat-count');
+const statLabel = document.getElementById('gb-stat-label');
 const submitBtn = document.getElementById('gb-submit');
 const statusEl = document.getElementById('gb-status');
 const colorInput = document.getElementById('gb-color-input');
 const colorPreview = document.getElementById('gb-color-preview');
 
-document.getElementById('gb-name').disabled = true;
-document.getElementById('gb-site').disabled = true;
-document.getElementById('gb-message').disabled = true;
-document.getElementById('gb-color-input').disabled = true;
-submitBtn.disabled = true;
-statusEl.textContent = 'guestbook is read only right now.';
+let turnstileWidget = null;
+let clientIp = 'unknown';
 
-colorInput.addEventListener('input', () => {
-    colorPreview.style.background = colorInput.value;
-});
+(async function () {
+    try {
+        clientIp = (await fetch('https://api64.ipify.org').then(r => r.text())).trim();
+    } catch {
+        clientIp = 'unknown';
+    }
+})();
 
-colorPreview.addEventListener('click', () => {
-    colorInput.click();
+colorInput.addEventListener('input', () => colorPreview.style.background = colorInput.value);
+colorPreview.addEventListener('click', () => colorInput.click());
+
+document.addEventListener('includesLoaded', () => {
+    const container = document.getElementById('gb-turnstile');
+    if (!container || !window.turnstile) return;
+    turnstileWidget = turnstile.render(container, {
+        sitekey: SITE_KEY,
+        theme: 'light',
+        size: 'normal'
+    });
 });
 
 function fmt(iso) {
     const d = new Date(iso);
     if (isNaN(d.getTime())) return '';
-
-    return `${d.toLocaleDateString('en-US', {
-        month: '2-digit',
-        day: '2-digit',
-        year: 'numeric'
-    })}, ${d.toLocaleTimeString('en-US', {
-        hour: 'numeric',
-        minute: '2-digit',
-        hour12: true
-    })}`;
+    return `${d.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })}, ` +
+        `${d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })}`;
 }
 
-function escapeHtml(str) {
+function escHtml(str) {
     return String(str ?? '')
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
@@ -47,28 +50,122 @@ function escapeHtml(str) {
         .replace(/'/g, '&#039;');
 }
 
-function safeColor(color) {
-    return /^#[0-9a-fA-F]{6}$/.test(color) ? color : '#3D3D3D';
+function safeColor(c) {
+    return /^#[0-9a-fA-F]{6}$/.test(c) ? c : '#3D3D3D';
 }
 
 function cleanUrl(url) {
     if (!url) return null;
     try {
         const u = new URL(url.startsWith('http') ? url : 'https://' + url);
-        if (u.protocol !== 'http:' && u.protocol !== 'https:') return null;
-        return u.href;
-    } catch {
-        return null;
-    }
-}
-
-function safeDate(d) {
-    const date = new Date(d);
-    return isNaN(date.getTime()) ? new Date() : date;
+        return (u.protocol === 'http:' || u.protocol === 'https:') ? u.href : null;
+    } catch { return null; }
 }
 
 const PINNED_DATE = '2026-05-07T23:03:00';
 document.getElementById('gb-pinned-date').textContent = fmt(new Date(PINNED_DATE));
+
+function buildPost(p) {
+    const post = document.createElement('div');
+    post.className = 'gb-post gb-dynamic';
+
+    const color = safeColor(p.color);
+    const href = cleanUrl(p.site);
+    const siteDisplay = href ? href.replace(/^https?:\/\//, '').replace(/\/$/, '') : '';
+
+    const nameEl = document.createElement('span');
+    nameEl.className = 'gb-post-name';
+    nameEl.style.color = color;
+
+    if (href) {
+        const a = document.createElement('a');
+        a.href = href;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.className = 'gb-post-name';
+        a.style.cssText = `color:${color};text-decoration:none;`;
+
+        const nameSpan = document.createElement('span');
+        nameSpan.textContent = p.name;
+
+        const urlSpan = document.createElement('span');
+        urlSpan.className = 'gb-name-url';
+        urlSpan.style.color = color;
+        urlSpan.textContent = siteDisplay;
+
+        a.append(nameSpan, urlSpan);
+        nameEl.replaceWith(a);
+
+        post.innerHTML = '';
+        const header = document.createElement('div');
+        header.className = 'gb-post-header';
+        header.append(a);
+
+        const dateSpan = document.createElement('span');
+        dateSpan.className = 'gb-post-date';
+        dateSpan.textContent = fmt(new Date(p.date));
+
+        header.appendChild(dateSpan);
+
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'gb-post-message';
+        msgDiv.textContent = p.message;
+
+        post.append(header, msgDiv);
+    } else {
+        const header = document.createElement('div');
+        header.className = 'gb-post-header';
+
+        const nameSpan = document.createElement('span');
+        nameSpan.className = 'gb-post-name';
+        nameSpan.style.color = color;
+        nameSpan.textContent = p.name;
+
+        const dateSpan = document.createElement('span');
+        dateSpan.className = 'gb-post-date';
+        dateSpan.textContent = fmt(new Date(p.date));
+
+        header.append(nameSpan, dateSpan);
+
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'gb-post-message';
+        msgDiv.textContent = p.message;
+
+        post.append(header, msgDiv);
+    }
+
+    if (p.reply) {
+        const replyDiv = document.createElement('div');
+        replyDiv.className = 'gb-reply';
+
+        const replyHeader = document.createElement('div');
+        replyHeader.className = 'gb-reply-header';
+
+        const acorn = document.createElement('img');
+        acorn.src = '/assets/icons/acorn.png';
+        acorn.className = 'gb-post-icon';
+        acorn.setAttribute('data-tip', 'squirrel');
+
+        const rName = document.createElement('span');
+        rName.className = 'gb-reply-name';
+        rName.textContent = 'squirrel';
+
+        const rDate = document.createElement('span');
+        rDate.className = 'gb-reply-date';
+        rDate.textContent = p.replyDate ? fmt(new Date(p.replyDate)) : '';
+
+        replyHeader.append(acorn, rName, rDate);
+
+        const rMsg = document.createElement('div');
+        rMsg.className = 'gb-reply-message';
+        rMsg.textContent = p.reply;
+
+        replyDiv.append(replyHeader, rMsg);
+        post.appendChild(replyDiv);
+    }
+
+    return post;
+}
 
 function loadPosts() {
     fetch(SCRIPT_URL)
@@ -78,12 +175,8 @@ function loadPosts() {
             listEl.querySelectorAll('.gb-dynamic').forEach(el => el.remove());
 
             const posts = Array.isArray(data) ? data : Object.values(data).reverse();
-
-            const statLabel = document.getElementById('gb-stat-label');
-            const count = posts.length;
-
-            statCount.textContent = count;
-            statLabel.textContent = count === 1 ? 'message' : 'messages';
+            statCount.textContent = posts.length;
+            if (statLabel) statLabel.textContent = posts.length === 1 ? 'message' : 'messages';
 
             if (!posts.length) {
                 const empty = document.createElement('div');
@@ -93,61 +186,12 @@ function loadPosts() {
                 return;
             }
 
-            posts.forEach(p => {
-                const post = document.createElement('div');
-                post.className = 'gb-post gb-dynamic';
+            posts.forEach(p => listEl.appendChild(buildPost(p)));
 
-                const color = safeColor(p.color);
-                const name = escapeHtml(p.name);
-                const message = escapeHtml(p.message);
-                const reply = escapeHtml(p.reply);
-
-                const safeHref = cleanUrl(p.site);
-                const hasSite = !!safeHref;
-
-                const siteText = escapeHtml(
-                    safeHref ? safeHref.replace(/^https?:\/\//, '') : ''
-                );
-
-                const nameInner = hasSite
-                    ? `
-<a href="${safeHref}" target="_blank" rel="noopener noreferrer"
-   class="gb-post-name" style="color:${color};text-decoration:none;">
-    <span>${name}</span>
-    <span class="gb-name-url" style="color:${color};">${siteText}</span>
-</a>`
-                    : `<span class="gb-post-name" style="color:${color}">${name}</span>`;
-
-                const replyHtml = p.reply
-                    ? `
-<div class="gb-reply">
-    <div class="gb-reply-header">
-        <img data-tip="squirrel" src="/assets/icons/acorn.png" class="gb-post-icon">
-        <span class="gb-reply-name">squirrel</span>
-        <span class="gb-reply-date">
-            ${p.replyDate ? fmt(safeDate(p.replyDate)) : ''}
-        </span>
-    </div>
-    <div class="gb-reply-message">${reply}</div>
-</div>`
-                    : '';
-
-                post.innerHTML = `
-<div class="gb-post-header">
-    ${nameInner}
-    <span class="gb-post-date">${fmt(safeDate(p.date))}</span>
-</div>
-<div class="gb-post-message">${message}</div>
-${replyHtml}
-`;
-
-                listEl.appendChild(post);
-                initTooltip();
-            });
+            if (window.initTooltip) initTooltip();
         })
         .catch(() => {
-            loadingEl.textContent =
-                "couldn't load messages..";
+            if (loadingEl) loadingEl.textContent = "couldn't load messages..";
         });
 }
 
@@ -164,31 +208,30 @@ submitBtn.addEventListener('click', async () => {
         return;
     }
 
+    const token = turnstileWidget !== null ? turnstile.getResponse(turnstileWidget) : '';
+    if (!token) {
+        statusEl.textContent = 'please complete the captcha.';
+        return;
+    }
+
     submitBtn.disabled = true;
     statusEl.textContent = 'signing.......';
+
+    const payload = JSON.stringify({ name, message, site, color, token, ip: clientIp });
 
     try {
         await fetch(SCRIPT_URL, {
             method: 'POST',
-            headers: { 'Content-Type': 'text/plain' },
-            body: JSON.stringify({ name, message, site, color })
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
+            body: payload
         });
 
-        document.getElementById('gb-name').value = '';
-        document.getElementById('gb-site').value = '';
-        document.getElementById('gb-message').value = '';
-        colorInput.value = '#3D3D3D';
-        colorPreview.style.background = '#3D3D3D';
-
-        statusEl.textContent = 'signed!!';
-
-        setTimeout(() => {
-            location.reload();
-        }, 800);
-
-    } catch {
+        statusEl.textContent = 'signed!! reloading...';
+        setTimeout(() => location.reload(), 1500);
+    } catch (err) {
         statusEl.textContent = 'something went wrong, try again.';
-    } finally {
+        if (turnstileWidget !== null) turnstile.reset(turnstileWidget);
         submitBtn.disabled = false;
     }
 });

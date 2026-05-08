@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +8,9 @@
     <link rel="stylesheet" href="/stylesheets/components/guestbook.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700&family=Yusei+Magic&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700&family=Yusei+Magic&display=swap" rel="stylesheet">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
-
 <body>
     <include src="/components/header.html"></include>
 
@@ -29,30 +26,25 @@
                             <div class="gb-form-row">
                                 <label for="gb-name">
                                     name
-                                    <span class="gb-color-swatch" id="gb-color-preview"
-                                        style="background:#3D3D3D;"></span>
+                                    <span class="gb-color-swatch" id="gb-color-preview" style="background:#3D3D3D;"></span>
                                     <input type="color" class="gb-color-input" id="gb-color-input" value="#3D3D3D">
                                 </label>
                                 <input type="text" id="gb-name" maxlength="60" required placeholder="your name">
                             </div>
                             <div class="gb-form-row">
-                                <label for="gb-site">website <span
-                                        style="color:#d0d0d0;font-size:9px;text-transform:none;letter-spacing:0;">(optional)</span></label>
-                                <input type="text" id="gb-site" maxlength="100"
-                                    placeholder="https://yourAMAZINGswagpeaksitehere.chud">
+                                <label for="gb-site">website <span style="color:#d0d0d0;font-size:9px;text-transform:none;letter-spacing:0;">(optional)</span></label>
+                                <input type="text" id="gb-site" maxlength="100" placeholder="https://yourAMAZINGswagpeaksitehere.chud">
                             </div>
                             <div class="gb-form-row">
                                 <label for="gb-message">message</label>
-                                <textarea id="gb-message" maxlength="500" required
-                                    placeholder="say something!!"></textarea>
+                                <textarea id="gb-message" maxlength="500" required placeholder="say something!!"></textarea>
                             </div>
                         </div>
                         <div class="gb-form-bottom">
+                            <div id="gb-turnstile" class="gb-turnstile"></div>
                             <button class="gb-submit" id="gb-submit">sign</button>
                             <span class="gb-status" id="gb-status"></span>
-                            <small>please be respectful when signing my guestbook i don't want to see some weird shit or
-                                whatever, if something's weird PLEASE tell me. i mean that's kinda all, this is a
-                                guestbook LMFAO</small>
+                            <small>please be respectful when signing my guestbook i don't want to see some weird shit or whatever, if something's weird PLEASE tell me. i mean that's kinda all, this is a guestbook LMFAO</small>
                         </div>
                     </div>
 
@@ -65,10 +57,8 @@
                                     <span class="gb-post-name" style="color:#3D3D3D;">squirrel</span>
                                     <span class="gb-post-date" id="gb-pinned-date"></span>
                                 </div>
-                                <div class="gb-post-message">hi welcome to my guestbook!! feel free to write anything
-                                    like if you found bugs or just all that random shit you do in a guestbook LOL</div>
+                                <div class="gb-post-message">hi welcome to my guestbook!! feel free to write anything like if you found bugs or just all that random shit you do in a guestbook LOL</div>
                             </div>
-                            <hr>
                             <div class="gb-messages-empty" id="gb-loading">loading.....</div>
                         </div>
                     </div>
@@ -76,7 +66,7 @@
 
                 <hr>
                 <div class="gb-footer">
-                    <strong id="gb-stat-count">**loading.....**</strong>
+                    <strong id="gb-stat-count">—</strong>
                     <span id="gb-stat-label">messages</span>
                 </div>
             </div>
@@ -86,11 +76,9 @@
     <include src="/components/buttons.html"></include>
 
     <script src="https://sc.squirrelz.xyz/track.js?key=squirrel"></script>
-
     <script src="/js/lib/include.js"></script>
     <script src="/js/tooltip.js"></script>
     <script src="/js/misc.js"></script>
     <script src="/js/guestbook/guestbook.js"></script>
 </body>
-
 </html>
