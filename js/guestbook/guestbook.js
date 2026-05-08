@@ -71,7 +71,10 @@ function loadPosts() {
             listEl.querySelectorAll('.gb-dynamic').forEach(el => el.remove());
 
             const posts = Array.isArray(data) ? data : Object.values(data).reverse();
-            statCount.textContent = posts.length;
+            const statLabel = document.getElementById('gb-stat-label')
+            const count = posts.length;
+            statCount.textContent = count;
+            statLabel.textContent = count === 1 ? 'message' : 'messages';
 
             if (!posts.length) {
                 const empty = document.createElement('div');
