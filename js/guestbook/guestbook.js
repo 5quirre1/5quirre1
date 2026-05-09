@@ -177,7 +177,7 @@ submitBtn.addEventListener('click', async () => {
     const color = colorInput.value;
 
     if (isRateLimited()) {
-        statusEl.textContent = "you're rate limited — wait a bit before posting again";
+        statusEl.textContent = "you're rate limited - wait a bit before posting again";
         return;
     }
 
@@ -211,7 +211,7 @@ submitBtn.addEventListener('click', async () => {
             submitBtn.disabled = false;
 
             if (data.error === 'rate limited') {
-                statusEl.textContent = "you're rate limited — try again in ~15 minutes";
+                statusEl.textContent = "you're rate limited - try again in ~15 minutes";
                 return;
             }
 
