@@ -56,8 +56,9 @@ function safeColor(c) {
 
 function cleanUrl(url) {
     if (!url) return null;
+
     try {
-        const u = new URL(url.startsWith('http') ? url : 'https://' + url);
+        const u = new URL(url);
         return (u.protocol === 'http:' || u.protocol === 'https:') ? u.href : null;
     } catch {
         return null;
