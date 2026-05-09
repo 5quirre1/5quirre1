@@ -56,7 +56,6 @@ function safeColor(c) {
 
 function cleanUrl(url) {
     if (!url) return null;
-
     try {
         const u = new URL(url.startsWith('http') ? url : 'https://' + url);
         return (u.protocol === 'http:' || u.protocol === 'https:') ? u.href : null;
@@ -68,18 +67,24 @@ function cleanUrl(url) {
 const PINNED_DATE = '2026-05-07T23:03:00';
 document.getElementById('gb-pinned-date').textContent = fmt(new Date(PINNED_DATE));
 
-function buildPost(p) {
+function buildPost(p, isNewest = false) {
     const post = document.createElement('div');
     post.className = 'gb-post gb-dynamic';
 
     const color = safeColor(p.color);
     const href = cleanUrl(p.site);
-    const siteDisplay = href
-        ? href.replace(/^https?:\/\//, '').replace(/\/$/, '')
-        : '';
+    const siteDisplay = href ? href.replace(/^https?:\/\//, '').replace(/\/$/, '') : '';
 
     const header = document.createElement('div');
     header.className = 'gb-post-header';
+
+    if (isNewest) {
+        const newIcon = document.createElement('img');
+        newIcon.src = '/assets/icons/new.png';
+        newIcon.className = 'gb-post-icon';
+        newIcon.dataset.tip = 'newest message';
+        header.appendChild(newIcon);
+    }
 
     if (href) {
         const a = document.createElement('a');
@@ -159,7 +164,7 @@ function loadPosts() {
             loadingEl?.remove();
             listEl.querySelectorAll('.gb-dynamic').forEach(el => el.remove());
 
-            const posts = Array.isArray(data) ? data : Object.values(data).reverse();
+            const posts = (Array.isArray(data) ? data : Object.values(data)).sort((a, b) => new Date(b.date) - new Date(a.date));
 
             statCount.textContent = posts.length;
             if (statLabel) statLabel.textContent = posts.length === 1 ? 'message' : 'messages';
@@ -172,7 +177,7 @@ function loadPosts() {
                 return;
             }
 
-            posts.forEach(p => listEl.appendChild(buildPost(p)));
+            posts.forEach((p, i) => listEl.appendChild(buildPost(p, i === 0)));
             initTooltip();
         })
         .catch(() => {
