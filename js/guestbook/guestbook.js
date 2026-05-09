@@ -58,7 +58,7 @@ function cleanUrl(url) {
     if (!url) return null;
 
     try {
-        const u = new URL(url);
+        const u = new URL(url.startsWith('http') ? url : 'https://' + url);
         return (u.protocol === 'http:' || u.protocol === 'https:') ? u.href : null;
     } catch {
         return null;
@@ -74,7 +74,9 @@ function buildPost(p) {
 
     const color = safeColor(p.color);
     const href = cleanUrl(p.site);
-    const siteDisplay = href ? href.replace(/^https?:\/\//, '').replace(/\/$/, '') : '';
+    const siteDisplay = href
+        ? href.replace(/^https?:\/\//, '').replace(/\/$/, '')
+        : '';
 
     const header = document.createElement('div');
     header.className = 'gb-post-header';
