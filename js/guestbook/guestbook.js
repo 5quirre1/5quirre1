@@ -64,6 +64,9 @@ function cleanUrl(url) {
     }
 }
 
+const PINNED_DATE = '2026-05-07T23:03:00';
+document.getElementById('gb-pinned-date').textContent = fmt(new Date(PINNED_DATE));
+
 function buildPost(p) {
     const post = document.createElement('div');
     post.className = 'gb-post gb-dynamic';
