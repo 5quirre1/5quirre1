@@ -170,6 +170,7 @@ function loadPosts() {
             }
 
             posts.forEach(p => listEl.appendChild(buildPost(p)));
+            initTooltip();
         })
         .catch(() => {
             if (loadingEl) loadingEl.textContent = "couldn't load messages..";
