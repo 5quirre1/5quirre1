@@ -213,7 +213,9 @@ fetch(ALBUMS_JSON)
 
                 const i = +entry.target.dataset.index;
 
-                entry.target.replaceWith(buildCard(data[i]));
+                const card = buildCard(data[i]);
+                entry.target.replaceWith(card);
+                initTooltip();
                 observer.unobserve(entry.target);
             });
         }, {
