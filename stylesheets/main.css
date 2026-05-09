@@ -22,13 +22,15 @@
     height: 0;
     width: 0;
 }
+
 body {
     font-family: 'Radio Canada', sans-serif;
     text-align: center;
     margin: 0;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'Yusei Magic', sans-serif;
 }
 
@@ -138,4 +140,14 @@ figcaption {
 
 .colored.animated {
     transform: scale(1.2);
+}
+
+.marquee-text {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
 }

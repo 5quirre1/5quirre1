@@ -35,16 +35,6 @@
     min-width: 0;
 }
 
-.marquee-text {
-    display: inline-block;
-    animation: marquee 10s linear infinite;
-}
-
-@keyframes marquee {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
-}
-
 .music-icon {
     width: 16px;
     height: 16px;
