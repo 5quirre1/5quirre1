@@ -123,6 +123,11 @@ function buildPost(p) {
         const replyHeader = document.createElement('div');
         replyHeader.className = 'gb-reply-header';
 
+        const rSquirrelIcon = document.createElement('img');
+        rSquirrelIcon.src = '/assets/icons/acorn.png';
+        rSquirrelIcon.className = 'gb-post-icon';
+        rSquirrelIcon.dataset.tip = 'squirrel';
+
         const rName = document.createElement('span');
         rName.className = 'gb-reply-name';
         rName.textContent = 'squirrel';
@@ -131,7 +136,7 @@ function buildPost(p) {
         rDate.className = 'gb-reply-date';
         rDate.textContent = p.replyDate ? fmt(new Date(p.replyDate)) : '';
 
-        replyHeader.append(rName, rDate);
+        replyHeader.append(rSquirrelIcon, rName, rDate);
 
         const rMsg = document.createElement('div');
         rMsg.className = 'gb-reply-message';
