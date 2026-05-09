@@ -1,4 +1,4 @@
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz3SZzVolV4mbg_1fxUbJ--Xv4hrNxxCtDBVuNKA69Ggd0mE08RqnzdHoeoGxIYc9I6/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbywxZ15POGRVQRBaGXPvYCoA33TQgx8N3cIDqBwf2wjj4r23BKcWn_4DU6Xlpilv5ms/exec';
 
 const listEl = document.getElementById('gb-list');
 const loadingEl = document.getElementById('gb-loading');
@@ -11,23 +11,43 @@ const colorPreview = document.getElementById('gb-color-preview');
 
 let clientIp = 'unknown';
 
+function getClientId() {
+    let id = localStorage.getItem('gb_client_id');
+    if (!id) {
+        id = crypto.randomUUID();
+        localStorage.setItem('gb_client_id', id);
+    }
+    return id;
+}
+
 (async function () {
     try {
         clientIp = (await fetch('https://api64.ipify.org').then(r => r.text())).trim();
     } catch {
         clientIp = 'unknown';
-        console.error("getting the ip didn't work.");
     }
 })();
 
-colorInput.addEventListener('input', () => colorPreview.style.background = colorInput.value);
+colorInput.addEventListener('input', () => {
+    colorPreview.style.background = colorInput.value;
+});
+
 colorPreview.addEventListener('click', () => colorInput.click());
+
+function isRateLimited() {
+    const last = localStorage.getItem('gb_last_submit');
+    if (!last) return false;
+    return Date.now() - Number(last) < 15 * 60 * 1000;
+}
+
+function setRateLimit() {
+    localStorage.setItem('gb_last_submit', Date.now().toString());
+}
 
 function fmt(iso) {
     const d = new Date(iso);
     if (isNaN(d.getTime())) return '';
-    return `${d.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })}, ` +
-        `${d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })}`;
+    return `${d.toLocaleDateString('en-US', { month: '2-digit', day: '2-digit', year: 'numeric' })}, ${d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true })}`;
 }
 
 function safeColor(c) {
@@ -39,7 +59,9 @@ function cleanUrl(url) {
     try {
         const u = new URL(url.startsWith('http') ? url : 'https://' + url);
         return (u.protocol === 'http:' || u.protocol === 'https:') ? u.href : null;
-    } catch { return null; }
+    } catch {
+        return null;
+    }
 }
 
 function buildPost(p) {
@@ -127,6 +149,7 @@ function loadPosts() {
             listEl.querySelectorAll('.gb-dynamic').forEach(el => el.remove());
 
             const posts = Array.isArray(data) ? data : Object.values(data).reverse();
+
             statCount.textContent = posts.length;
             if (statLabel) statLabel.textContent = posts.length === 1 ? 'message' : 'messages';
 
@@ -153,28 +176,60 @@ submitBtn.addEventListener('click', async () => {
     const message = document.getElementById('gb-message').value.trim();
     const color = colorInput.value;
 
+    if (isRateLimited()) {
+        statusEl.textContent = "you're rate limited — wait a bit before posting again";
+        return;
+    }
+
     if (!name || !message) {
         statusEl.textContent = 'name and message are required.';
         return;
     }
 
     submitBtn.disabled = true;
-    statusEl.textContent = 'signing.......';
+    statusEl.textContent = 'signing...';
 
-    const payload = JSON.stringify({ name, message, site, color, ip: clientIp });
+    const payload = JSON.stringify({
+        name,
+        message,
+        site,
+        color,
+        ip: clientIp,
+        clientId: getClientId()
+    });
 
     try {
-        await fetch(SCRIPT_URL, {
+        const res = await fetch(SCRIPT_URL, {
             method: 'POST',
-            mode: 'no-cors',
             headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
             body: payload
         });
 
+        const data = await res.json();
+
+        if (!data.ok) {
+            submitBtn.disabled = false;
+
+            if (data.error === 'rate limited') {
+                statusEl.textContent = "you're rate limited — try again in ~15 minutes";
+                return;
+            }
+
+            if (data.error === 'missing fields') {
+                statusEl.textContent = "missing name or message";
+                return;
+            }
+
+            statusEl.textContent = data.error || "something went wrong.";
+            return;
+        }
+
+        setRateLimit();
+
         statusEl.textContent = 'signed!! reloading...';
-        setTimeout(() => location.reload(), 1500);
+        setTimeout(() => location.reload(), 1200);
     } catch {
-        statusEl.textContent = 'something went wrong, try again.';
         submitBtn.disabled = false;
+        statusEl.textContent = 'network error. try again';
     }
 });
