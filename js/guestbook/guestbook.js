@@ -1,4 +1,4 @@
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxs831WRn58pKtSDWvgp3E5-hmFv30XZ5WtXXHajcM9GnQHEwK2V_76YfU7LEfZ5_1Y/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw0ETo8HeXTmIdRb-jWSkpBwRHXBEuyELhAlSECjKsKT570N23EQCCqXQ0q39Iw5eDt/exec';
 
 const listEl = document.getElementById('gb-list');
 const loadingEl = document.getElementById('gb-loading');
