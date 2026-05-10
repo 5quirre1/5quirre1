@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backrooms</title>
+
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/components/backrooms.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700&family=Yusei+Magic&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <button class="volume-btn" id="volumeBtn">
+        <img src="/assets/icons/volume-playing.png" id="volumeIcon" alt="volume">
+    </button>
+
+    <audio id="ambience" src="/assets/misc/backrooms/sfx/ambience.mp3" loop></audio>
+
+    <include src="/components/header.html"></include>
+
+    <div class="backrooms-title">Backrooms</div>
+
+    <div class="backrooms-description">
+        After a therapist's patient disappears into a dimension beyond reality,
+        she must venture into the unknown to save him.
+    </div>
+
+    <div class="container">
+
+        <section class="section main">
+
+            <div class="main-left">
+                <img src="/assets/misc/backrooms/img/main.png" class="main-image">
+
+                <div class="text">
+                    <p>
+                        <a href="https://www.imdb.com/title/tt26657236/">The Backrooms</a>
+                        is a movie directed by
+                        <a href="https://en.wikipedia.org/wiki/Kane_Parsons">Kane Parsons (Kane Pixels)</a>
+                        featuring people such as
+                        <a href="https://en.wikipedia.org/wiki/Mark_Duplass">Mark Duplass</a>,
+                        <a href="https://en.wikipedia.org/wiki/Chiwetel_Ejiofor">Chiwetel Ejiofor</a>,
+                        and <a href="https://en.wikipedia.org/wiki/Renate_Reinsve">Renate Reinsve</a>.
+                    </p>
+                </div>
+
+                <img src="/assets/misc/backrooms/backrooms1.png" class="main-image">
+            </div>
+
+            <div class="side-panel">
+                <div class="poster-window">
+                    <div class="poster-track" id="posterSlider">
+                        <img src="/assets/misc/backrooms/posters/1.png">
+                        <img src="/assets/misc/backrooms/posters/2.png">
+                        <img src="/assets/misc/backrooms/posters/3.png">
+                    </div>
+                </div>
+
+                <div class="release-text" id="releaseText"></div>
+
+                <div class="side-info">
+                    <div class="text">
+                        <p>
+                            <a href="https://en.wikipedia.org/wiki/The_Backrooms">The Backrooms</a> is a fictional
+                            internet horror concept that originated from a 2019 4chan post.
+                            It describes an endless, maze-like expanse of empty, liminal rooms that can be entered by
+                            "noclipping" out of reality.<br>
+                            It started to become more popular and people started to make wikis, games and the most
+                            notable thing is the series made by <a href="https://www.youtube.com/@kanepixels">Kane
+                                Pixels</a>.
+                        </p>
+                        <p>
+                            I'm EXTREMELY excited for this movie and I have super high hopes for this movie just because
+                            the director IS Kane Parsons. I think it's going to genuinely be one of the best movies I
+                            would've seen in a long time dude...
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="tuff-line">
+        Are You Ready?
+    </div>
+
+    <include src="/components/buttons.html"></include>
+
+    <script src="/js/lib/include.js"></script>
+    <script src="/js/maybemarquee.js"></script>
+    <script src="/js/misc.js"></script>
+    <script src="/js/tooltip.js"></script>
+    <script src="/js/misc/backrooms/poster-animation.js"></script>
+    <script src="/js/misc/backrooms/player.js"></script>
+
+</body>
+
+</html>
