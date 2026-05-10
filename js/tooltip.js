@@ -30,8 +30,23 @@ function initTooltip() {
 }
 
 function moveTooltip(e) {
-    tooltip.style.left = (window.scrollX + e.clientX + 14) + 'px';
-    tooltip.style.top  = (window.scrollY + e.clientY + 14) + 'px';
+    const padding = 12;
+
+    const rect = tooltip.getBoundingClientRect();
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+
+    let x = e.clientX + padding;
+    let y = e.clientY + padding;
+
+    if (x + rect.width > vw) x = e.clientX - rect.width - padding;
+    if (y + rect.height > vh) y = e.clientY - rect.height - padding;
+
+    if (x < padding) x = padding;
+    if (y < padding) y = padding;
+
+    tooltip.style.left = x + window.scrollX + 'px';
+    tooltip.style.top = y + window.scrollY + 'px';
 }
 
 document.addEventListener('DOMContentLoaded', initTooltip);
