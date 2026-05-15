@@ -1,0 +1,127 @@
+.warning-wrap {
+    max-width: 560px;
+    margin: 60px auto 60px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.warning-title {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 28px;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.warning-title img {
+    width: 28px;
+    height: 28px;
+}
+
+.warning-text {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+.warning-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 15px;
+    margin-top: 16px;
+    align-items: flex-start;
+}
+
+.warning-links a {
+    color: #6b4e6b;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.warning-links a:hover {
+    text-decoration: underline;
+}
+
+.monkey-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#monkeyLink {
+    color: #c0392b;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.quiz-yn {
+    display: none;
+    gap: 20px;
+    justify-content: center;
+}
+
+.quiz-yn.visible {
+    display: flex;
+}
+
+.quiz-yn a {
+    color: #6b4e6b;
+    cursor: pointer;
+    font-size: 15px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.quiz-yn a:hover {
+    text-decoration: underline;
+}
+
+.quiz-input {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.quiz-input.visible {
+    display: flex;
+}
+
+.quiz-input input {
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 14px;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    outline: none;
+    padding: 4px 8px;
+    background: transparent;
+    color: #3d3d3d;
+    width: 260px;
+    text-align: center;
+}
+
+.quiz-input input:focus {
+    border-bottom-color: #aaa;
+}
+
+.quiz-input a {
+    color: #c0392b;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.quiz-input a:hover {
+    text-decoration: underline;
+}

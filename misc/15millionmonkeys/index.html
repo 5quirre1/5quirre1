@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>warning</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/components/15millionmonkeys.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700&family=Yusei+Magic&display=swap"
+        rel="stylesheet">
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <include src="/components/header.html"></include>
+
+    <div class="warning-wrap">
+        <h1 class="warning-title">
+            <img src="/assets/icons/warning.png" alt="">
+            HOLD ON STOP
+            <img src="/assets/icons/warning.png" alt="">
+        </h1>
+        <p class="warning-text">
+            the next page is going to genuinely load 15 million monkeys and is most likely going to make your laptop
+            kill itself. if some shit breaks or whatever, that is on YOU. you decided to come to this page, you broke
+            that shit LOL so like yea that's your choice
+        </p>
+        <p class="warning-text">
+            again, <strong>THIS IS GOING TO LOAD 15 MILLION MONKEYS AT THE SAME TIME.</strong>
+        </p>
+
+        <div class="warning-links">
+            <div class="monkey-col">
+                <a id="monkeyLink">i understand show me the monkeys</a>
+                <div class="quiz-yn" id="quizYN">
+                    <a id="quizYes">yes</a>
+                    <a id="quizNo">no</a>
+                </div>
+                <div class="quiz-input" id="quizInput">
+                    <input type="text" id="quizAnswer" placeholder="type your answer...">
+                    <a id="quizSubmit">submit</a>
+                </div>
+            </div>
+            <a href="/">ok i'm sorry take me home</a>
+        </div>
+    </div>
+
+    <include src="/components/buttons.html"></include>
+
+    <script src="/js/lib/include.js"></script>
+    <script src="/js/maybemarquee.js"></script>
+    <script src="/js/misc.js"></script>
+    <script src="/js/tooltip.js"></script>
+    <script src="/js/misc/15millionmonkeys/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>15 million monkeys</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #fff;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .monkey {
+            position: absolute;
+            width: 80px;
+            height: auto;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const W = window.innerWidth;
+        const H = window.innerHeight;
+        const SRC = '/assets/misc/15millionmonkeys/monkey.png';
+
+        const frag = document.createDocumentFragment();
+
+        for (let i = 0; i < 15_000_000; i++) {
+            const img = document.createElement('img');
+            img.src = SRC;
+            img.className = 'monkey';
+            img.style.left = Math.random() * W + 'px';
+            img.style.top = Math.random() * H + 'px';
+            frag.appendChild(img);
+        }
+
+        document.body.appendChild(frag);
+    </script>
+</body>
+
+</html>
