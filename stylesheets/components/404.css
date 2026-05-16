@@ -1,0 +1,17 @@
+.section.main {
+    text-align: center;
+    margin: 20px;
+}
+
+.text h1 {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 64px;
+    margin: 0 0 10px 0;
+}
+
+.text p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.5;
+    margin: 0;
+}
