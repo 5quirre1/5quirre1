@@ -1,0 +1,58 @@
+.credits-wrap {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+.credits-intro {
+    font-size: 14px;
+    color: #888;
+    line-height: 1.7;
+    margin: 0 0 40px 0;
+}
+
+.credits-block {
+    margin-bottom: 44px;
+}
+
+.credits-block h3 {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0 0 6px 0;
+}
+
+.credits-block hr {
+    width: 100%;
+    margin: 0 0 22px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.credits-entries {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.credits-entry {
+    font-size: 14px;
+    display: flex;
+    align-items: baseline;
+    gap: 0;
+}
+
+.credits-entry a {
+    flex-shrink: 0;
+}
+
+.credits-entry-sep {
+    color: #ccc;
+    margin: 0 8px;
+    flex-shrink: 0;
+}
+
+.credits-entry span {
+    color: #aaa;
+    font-size: 13px;
+}
