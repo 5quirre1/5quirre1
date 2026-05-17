@@ -1,0 +1,131 @@
+.bucket-webring {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 140px;
+    height: 18px;
+    box-sizing: border-box;
+    padding: 0 5px;
+    gap: 3px;
+    position: relative;
+    overflow: hidden;
+    background: #2a2a2a;
+    border: 1px solid #444;
+}
+
+.bucket-webring::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 202, 202, 0.18) 15%,
+            rgba(255, 237, 193, 0.18) 30%,
+            rgba(254, 255, 184, 0.18) 45%,
+            rgba(196, 255, 203, 0.18) 60%,
+            rgba(173, 216, 255, 0.18) 75%,
+            rgba(204, 175, 233, 0.18) 90%,
+            transparent 100%);
+    background-size: 200% 100%;
+    animation: bw-sweep 4s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes bw-sweep {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.bucket-webring a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 8px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    font-family: 'Radio Canada', sans-serif;
+    position: relative;
+    z-index: 1;
+    line-height: 1;
+}
+
+.bucket-webring a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bucket-webring-center {
+    flex: 1;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 8px;
+    font-family: 'Radio Canada', sans-serif;
+    position: relative;
+    z-index: 1;
+    line-height: 1;
+}
+
+.bucket-webring-char {
+    position: relative;
+    display: inline-block;
+    color: #ffcaca;
+    animation: bw-wave 1.5s linear var(--bw-n) infinite, bw-rainbow 3s linear var(--bw-n) infinite;
+}
+
+@keyframes bw-wave {
+    0% {
+        top: 0px;
+    }
+
+    25% {
+        top: -1px;
+    }
+
+    50% {
+        top: 0px;
+    }
+
+    75% {
+        top: 1px;
+    }
+
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes bw-rainbow {
+    0% {
+        color: #ffcaca;
+    }
+
+    17% {
+        color: #ffedc1;
+    }
+
+    33% {
+        color: #feffb8;
+    }
+
+    50% {
+        color: #c4ffcb;
+    }
+
+    67% {
+        color: #add8ff;
+    }
+
+    83% {
+        color: #ccafe9;
+    }
+
+    100% {
+        color: #ffcaca;
+    }
+}

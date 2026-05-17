@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about me</title>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/about/about.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -22,9 +23,9 @@
             <div class="text">
                 <h1 class="about-heading">about me</h1>
                 <p>hi i'm squirrel!!!</p>
-                <p>i'm a random teenager on the web that lives in the evil state of washington.<br>i like to spend my
-                    time
-                    rotting away in my room either talking to my friends or working on some random shit.<br>when i'm not
+                <p>i'm a random person on the web that lives in the evil state of washington.<br>i like to spend my
+                    time rotting away in my room either talking to my friends or working on some random shit.<br>when
+                    i'm not
                     being a chud, i like to go on walks with my mother and do some photography!</p>
                 <p>
                     i do marching band + concert band and i play the clarinet!! i'm a SORTA beginner clarinet, i started
@@ -67,7 +68,6 @@
                         <span class="ld-content">pizza, alfredo, fast wifi, friends, <span
                                 id="LMFAO">slendytubbies</span>, amazing swag art, thrifting</span>
                     </div>
-
                     <div class="ld-row">
                         <img src="assets/icons/red-heart-broken.png" class="ld-icon">
                         <span class="ld-label">dislikes</span>
@@ -81,14 +81,19 @@
                     <a href="https://x.com/_5quirre1_">tw*tter</a>
                     <a href="https://steamcommunity.com/id/5quirre1/">steam</a>
                 </div>
-                <div class="about-card">
-                    <div class="webring">
-                        <a href="https://webring.nomaakip.xyz/webring?name=squirrel&to=prev"><img
+                <div class="about-card webrings-card">
+                    <div class="webring"><a href="https://webring.nomaakip.xyz/webring?name=squirrel&to=prev"><img
                                 src="https://webring.nomaakip.xyz/img/webring-left.png"></a><a
                             href="https://webring.nomaakip.xyz"><img
                                 src="https://webring.nomaakip.xyz/img/webring.png"></a><a
                             href="https://webring.nomaakip.xyz/webring?name=squirrel&to=next"><img
-                                src="https://webring.nomaakip.xyz/img/webring-right.png"></a>
+                                src="https://webring.nomaakip.xyz/img/webring-right.png"></a></div>
+                    <div class="webring">
+                        <div class="bucket-webring">
+                            <a href="https://webring.bucketfish.me/redirect.html?to=prev&name=squirrel">⥼</a>
+                            <a href="https://webring.bucketfish.me/"><span class="bucket-webring-center">🏳️‍🌈 <span id="bw-title"></span> 🏳️‍🌈</span></a>
+                            <a href="https://webring.bucketfish.me/redirect.html?to=next&name=squirrel">⥽</a>
+                        </div>
                     </div>
                 </div>
                 <div class="about-card">
@@ -109,6 +114,14 @@
     <script src="js/about/about.js"></script>
     <script src="js/tooltip.js"></script>
     <script src="js/misc.js"></script>
+    <script>
+        const bwTitle = document.getElementById('bw-title');
+        const full = 'bucket webring';
+        bwTitle.innerHTML = full.split('').map(function (ch, i) {
+            var delay = (i * 0.1).toFixed(1) + 's';
+            return '<span class="bucket-webring-char" style="--bw-n:' + delay + '">' + (ch === ' ' ? '&nbsp;' : ch) + '</span>';
+        }).join('');
+    </script>
 </body>
 
 </html>

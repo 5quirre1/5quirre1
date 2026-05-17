@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/components/404.css">
+    <link rel="stylesheet" href="/stylesheets/404.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -21,7 +21,8 @@
         <section class="section main">
             <div class="text">
                 <h1>404</h1>
-                <p>'<span id="page"></span>' was not found. so either it was removed or you're STUPID and typed it in
+                <p id="hahaha">'<span id="page"></span>' was not found. so either it was removed or you're STUPID and
+                    typed it in
                     wrong HAHAHAH</p>
             </div>
         </section>
@@ -35,8 +36,22 @@
 
     <script>
         const pageSpan = document.getElementById("page");
+        const message = document.getElementById("hahaha");
         const path = window.location.pathname;
-        pageSpan.textContent = path.startsWith("/") ? path.slice(1) : path;
+
+        const normalized = path.replace(/\/$/, "");
+
+        const is404Page =
+            normalized === "/404" ||
+            normalized === "/404.html";
+
+        if (is404Page) {
+            pageSpan.textContent = "404 page (why are you here)";
+            message.textContent =
+                "What the fuck are you doing, why would you go to the 404 page???";
+        } else {
+            pageSpan.textContent = path.startsWith("/") ? path.slice(1) : path;
+        }
     </script>
 </body>
 

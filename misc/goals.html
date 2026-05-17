@@ -4,16 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>blog</title>
+    <title>goals</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
-    <link rel="stylesheet" href="/stylesheets/blog/blog.css">
-    <link rel="stylesheet" href="/stylesheets/about/about.css">
+    <link rel="stylesheet" href="/stylesheets/misc/goals/goals.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700&family=Yusei+Magic&display=swap"
         rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
 </head>
 
 <body>
@@ -21,11 +19,24 @@
 
     <div class="container">
         <section class="section main">
-            <div class="text blog-post-wrap">
+            <div class="goals-wrap">
+                <div class="goals-cards" id="goals-cards"></div>
 
-                <div id="post-content">
-                    <p style="color:#888;font-size:14px;">loading...</p>
+                <div class="goals-bar-section">
+                    <div class="goals-bar-meta">
+                        <span>saved - <strong id="money-display">$0.00</strong></span>
+                        <span id="progress-label">0%</span>
+                    </div>
+                    <div class="goals-bar-outer">
+                        <div class="goals-bar-track">
+                            <div class="goals-bar-fill" id="bar-fill"></div>
+                        </div>
+                        <div class="goals-waypoints" id="waypoints"></div>
+                    </div>
                 </div>
+
+                <div class="goals-stats" id="goals-stats"></div>
+
             </div>
         </section>
     </div>
@@ -37,7 +48,7 @@
     <script src="/js/maybemarquee.js"></script>
     <script src="/js/tooltip.js"></script>
     <script src="/js/misc.js"></script>
-    <script src="/js/blog/loader.js"></script>
+    <script src="/js/misc/goals/goals.js"></script>
 </body>
 
 </html>
