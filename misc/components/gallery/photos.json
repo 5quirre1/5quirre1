@@ -94,5 +94,29 @@
         "thumb": "/assets/misc/photos-i-took/thumbs/2024/IMG_20240802_203103460.webp",
         "caption": "",
         "date": "2024-08-02"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/102_1071.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1071.webp",
+        "caption": "tower on the top of a mountain",
+        "date": "2026-05-21"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/102_1136.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1136.webp",
+        "caption": "some truck that's kinda just been sitting out by my neighbors house since the guy who owned it died",
+        "date": "2026-05-22"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/102_1142.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1142.webp",
+        "caption": "random picture of some kitties in my neighborhood",
+        "date": "2026-05-22"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/102_1062.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1062.webp",
+        "caption": "some super swag guy playing the guitar at a park we went to for mother's day",
+        "date": "2026-05-10"
     }
 ]
