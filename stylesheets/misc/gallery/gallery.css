@@ -1,11 +1,20 @@
-.gallery-texty {
-    max-width: 860px;
+body.lightbox-open {
+    overflow: hidden;
+    position: fixed;
+    inset: 0;
     width: 100%;
+    overscroll-behavior: none;
+    touch-action: none;
+}
+
+.gallery-texty {
+    width: 100%;
+    max-width: 860px;
     text-align: center;
 }
 
-.gallery-texty > p {
-    margin: 0 0 14px 0;
+.gallery-texty>p {
+    margin: 0 0 14px;
 }
 
 .gallery-bar {
@@ -29,7 +38,7 @@
 }
 
 .gallery-stats strong {
-    color: #3D3D3D;
+    color: #3d3d3d;
     font-weight: 600;
 }
 
@@ -47,17 +56,17 @@
 }
 
 .gallery-filter select {
-    font-family: 'Radio Canada', sans-serif;
-    font-size: 13px;
+    padding: 2px 4px;
     border: 0;
     border-bottom: 1px solid #ddd;
     background: transparent;
-    color: #3D3D3D;
-    padding: 2px 4px;
+    color: #3d3d3d;
     cursor: pointer;
+    outline: none;
     appearance: none;
     -webkit-appearance: none;
-    outline: none;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 13px;
 }
 
 .gallery-filter select:hover {
@@ -69,48 +78,42 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 6px;
     margin-top: 16px;
-    contain: layout style;
 }
 
 .gallery-item {
     position: relative;
+    aspect-ratio: 4 / 3;
     overflow: hidden;
     cursor: pointer;
-    aspect-ratio: 4 / 3;
     background: #f5f5f5;
-    contain: layout style paint;
 }
 
 .gallery-item img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     opacity: 0;
-    transform: scale(1.02);
-    transition: opacity 0.25s ease;
+    transition: opacity 0.2s ease;
 }
 
 .gallery-item img.loaded {
     opacity: 1;
-    transform: scale(1);
 }
 
 .gallery-item-overlay {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0,0.52);
-    color: #fff;
-    font-size: 11px;
-    padding: 4px 7px;
+    inset: auto 0 0;
+    z-index: 2;
     display: flex;
     align-items: center;
     gap: 5px;
-    white-space: nowrap;
     overflow: hidden;
-    z-index: 2;
+    padding: 4px 7px;
+    background: rgba(0, 0, 0, 0.52);
+    color: #fff;
+    white-space: nowrap;
+    font-size: 11px;
 }
 
 .gallery-item-sep {
@@ -119,9 +122,9 @@
 }
 
 .gallery-item-caption-wrap {
-    overflow: hidden;
     flex: 1;
     min-width: 0;
+    overflow: hidden;
 }
 
 .gallery-item-caption-text {
@@ -130,22 +133,22 @@
 }
 
 .gallery-empty {
-    font-size: 14px;
-    color: #888;
-    margin-top: 20px;
     grid-column: 1 / -1;
+    margin-top: 20px;
+    color: #888;
     text-align: center;
+    font-size: 14px;
 }
 
 .gallery-lightbox {
-    display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.9);
     z-index: 1000;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .gallery-lightbox.open {
@@ -162,20 +165,48 @@
     box-sizing: border-box;
 }
 
-.gallery-lightbox-img-wrap img {
-    max-width: 80vw;
-    max-height: 80vh;
-    object-fit: contain;
-}
-
 .gallery-lightbox-arrow {
     width: 32px;
     height: 32px;
+    flex-shrink: 0;
     cursor: pointer;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .gallery-lightbox-arrow.hidden {
     visibility: hidden;
+}
+
+.gallery-lightbox-img-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+#gallery-lightbox-img {
+    display: block;
+    max-width: 80vw;
+    max-height: 80vh;
+    object-fit: contain;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.gallery-lightbox-spinner {
+    position: absolute;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.gallery-lightbox-spinner .spinner,
+#gallery-spinner .spinner {
+    margin: 0;
 }
 
 .gallery-lightbox-footer {
@@ -187,9 +218,9 @@
 }
 
 .gallery-lightbox-counter {
-    font-family: 'Radio Canada', sans-serif;
-    font-size: 11px;
     color: #666;
+    font-size: 11px;
+    font-family: 'Radio Canada', sans-serif;
 }
 
 .gallery-lightbox-meta {
@@ -203,13 +234,19 @@
     top: 16px;
     right: 20px;
     color: #fff;
-    font-size: 16px;
     cursor: pointer;
     opacity: 0.5;
+    font-size: 16px;
 }
 
 .gallery-lightbox-close:hover {
     opacity: 1;
+}
+
+#gallery-spinner {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 10px;
 }
 
 @media (max-width: 1000px) {
@@ -221,6 +258,51 @@
 @media (max-width: 700px) {
     .gallery-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-lightbox-img-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "image image"
+            "prev next";
+        gap: 16px;
+        width: 100%;
+        padding: 0 12px;
+    }
+
+    .gallery-lightbox-img-area {
+        grid-area: image;
+    }
+
+    #gallery-lightbox-prev {
+        grid-area: prev;
+        justify-self: end;
+        opacity: 0.25;
+        filter: grayscale(1);
+    }
+
+    #gallery-lightbox-next {
+        grid-area: next;
+        justify-self: start;
+        opacity: 0.25;
+        filter: grayscale(1);
+    }
+
+    #gallery-lightbox-prev:not(.hidden),
+    #gallery-lightbox-next:not(.hidden) {
+        opacity: 1;
+        filter: none;
+    }
+
+    .gallery-lightbox-arrow {
+        width: 44px;
+        height: 44px;
+    }
+
+    #gallery-lightbox-img {
+        max-width: 100%;
+        max-height: 72vh;
     }
 }
 

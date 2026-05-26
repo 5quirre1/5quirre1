@@ -5,10 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gallery</title>
+
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/misc/gallery/gallery.css">
+    <link rel="stylesheet" href="/stylesheets/components/spinner.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700&family=Yusei+Magic&display=swap"
         rel="stylesheet">
@@ -17,12 +21,17 @@
 <body>
     <include src="/components/header.html"></include>
 
-    <div class="container">
+    <main class="container">
         <section class="section main">
             <div class="text gallery-texty">
-                <p>this page has just a bunch of photos and possibly some videos that i have taken!!<br>
-                    <small>p.s. i might not really caption EVERYTHING but i'll try to caption random stuff</small>
+                <p>
+                    this page has just a bunch of photos and possibly some videos that i have taken!!
+                    <br>
+                    <small>
+                        p.s. i might not really caption EVERYTHING but i'll try to caption random stuff
+                    </small>
                 </p>
+
                 <hr>
 
                 <div class="gallery-bar">
@@ -31,37 +40,88 @@
                         <span id="stat-months">*loading*</span>
                         <span id="stat-years">*loading*</span>
                     </div>
+
                     <div class="gallery-filter">
                         <label for="gallery-date-filter">date</label>
+
                         <select id="gallery-date-filter">
                             <option value="all">all</option>
                         </select>
                     </div>
                 </div>
 
-                <div class="gallery-grid" id="gallery-grid">
-                    <p class="gallery-empty">loading...</p>
+                <div class="gallery-grid" id="gallery-grid" aria-live="polite">
                 </div>
             </div>
         </section>
+    </main>
+
+    <div class="gallery-lightbox" id="gallery-lightbox" aria-hidden="true">
+
+        <span class="gallery-lightbox-close" id="gallery-lightbox-close">✕</span>
+
+        <div class="gallery-lightbox-img-wrap" id="gallery-lightbox-img-wrap">
+
+            <img id="gallery-lightbox-prev" class="gallery-lightbox-arrow" src="/assets/icons/arrow-left.png"
+                alt="previous image">
+
+            <div class="gallery-lightbox-img-area">
+                <img id="gallery-lightbox-img" src="" alt="gallery image">
+
+                <div class="gallery-lightbox-spinner" id="gallery-lightbox-spinner">
+                </div>
+            </div>
+
+            <img id="gallery-lightbox-next" class="gallery-lightbox-arrow" src="/assets/icons/arrow-right.png"
+                alt="next image">
+        </div>
+
+        <div class="gallery-lightbox-footer">
+            <span class="gallery-lightbox-counter" id="gallery-lightbox-counter">
+            </span>
+
+            <span class="gallery-lightbox-meta" id="gallery-lightbox-meta">
+            </span>
+        </div>
     </div>
 
-    <div class="gallery-lightbox" id="gallery-lightbox">
-        <span class="gallery-lightbox-close" id="gallery-lightbox-close">✕</span>
-        <div class="gallery-lightbox-img-wrap">
-            <img id="gallery-lightbox-prev" class="gallery-lightbox-arrow" src="/assets/icons/arrow-left.png" alt="prev">
-            <img id="gallery-lightbox-img" src="" alt="">
-            <img id="gallery-lightbox-next" class="gallery-lightbox-arrow" src="/assets/icons/arrow-right.png" alt="next">
+    <template id="gallery-item-template">
+        <div class="gallery-item">
+            <img loading="lazy" decoding="async">
+
+            <div class="gallery-item-overlay">
+                <span class="gallery-item-date"></span>
+
+                <span class="gallery-item-sep">-</span>
+
+                <span class="gallery-item-caption-wrap">
+                    <span class="gallery-item-caption-text"></span>
+                </span>
+            </div>
         </div>
-        <div class="gallery-lightbox-footer">
-            <span class="gallery-lightbox-counter" id="gallery-lightbox-counter"></span>
-            <span class="gallery-lightbox-meta" id="gallery-lightbox-meta"></span>
+    </template>
+
+    <template id="gallery-empty-template">
+        <p class="gallery-empty"></p>
+    </template>
+
+    <template id="gallery-spinner-template">
+        <div class="spinner">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-    </div>
+    </template>
 
     <include src="/components/buttons.html"></include>
-    
+
     <script src="https://sc.squirrelz.xyz/track.js?key=squirrel"></script>
+
     <script src="/js/lib/include.js"></script>
     <script src="/js/maybemarquee.js"></script>
     <script src="/js/misc.js"></script>
