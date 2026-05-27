@@ -1,6 +1,6 @@
 //https://www.mf2fm.com/rv/dhtmlrolltext.php
 const text = [
-    "2026 squirrelz.xyz - all rights reserved",
+    "&copy;2026 squirrelz.xyz - all rights reserved",
     `built with love <img src="assets/icons/red-heart-normal.png" style="width:10px;height:10px;vertical-align:middle;position:relative;top:-1px;">`
 ];
 
