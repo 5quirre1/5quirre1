@@ -48,6 +48,5 @@
 .buttons img {
     width: 88px;
     height: 31px;
-    image-rendering: pixelated;
     display: block;
 }
