@@ -1,7 +1,7 @@
 //https://www.mf2fm.com/rv/dhtmlrolltext.php
 const text = [
     "&copy;2026 squirrelz.xyz - all rights reserved",
-    `built with love <img src="assets/icons/red-heart-normal.png" style="width:10px;height:10px;vertical-align:middle;position:relative;top:-1px;">`
+    `built with love <img src="/assets/icons/red-heart-normal.png" style="width:10px;height:10px;vertical-align:middle;position:relative;top:-1px;">`
 ];
 
 const delay = 10000;
