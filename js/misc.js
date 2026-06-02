@@ -10,7 +10,6 @@ document.addEventListener("includesLoaded", () => {
         dropdown.style.display = "block";
 
         requestAnimationFrame(() => {
-            dropdown.classList.add("open");
             dropdown.style.maxHeight = dropdown.scrollHeight + "px";
             dropdown.style.opacity = "1";
         });
@@ -19,24 +18,26 @@ document.addEventListener("includesLoaded", () => {
     };
 
     const close = () => {
+        isOpen = false;
+
         dropdown.style.maxHeight = "0";
         dropdown.style.opacity = "0";
-        dropdown.classList.remove("open");
 
-        dropdown.addEventListener(
-            "transitionend",
-            () => {
-                if (!isOpen) dropdown.style.display = "none";
-            },
-            { once: true }
-        );
-
-        isOpen = false;
+        setTimeout(() => {
+            if (!isOpen) {
+                dropdown.style.display = "none";
+            }
+        }, 300);
     };
 
     trigger.addEventListener("click", (e) => {
         e.preventDefault();
-        isOpen ? close() : open();
+
+        if (isOpen) {
+            close();
+        } else {
+            open();
+        }
     });
 
     document.addEventListener("click", (e) => {

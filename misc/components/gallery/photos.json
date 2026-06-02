@@ -60,6 +60,12 @@
         "date": "2026-04-19"
     },
     {
+        "src": "/assets/misc/photos-i-took/2026/102_0940.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_0940.webp",
+        "caption": "my very cute chud cat cleo",
+        "date": "2026-04-24"
+    },
+    {
         "src": "/assets/misc/photos-i-took/2024/102_0192.JPG",
         "thumb": "/assets/misc/photos-i-took/thumbs/2024/102_0192.webp",
         "caption": "from my 2nd trip to the olympic rainforest in seattle!!!",
@@ -166,5 +172,59 @@
         "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1284.webp",
         "caption": "",
         "date": "2026-05-28"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/102_1310.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1310.webp",
+        "caption": "",
+        "date": "2026-06-01"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/102_1352.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1352.webp",
+        "caption": "",
+        "date": "2026-06-01"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/102_1355.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1355.webp",
+        "caption": "",
+        "date": "2026-06-01"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2024/102_0300.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2024/102_0300.webp",
+        "caption": "",
+        "date": "2024-04-08"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2024/102_0201.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2024/102_0201.webp",
+        "caption": "",
+        "date": "2024-04-07"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/102_0933.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_0933.webp",
+        "caption": "",
+        "date": "2026-04-24"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/102_0934.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_0934.webp",
+        "caption": "",
+        "date": "2026-04-24"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2024/102_0577.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2024/102_0577.webp",
+        "caption": "",
+        "date": "2024-04-18"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2025/102_0726.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2025/102_0726.webp",
+        "caption": "",
+        "date": "2025-09-05"
     }
 ]
