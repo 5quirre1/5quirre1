@@ -5,5 +5,12 @@
         "date": "2026-04-30",
         "description": "swagcounter is a small tool i made that counts visits for websites easily.",
         "thumbnail": "/assets/blog/04302026/thumbnail.png"
+    },
+    {
+        "slug": "06022026/100-questions",
+        "title": "100 webmaster questions",
+        "date": "2026-06-02",
+        "description": "100 questions about a lot of random webmaster shit",
+        "thumbnail": "/assets/misc/photos-i-took/thumbs/2026/PIC_0402.webp"
     }
 ]

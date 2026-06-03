@@ -301,3 +301,36 @@
     background: none;
     padding: 0;
 }
+
+.blog-post-body dl {
+    margin: 0;
+}
+
+.blog-post-body dt {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 14px;
+    color: #3D3D3D;
+    margin-top: 20px;
+    margin-bottom: 6px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #eee;
+}
+
+.blog-post-body dt:first-child {
+    margin-top: 0;
+}
+
+.blog-post-body dd {
+    margin: 0 0 14px 0;
+    padding-left: 12px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.blog-post-body dd code {
+    font-size: 12px;
+}
+
+.blog-post-body dd a {
+    word-break: break-word;
+}
