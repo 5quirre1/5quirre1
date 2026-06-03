@@ -119,7 +119,7 @@
 
    <dt>34. Do you have many webmaster friends, or is it a solitary hobby?</dt>
    <dd><a href="https://nomaakip.xyz">nomaakip</a> and <a href="https://wish13yt.github.io">wish</a> are the only ones i
-       can think of as an actual friend who own's a website. </dd>
+       can think of as an actual friend who owns a website. </dd>
 
    <dt>35. Do people in your real life know about your website?</dt>
    <dd>yes a lot of people know about my website at school</dd>
