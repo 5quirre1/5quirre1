@@ -336,7 +336,7 @@
    <dd>again, i really don't want to put too much about myself yet.</dd>
 
    <dt>98. Are you willing to reveal who your best online friend is, and/or if they have a website?</dt>
-   <dd><a href="https://nomaakip.xyz">nomaakip</a> and <a href="https://wish13yt.github.io">wish</a></dd>
+   <dd><a href="https://nomaakip.xyz">nomaakip</a>, <a href="https://wish13yt.github.io">wish</a>, and names</dd>
 
    <dt>99. And do you optimise the images on your website?</dt>
    <dd>i mean i tried on the gallery page but besides that, no LMFAO</dd>
