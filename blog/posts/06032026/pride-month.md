@@ -87,7 +87,7 @@ celebration of identity.</p>
 <p>for many people, Pride is a celebration of identity, community, and resilience. it is a time to honor the past, recognize the present, and look toward a future where everyone can live openly, safely, and authentically.</p>
 
 <figure>
-    <img src="/assets/blog/06032026/parade.png" alt="Pride parade">
+    <img src="/assets/blog/06032026/parade.png" alt="spokane pride parade">
     <figcaption>spokane pride parade in 2024 - <a href="https://www.reddit.com/r/Spokane/comments/1dbgz7l/happy_pride_month_heres_some_photos_i_got_from/">source</a></figcaption>
 </figure>
 
