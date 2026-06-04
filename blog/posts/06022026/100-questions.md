@@ -267,7 +267,7 @@
    <dd>sometimes.,.,</dd>
 
    <dt>78. Thoughts on floating elements?</dt>
-   <dd></dd>
+   <dd>i mean it's alright i don't use it that often (i think at least)</dd>
 
    <dt>79. When you're sizing stuff, what do you use first? Do you use px, em, %, or something else?</dt>
    <dd>i kinda just use all but most of the time it's px or em or %</dd>
