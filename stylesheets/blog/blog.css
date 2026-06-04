@@ -334,3 +334,31 @@
 .blog-post-body dd a {
     word-break: break-word;
 }
+
+.blog-likebtn {
+    width: 100%;
+    margin: 40px 0 0 0;
+    text-align: center;
+    display: block;
+}
+
+.blog-likebtn-bottom::before {
+    content: "liked this blog? give it a like!!";
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+}
+
+.blog-likebtn .likebtn-wrapper {
+    display: block;
+    width: 100%;
+    transform: scale(0.9);
+    transform-origin: center;
+}
+
+.blog-likebtn .likebtn-wrapper > * {
+    margin: 0 auto;
+}
