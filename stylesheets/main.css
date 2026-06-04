@@ -125,17 +125,18 @@ a[aria-disabled="true"] {
     max-width: 400px;
 }
 
-figure {
+
+.side figure {
     margin: 0;
     text-align: left;
 }
 
-figure img {
+.side figure img {
     width: 300px;
     height: auto;
 }
 
-figcaption {
+.side figcaption {
     font-size: 14px;
     margin-top: 5px;
     color: #555;
