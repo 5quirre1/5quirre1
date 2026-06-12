@@ -115,3 +115,11 @@
     line-height: 1.2;
     color: #3D3D3D;
 }
+
+.interests-text-scroll img[src="/assets/misc/us.png"] {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

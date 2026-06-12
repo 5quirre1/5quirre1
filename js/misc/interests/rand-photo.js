@@ -6,7 +6,7 @@ fetch('components/gallery/photos.json')
         const pick = valid[Math.floor(Math.random() * valid.length)];
 
         const img = document.getElementById('random-photo');
-        img.src = pick.src;
+        img.src = pick.thumb || pick.src;
 
         const captionEl = document.querySelector('.interests-photo-caption');
 
