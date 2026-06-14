@@ -97,29 +97,45 @@ fetch('https://status.cafe/users/squirrel/status.json')
         document.getElementById('status-text').textContent = 'unavailable';
     });
 
-fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=squirre1z&api_key=4204a2d9b89f985f6b47c29f913dd463&format=json&limit=1')
-    .then(r => r.json())
-    .then(d => {
-        const track = d.recenttracks.track[0];
-        const nowPlaying = track['@attr']?.nowplaying;
-        const icon = document.getElementById('music-icon');
-        const artistName = track.artist['#text'];
-        const trackName = track.name;
-        const trackUrl = track.url;
-        const artistUrl = `https://www.last.fm/music/${encodeURIComponent(artistName)}`;
+function fetchLastFm() {
+    fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=squirre1z&api_key=4204a2d9b89f985f6b47c29f913dd463&format=json&limit=1')
+        .then(r => r.json())
+        .then(d => {
+            const track = d.recenttracks.track[0];
+            const nowPlaying = track['@attr']?.nowplaying;
+            const icon = document.getElementById('music-icon');
+            const cover = document.getElementById('lastfm-cover');
 
-        const html = `<a href="${artistUrl}" target="_blank">${artistName}</a> - <a href="${trackUrl}" target="_blank">${trackName}</a>`;
+            const artistName = track.artist['#text'];
+            const trackName = track.name;
+            const trackUrl = track.url;
+            const artistUrl = `https://www.last.fm/music/${encodeURIComponent(artistName)}`;
 
-        if (nowPlaying) {
-            icon.classList.add('music-playing');
-            icon.classList.remove('music-idle');
-        } else {
-            icon.classList.add('music-idle');
-            icon.classList.remove('music-playing');
-        }
-        maybeMarquee(document.getElementById('lastfm-text'), null, html);
-    })
-    .catch(() => {
-        document.getElementById('music-icon').classList.add('music-idle');
-        document.getElementById('lastfm-text').textContent = 'unavailable';
-    });
+            const html = `<a href="${artistUrl}" target="_blank">${artistName}</a> - <a href="${trackUrl}" target="_blank">${trackName}</a>`;
+
+            const imageUrl =
+                track.image?.find(img => img.size === 'medium')?.['#text'] ||
+                track.image?.find(img => img['#text'])?.['#text'];
+
+            if (imageUrl) {
+                cover.src = imageUrl;
+            }
+
+            if (nowPlaying) {
+                icon.classList.add('music-playing');
+                icon.classList.remove('music-idle');
+            } else {
+                icon.classList.add('music-idle');
+                icon.classList.remove('music-playing');
+            }
+
+            maybeMarquee(document.getElementById('lastfm-text'), null, html);
+        })
+        .catch(() => {
+            document.getElementById('music-icon').classList.add('music-idle');
+            document.getElementById('lastfm-text').textContent = 'unavailable';
+        });
+}
+
+fetchLastFm();
+setInterval(fetchLastFm, 30000);

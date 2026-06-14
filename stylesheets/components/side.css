@@ -17,6 +17,7 @@
     gap: 6px;
     margin-bottom: 5px;
     min-width: 0;
+    width: 100%;
 }
 
 .side-label {
@@ -52,8 +53,13 @@
 }
 
 @keyframes tilt {
-    from { transform: rotate(-15deg); }
-    to { transform: rotate(15deg); }
+    from {
+        transform: rotate(-15deg);
+    }
+
+    to {
+        transform: rotate(15deg);
+    }
 }
 
 .side-links a,
@@ -64,6 +70,20 @@
 .side-links a:hover,
 #lastfm-text a:hover {
     text-decoration: underline;
+}
+
+.lastfm-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.lastfm-cover {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-left: auto;
 }
 
 .site-stats {
