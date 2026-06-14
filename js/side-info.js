@@ -103,8 +103,10 @@ function fetchLastFm() {
         .then(d => {
             const track = d.recenttracks.track[0];
             const nowPlaying = track['@attr']?.nowplaying;
+
             const icon = document.getElementById('music-icon');
             const cover = document.getElementById('lastfm-cover');
+            const coverLink = document.getElementById('lastfm-cover-link');
 
             const artistName = track.artist['#text'];
             const trackName = track.name;
@@ -119,6 +121,14 @@ function fetchLastFm() {
 
             if (imageUrl) {
                 cover.src = imageUrl;
+            }
+
+            const albumName = track.album?.['#text'];
+
+            if (albumName) {
+                coverLink.href = `https://www.last.fm/music/${encodeURIComponent(artistName)}/${encodeURIComponent(albumName)}`;
+            } else {
+                coverLink.href = trackUrl;
             }
 
             if (nowPlaying) {
