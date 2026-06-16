@@ -1,0 +1,52 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-container .widgets {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 0;
+    margin-bottom: 40px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px dotted #999;
+    background: #fff;
+}
+
+.widget {
+    height: 151px;
+    box-sizing: border-box;
+    padding: 12px;
+    text-align: left;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.widget:nth-child(3n) {
+    border-right: none;
+}
+
+.widget:nth-last-child(-n + 3) {
+    border-bottom: none;
+}
+
+.widget h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.widget p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

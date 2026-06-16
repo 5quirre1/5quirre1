@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>squirrelz.xyz</title>
     <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/components/widgets/import.css">
+    <link rel="stylesheet" href="stylesheets/components/widgets.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700&family=Yusei+Magic&display=swap"
         rel="stylesheet">
@@ -17,7 +20,7 @@
 
     <include src="/components/header.html"></include>
 
-    <div class="container">
+    <div class="container home-container">
         <section class="section main">
             <div class="text">
                 <p>hi, i'm squirrel,</p>
@@ -43,8 +46,8 @@
                 <p>i'm not really a photographer but i sometimes like to take pictures! i don't exactly have a
                     <i>main</i> camera but i have some cameras i use time to time. the one i usually use more though is
                     a <span data-tip="the picture on the right was taken with this camera!!"><a
-                            href="https://www.cnet.com/reviews/jvc-everio-gz-mg37-review/">JVC Everio GZ-MG47</a><img
-                            src="assets/icons/arrow-up-right.png" class="jvc-arrow" alt=""></span>.
+                            href="https://www.kodak.com/en/consumer/product/cameras/digital/az528/">Kodak PIXPRO
+                            AZ528</a><img src="assets/icons/arrow-up-right.png" class="jvc-arrow" alt=""></span>
                 </p>
                 <p>i'll try to be active with updating and adding more shit to this website so it's not just a ghost
                     town LMFAO</p>
@@ -52,8 +55,8 @@
             </div>
             <div class="side">
                 <figure>
-                    <img src="assets/misc/photos-i-took/2026/PIC_0290.JPG">
-                    <figcaption>a picture i took at a park on easter 2026</figcaption>
+                    <img src="assets/misc/photos-i-took/2026/102_1409.JPG">
+                    <figcaption>some picture of a water tower close by</figcaption>
                 </figure>
 
                 <!--thank you wish (https://wish13yt.github.io/) for giving layout ideas!!!!!!! -->
@@ -114,6 +117,11 @@
                 </div>
             </div>
         </section>
+        <section class="widgets">
+            <include src="components/widgets/weather.html"></include>
+            <include src="components/widgets/changelog.html"></include>
+            <include src="components/widgets/bunchofshit.html"></include>
+        </section>
     </div>
 
     <include src="/components/footer.html"></include>
@@ -128,6 +136,11 @@
     <script src="js/tooltip.js"></script>
     <script src="js/side-info.js"></script>
     <script src="js/misc.js"></script>
+    <!--widgets-->
+    <script src="js/widgets/weather.js"></script>
+    <script src="js/widgets/changelog.js"></script>
+    <script src="js/widgets/bunchofshit.js"></script>
+    </script>
 </body>
 
 </html>

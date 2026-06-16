@@ -51,3 +51,53 @@ function rolling() {
 }
 
 document.addEventListener("includesLoaded", initRollingText);
+
+//just gonna put this here cause i'm too lazy to put the script tag in every file LOL
+document.addEventListener(
+    "error",
+    (e) => {
+        const img = e.target;
+
+        if (
+            img.tagName !== "IMG" ||
+            !img.closest(".buttons") ||
+            img.dataset.errorHandled
+        ) {
+            return;
+        }
+
+        img.dataset.errorHandled = "true";
+
+        img.src =
+            "data:image/svg+xml," +
+            encodeURIComponent(`
+                <svg xmlns="http://www.w3.org/2000/svg" width="88" height="31">
+                    <rect width="88" height="31" fill="white"/>
+
+                    <rect
+                        x="0.5"
+                        y="0.5"
+                        width="87"
+                        height="30"
+                        fill="none"
+                        stroke="#eee"
+                        stroke-width="1"
+                    />
+
+                    <text
+                        x="44"
+                        y="19"
+                        font-family="sans-serif"
+                        font-size="10"
+                        fill="black"
+                        text-anchor="middle"
+                    >
+                        no image (404)
+                    </text>
+                </svg>
+            `);
+
+        img.alt = "no image (404)";
+    },
+    true
+);

@@ -1,0 +1,54 @@
+.changelog-widget {
+    padding: 10px;
+    font-size: 11px;
+    line-height: 1.4;
+    height: 151px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#changelog-content {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.changelog-line {
+    display: block;
+    margin-bottom: 4px;
+    color: #555;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.changelog-icon {
+    width: 14px;
+    height: 14px;
+    vertical-align: text-bottom;
+    margin-right: 4px;
+}
+
+.changelog-line.latest {
+    color: #333;
+}
+
+.changelog-line a {
+    text-decoration: underline;
+}
+
+.changelog-line strong {
+    font-weight: 600;
+}
+
+.changelog-end {
+    margin-top: 6px;
+    padding-top: 6px;
+    border-top: 1px dotted #ddd;
+    text-align: center;
+    font-size: 10px;
+    color: #888;
+}

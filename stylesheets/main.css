@@ -47,17 +47,14 @@ h2 {
 
 .website-name-shit {
     display: inline-block;
-
     background:
         linear-gradient(
             rgba(0, 0, 0, 0.35),
             rgba(0, 0, 0, 0.35)
         ),
         url("/assets/woke.png") center center / 300% auto no-repeat;
-
     -webkit-background-clip: text;
     background-clip: text;
-
     color: transparent;
     -webkit-text-fill-color: transparent;
 }
@@ -124,7 +121,6 @@ a[aria-disabled="true"] {
 .text {
     max-width: 400px;
 }
-
 
 .side figure {
     margin: 0;
