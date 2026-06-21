@@ -26,6 +26,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: 8px;
 }
 
 .interests-photo-albums {
@@ -70,13 +71,13 @@
 }
 
 .interests-text-scroll {
-    height: 120px;
+    height: 140px;
     overflow-y: scroll !important;
     transition: height 0.25s ease;
 }
 
-.interests-text-scroll:hover {
-    height: 220px;
+.interests-text-scroll.movies-trigger-active {
+    height: 335px;
 }
 
 .interests-text-scroll p {
@@ -122,4 +123,69 @@
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+.movies-popup {
+    width: 312px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: max-height 0.3s ease, opacity 0.25s ease, transform 0.3s ease;
+}
+
+.movies-popup-visible {
+    max-height: 230px;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.movies-popup-inner {
+    border-top: 1px solid #eee;
+    padding-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+}
+
+.movies-popup-caption {
+    font-size: 12px;
+    color: #888;
+}
+
+.movies-popup-viewport {
+    width: 312px;
+    overflow: hidden;
+}
+
+.movies-popup-track {
+    display: flex;
+    width: 100%;
+}
+
+.movies-popup-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    overflow: hidden;
+}
+
+.movies-popup-slide-partial {
+    gap: 20px;
+}
+
+.movies-popup-cover {
+    width: 96px;
+    flex-shrink: 0;
+}
+
+.movies-popup-cover img {
+    width: 96px;
+    height: 144px;
+    object-fit: cover;
+    display: block;
 }

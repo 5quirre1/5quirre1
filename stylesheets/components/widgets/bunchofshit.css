@@ -20,3 +20,27 @@
 .bunchofshit-widget:hover .bunchofshit-track {
     animation-play-state: paused;
 }
+
+.bunchofshit-stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 14px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.label {
+    color: #666;
+}
+
+.value {
+    font-weight: 600;
+    color: #222;
+}

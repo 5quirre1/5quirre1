@@ -1,3 +1,47 @@
+function initBunchofshitStats() {
+    const countdown = document.getElementById("bunchofshit-birthday-countdown");
+
+    if (!countdown) {
+        return;
+    }
+
+    const raw = countdown.dataset.siteBirthday;
+    const [, month, day] = raw.split("-").map(Number);
+
+    function getNextBirthday(now) {
+        const todayMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        const thisYear = new Date(now.getFullYear(), month - 1, day);
+        return thisYear >= todayMidnight
+            ? thisYear
+            : new Date(now.getFullYear() + 1, month - 1, day);
+    }
+
+    function tick() {
+        const now = new Date();
+        const todayMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        const next = getNextBirthday(now);
+
+        if (next.getTime() === todayMidnight.getTime()) {
+            countdown.textContent = "today!!";
+            return;
+        }
+
+        const msPerDay = 24 * 60 * 60 * 1000;
+        const daysLeft = Math.round((next - todayMidnight) / msPerDay);
+
+        countdown.textContent = daysLeft;
+    }
+
+    tick();
+
+    if (countdown.dataset.intervalId) {
+        clearInterval(Number(countdown.dataset.intervalId));
+    }
+
+    const intervalId = setInterval(tick, 60000);
+    countdown.dataset.intervalId = String(intervalId);
+}
+
 function initBunchofshit() {
     const widget = document.querySelector(".bunchofshit-widget");
     const track = document.querySelector(".bunchofshit-track");
@@ -5,6 +49,8 @@ function initBunchofshit() {
     if (!widget || !track) {
         return;
     }
+
+    initBunchofshitStats();
 
     const slides = track.querySelectorAll(".bunchofshit-slide");
     const count = slides.length;

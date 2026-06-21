@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Brokeback Mountain",
+        "cover": "/assets/misc/interests/movies/brokeback-mountain.webp",
+        "tip": "Brokeback Mountain (2005)",
+        "link": "https://www.link.com/title/tt0388795/"
+    },
+    {
+        "title": "High Art",
+        "cover": "/assets/misc/interests/movies/high-art.webp",
+        "tip": "High Art (1998)",
+        "link": "https://www.link.com/title/tt0139362/"
+    },
+    {
+        "title": "I Saw the Tv Glow",
+        "cover": "/assets/misc/interests/movies/i-saw-the-tv-glow.webp",
+        "tip": "I Saw the Tv Glow (2024)",
+        "link": "https://www.link.com/title/tt15574270/"
+    },
+    {
+        "title": "Whiplash",
+        "cover": "/assets/misc/interests/movies/whiplash.webp",
+        "tip": "Whiplash (2014)",
+        "link": "https://www.link.com/title/tt2582802/"
+    },
+    {
+        "title": "Backrooms",
+        "cover": "/assets/misc/interests/movies/backrooms.webp",
+        "tip": "Backrooms (2026)",
+        "link": "https://www.link.com/title/tt26657236/"
+    },
+    {
+        "title": "Twister",
+        "cover": "/assets/misc/interests/movies/twister.webp",
+        "tip": "Twister (1996)",
+        "link": "https://www.link.com/title/tt0117998/"
+    },
+    {
+        "title": "Barnyard",
+        "cover": "/assets/misc/interests/movies/barnyard.webp",
+        "tip": "Barnyard (2006)",
+        "link": "https://www.link.com/title/tt0414853/"
+    },
+    {
+        "title": "Obsession",
+        "cover": "/assets/misc/interests/movies/obsession.webp",
+        "tip": "Obsession (2026)",
+        "link": "https://www.link.com/title/tt37287335/"
+    },
+    {
+        "title": "Jennifer's Body",
+        "cover": "/assets/misc/interests/movies/jennifers-body.webp",
+        "tip": "Jennifer's Body (2009)",
+        "link": "https://www.link.com/title/tt1131734/"
+    }
+]
