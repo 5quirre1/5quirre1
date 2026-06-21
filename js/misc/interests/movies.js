@@ -1,6 +1,6 @@
 async function loadMovies() {
     const res = await fetch('/misc/components/interests/movies.json');
-    if (!res.ok) throw new Error('Failed to load movies JSON');
+    if (!res.ok) throw new Error('failed to load movies JSON');
     return res.json();
 }
 
