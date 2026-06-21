@@ -305,7 +305,7 @@
         "caption": "pretty car from flagday parade",
         "date": "2026-06-13"
     },
-        {
+    {
         "src": "/assets/misc/photos-i-took/2026/102_1544.JPG",
         "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1544.webp",
         "caption": "",
@@ -346,5 +346,29 @@
         "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1556.webp",
         "caption": "",
         "date": "2026-06-17"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2024/102_0381.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2024/102_0381.webp",
+        "caption": "",
+        "date": "2024-04-10"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/102_1038.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1038.webp",
+        "caption": "",
+        "date": "2026-05-10"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/102_1049.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1049.webp",
+        "caption": "",
+        "date": "2026-05-10"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/102_1158.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1158.webp",
+        "caption": "",
+        "date": "2026-05-22"
     }
 ]
