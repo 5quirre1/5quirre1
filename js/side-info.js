@@ -85,17 +85,55 @@ function linksOnly(html) {
 
     return temp.innerHTML;
 }
+
 fetch('https://status.cafe/users/squirrel/status.json')
     .then(r => r.json())
     .then(d => {
         const el = document.getElementById('status-text');
         const content = d.content || 'no status';
-
         maybeMarquee(el, null, linksOnly(content));
     })
     .catch(() => {
         document.getElementById('status-text').textContent = 'unavailable';
     });
+
+const MOON_PHASE_NAMES = [
+    'New Moon',
+    'Waxing Crescent',
+    'Waxing Crescent',
+    'First Quarter',
+    'Waxing Gibbous',
+    'Waxing Gibbous',
+    'Full Moon',
+    'Full Moon',
+    'Waning Gibbous',
+    'Waning Gibbous',
+    'Last Quarter',
+    'Waning Crescent',
+    'Waning Crescent',
+    'Waning Crescent',
+    'Waning Crescent'
+];
+
+function getMoonPhaseIndex(date) {
+    const knownNewMoon = new Date('2000-01-06T18:14:00Z');
+    const synodicPeriod = 29.53058867;
+    const diffDays = (date - knownNewMoon) / (1000 * 60 * 60 * 24);
+    const phase = ((diffDays % synodicPeriod) + synodicPeriod) % synodicPeriod;
+    return Math.floor((phase / synodicPeriod) * 15) % 15;
+}
+
+function initMoonPhase() {
+    const laDate = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
+    const idx = getMoonPhaseIndex(laDate);
+    const img = document.getElementById('moon-phase-img');
+    if (!img) return;
+    img.src = `assets/moon/moon${idx + 1}.png`;
+    img.title = MOON_PHASE_NAMES[idx];
+    img.alt = MOON_PHASE_NAMES[idx];
+}
+
+initMoonPhase();
 
 function fetchLastFm() {
     fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=squirre1z&api_key=4204a2d9b89f985f6b47c29f913dd463&format=json&limit=1')

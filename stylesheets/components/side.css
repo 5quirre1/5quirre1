@@ -163,3 +163,10 @@
     box-sizing: border-box;
     line-height: 1.4;
 }
+
+.moon-phase-img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
