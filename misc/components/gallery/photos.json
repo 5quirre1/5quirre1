@@ -376,5 +376,89 @@
         "thumb": "/assets/misc/photos-i-took/thumbs/2026/102_1609.webp",
         "caption": "picture of me",
         "date": "2026-06-23"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2003/AUT_0121.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2003/AUT_0121.webp",
+        "caption": "[NOT TAKEN BY ME] pictures from a camera my school gave me",
+        "date": "2003-01-24"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2003/AUT_0122.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2003/AUT_0122.webp",
+        "caption": "[NOT TAKEN BY ME] pictures from a camera my school gave me",
+        "date": "2003-10-6"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2003/AUT_0123.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2003/AUT_0123.webp",
+        "caption": "[NOT TAKEN BY ME] pictures from a camera my school gave me",
+        "date": "2003-10-6"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2003/AUT_0124.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2003/AUT_0124.webp",
+        "caption": "[NOT TAKEN BY ME] pictures from a camera my school gave me",
+        "date": "2003-10-6"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2003/AUT_0125.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2003/AUT_0125.webp",
+        "caption": "[NOT TAKEN BY ME] pictures from a camera my school gave me",
+        "date": "2003-10-6"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2021/IMG_0319.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2021/IMG_0319.webp",
+        "caption": "",
+        "date": "2021-08-27"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2021/IMG_0383.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2021/IMG_0383.webp",
+        "caption": "",
+        "date": "2021-08-27"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2021/IMG_0588.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2021/IMG_0588.webp",
+        "caption": "",
+        "date": "2021-09-11"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2021/IMG_0635.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2021/IMG_0635.webp",
+        "caption": "",
+        "date": "2021-10-01"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2021/IMG_0642.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2021/IMG_0642.webp",
+        "caption": "",
+        "date": "2021-10-01"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/AUT_0134.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/AUT_0134.webp",
+        "caption": "",
+        "date": "2026-06-27"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/AUT_0135.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/AUT_0135.webp",
+        "caption": "",
+        "date": "2026-06-27"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2021/IMG_0210.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2021/IMG_0210.webp",
+        "caption": "",
+        "date": "2021-08-02"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2021/IMG_0560.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2021/IMG_0560.webp",
+        "caption": "",
+        "date": "2021-09-11"
     }
 ]
