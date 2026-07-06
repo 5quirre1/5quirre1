@@ -52,5 +52,11 @@
     "cover": "/assets/misc/interests/movies/jennifers-body.webp",
     "tip": "Jennifer's Body (2009)",
     "link": "https://www.imdb.com/title/tt1131734/"
+  },
+  {
+    "title": "Moonlight",
+    "cover": "/assets/misc/interests/movies/moonlight.webp",
+    "tip": "Moonlight (2016)",
+    "link": "https://www.imdb.com/title/tt4975722/"
   }
 ]
