@@ -1,6 +1,5 @@
 //https://www.mf2fm.com/rv/dhtmlrolltext.php
 const text = [
-    "happy pride month!!",
     "2025-FOREVER squirrelz.xyz",
     `built with love <img src="/assets/icons/red-heart-normal.png" style="width:10px;height:10px;vertical-align:middle;position:relative;top:-1px;">`
 ];
