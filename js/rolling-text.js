@@ -1,5 +1,6 @@
 //https://www.mf2fm.com/rv/dhtmlrolltext.php
 const text = [
+    "last updated: loading...",
     "2025-FOREVER squirrelz.xyz",
     `built with love <img src="/assets/icons/red-heart-normal.png" style="width:10px;height:10px;vertical-align:middle;position:relative;top:-1px;">`
 ];
@@ -10,6 +11,33 @@ const speed = 50;
 let diddly = [];
 let rolltop = 0;
 let referee = 0;
+
+async function updateLastUpdated() {
+    try {
+        const res = await fetch("https://api.github.com/repos/5quirre1/5quirre1");
+        const data = await res.json();
+
+        text[0] =
+            "last updated: " +
+            new Date(data.pushed_at).toLocaleString(undefined, {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+                hour: "numeric",
+                minute: "2-digit"
+            });
+
+        if (diddly[0]) {
+            diddly[0].textContent = text[0];
+        }
+    } catch {
+        text[0] = "last updated: unavailable";
+
+        if (diddly[0]) {
+            diddly[0].textContent = text[0];
+        }
+    }
+}
 
 function initRollingText() {
     const r = document.getElementById("rolling");
@@ -33,6 +61,7 @@ function initRollingText() {
         diddly.push(d);
     }
 
+    updateLastUpdated();
     rolling();
 }
 
