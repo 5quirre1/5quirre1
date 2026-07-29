@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body style="margin:0">
+
+<script>
+const text = "gayretardedfaggotjewsnomawishipodipadnovekhypersquirrelnames.jbc.lol";
+
+for (let i = 0; i < 5000; i++) {
+    const x = (Math.random() - 0.5) * 10000;
+    const y = (Math.random() - 0.5) * 10000;
+
+    const img = document.createElement("img");
+    img.src = "/assets/misc/ghhj.png";
+    img.style.position = "absolute";
+    img.style.left = x + "px";
+    img.style.top = y + "px";
+    img.style.width = (16 + Math.random() * 256) + "px";
+    img.style.height = "auto";
+    document.body.appendChild(img);
+
+    const txt = document.createElement("div");
+    txt.textContent = text;
+    txt.style.position = "absolute";
+    txt.style.left = (x + (Math.random() - 0.5) * 400) + "px";
+    txt.style.top = (y + (Math.random() - 0.5) * 400) + "px";
+
+    txt.style.fontSize = (8 + Math.random() * 32) + "px";
+    txt.style.whiteSpace = "nowrap";
+
+    document.body.appendChild(txt);
+}
+</script>
+
+</body>
+</html>
