@@ -97,43 +97,86 @@ fetch('https://status.cafe/users/squirrel/status.json')
         document.getElementById('status-text').textContent = 'unavailable';
     });
 
+// const DEBUG_DATE = new Date("2026-08-04T12:00:00");
+//for debugging shit to just make sure it's good
+function getMoonDate() {
+    return new Date();
+    // return DEBUG_DATE;
+}
+
 const MOON_PHASE_NAMES = [
-    'New Moon',
-    'Waxing Crescent',
-    'Waxing Crescent',
-    'First Quarter',
-    'Waxing Gibbous',
-    'Waxing Gibbous',
-    'Full Moon',
-    'Full Moon',
-    'Waning Gibbous',
-    'Waning Gibbous',
-    'Last Quarter',
-    'Waning Crescent',
-    'Waning Crescent',
-    'Waning Crescent',
-    'Waning Crescent'
+    "Waning Gibbous",
+    "Waning Gibbous",
+    "Waning Gibbous",
+    "Last Quarter",
+    "Waning Crescent",
+    "Waning Crescent",
+    "Waning Crescent",
+    "New Moon",
+    "Waxing Crescent",
+    "Waxing Crescent",
+    "Waxing Crescent",
+    "First Quarter",
+    "Waxing Gibbous",
+    "Waxing Gibbous",
+    "Waxing Gibbous",
+    "Full Moon"
 ];
 
-function getMoonPhaseIndex(date) {
-    const knownNewMoon = new Date('2000-01-06T18:14:00Z');
-    const synodicPeriod = 29.53058867;
-    const diffDays = (date - knownNewMoon) / (1000 * 60 * 60 * 24);
-    const phase = ((diffDays % synodicPeriod) + synodicPeriod) % synodicPeriod;
-    return Math.floor((phase / synodicPeriod) * 15) % 15;
+function getMoonImage(date) {
+    const moon = SunCalc.getMoonIllumination(date);
+    const phase = moon.phase;
+
+    if (phase < 0.0625 || phase >= 0.9375) return 7;
+    if (phase < 0.125) return 8;
+    if (phase < 0.1875) return 9;
+    if (phase < 0.25) return 10;
+    if (phase < 0.3125) return 11;
+    if (phase < 0.375) return 12;
+    if (phase < 0.4375) return 13;
+    if (phase < 0.5) return 14;
+    if (phase < 0.5625) return 15;
+    if (phase < 0.625) return 0;
+    if (phase < 0.6875) return 1;
+    if (phase < 0.75) return 2;
+    if (phase < 0.8125) return 3;
+    if (phase < 0.875) return 4;
+    if (phase < 0.9375) return 5;
+
+    return 6;
 }
 
 function initMoonPhase() {
-    const laDate = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }));
-    const idx = getMoonPhaseIndex(laDate);
-    const img = document.getElementById('moon-phase-img');
+    const img = document.getElementById("moon-phase-img");
+
     if (!img) return;
-    img.src = `assets/moon/moon${idx + 1}.png`;
-    img.title = MOON_PHASE_NAMES[idx];
-    img.alt = MOON_PHASE_NAMES[idx];
+
+    const now = getMoonDate();
+
+    const imageNum = getMoonImage(now);
+
+    img.src = `assets/moon/moon${imageNum}.png`;
+
+    const moonPosition = SunCalc.getMoonPosition(
+        now,
+        47.25,
+        -117.68
+    );
+
+    img.style.transform =
+        `rotate(${moonPosition.parallacticAngle * 180 / Math.PI}deg)`;
+
+    const illumination =
+        Math.round(
+            SunCalc.getMoonIllumination(now).fraction * 100
+        );
+
+    img.title = `${MOON_PHASE_NAMES[imageNum]} (${illumination}%)`;
+    img.alt = `${MOON_PHASE_NAMES[imageNum]} (${illumination}%)`;
 }
 
 initMoonPhase();
+
 
 function fetchLastFm() {
     fetch('https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=squirre1z&api_key=4204a2d9b89f985f6b47c29f913dd463&format=json&limit=1')
