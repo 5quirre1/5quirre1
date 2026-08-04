@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <script defer="" src="https://umm.nomaakip.xyz/script.js" data-website-id="49543798-55ae-44f6-9c08-c8069f0ed2b8"></script>
+    <script defer="" src="https://umm.nomaakip.xyz/script.js"
+        data-website-id="49543798-55ae-44f6-9c08-c8069f0ed2b8"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>credits</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
@@ -59,8 +60,28 @@
                                 dimden.dev
                             </a>
                             <span class="credits-entry-sep">-</span>
-                            <span>where i got the moon sprites <img style="width:15.99px"
-                                    src="/assets/moon/moon15.png"></span>
+                            <span>where i got the moon sprites
+                                <img id="moons" style="width:15.99px; height:15.99px; object-fit:contain;"
+                                    src="/assets/moon/moon0.png">
+                            </span>
+                            <script>
+                                const moon = document.getElementById("moons");
+                                const moonFrames = [];
+                                let frame = 0;
+
+                                for (let i = 0; i < 16; i++) {
+                                    const img = new Image();
+                                    img.src = `/assets/moon/moon${i}.png`;
+                                    moonFrames.push(img);
+                                }
+                                function animateMoon() {
+                                    moon.src = moonFrames[frame].src;
+                                    frame = (frame + 1) % moonFrames.length;
+                                    setTimeout(() => requestAnimationFrame(animateMoon), 120);
+                                }
+
+                                animateMoon();
+                            </script>
                         </div>
                     </div>
                 </div>
@@ -90,6 +111,7 @@
             </div>
         </section>
     </div>
+
     <include src="/components/footer.html"></include>
 
     <script src="/js/rolling-text.js"></script>
