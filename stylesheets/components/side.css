@@ -170,3 +170,28 @@
     object-fit: contain;
     flex-shrink: 0;
 }
+
+.widget-icon {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.widget-icon ws-widget {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 130px;
+    height: 130px;
+    transform: scale(calc(16 / 130));
+    transform-origin: top left;
+}
+
+.widget-icon ws-widget iframe {
+    width: 130px;
+    height: 130px;
+    border: 0;
+    display: block;
+}

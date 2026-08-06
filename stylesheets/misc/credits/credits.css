@@ -56,3 +56,9 @@
     color: #aaa;
     font-size: 13px;
 }
+
+.credits-entry .widget-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+}
