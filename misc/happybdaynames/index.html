@@ -155,6 +155,15 @@
     <img id="vamp" src="vamp.png">
     <img id="noma" src="noma.png">
     <img id="mpax" src="mpax.png">
-    <audio src="happybirthdaynames.mp3" loop autoplay></audio>
+    <audio id="d" src="happybirthdaynames.mp3" loop autoplay></audio>
+    <script>
+    const music = document.getElementById("d");
+
+    music.play().catch(() => {
+        document.addEventListener("click", () => {
+            music.play();
+        }, { once: true });
+    });
+    </script>
 </body>
 </html>
