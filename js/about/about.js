@@ -1,4 +1,4 @@
-const CHUNGUSMEID = '1484384790735093831';
+const CHUNGUSMEID = '1527660023420031069';
 
 fetch(`https://api.lanyard.rest/v1/users/${CHUNGUSMEID}`)
     .then(r => r.json())
