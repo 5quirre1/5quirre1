@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> days until the kirkiversary.</title>
+    <style>
+        @font-face {
+            font-family: 'kirk';
+            src: url('../assets/misc/fonts/kirk.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'kirk', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .text {
+            padding: 20px;
+            max-width: 90%;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .text p {
+            font-size: clamp(1.2rem, 5vw, 2.2rem);
+            margin: 0;
+            white-space: nowrap;
+            font-weight: normal;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="text" id="countdown">
+        <p>
+            <span id="days">5</span>
+            days until the kirkiversary.
+        </p>
+    </div>
+
+    <audio id="d" src="../assets/misc/kirk/kirk.ogg" loop></audio>
+
+    <script>
+        (function () {
+            const targetYear = 2026;
+            const targetMonth = 8;
+            const targetDay = 10;
+            const finalTarget = new Date(targetYear, targetMonth, targetDay);
+            const redirectURL = 'https://youtu.be/pRPNcdrTHfc?si=kyGzeevAPW25qvLA';
+
+            const countEl = document.getElementById('days');
+            const container = document.getElementById('countdown');
+            const audio = document.getElementById('d');
+
+            function getDaysUntil(target) {
+                const current = new Date();
+                const todayMidnight = new Date(current.getFullYear(), current.getMonth(), current.getDate());
+                const targetMidnight = new Date(target.getFullYear(), target.getMonth(), target.getDate());
+                const diffMs = targetMidnight - todayMidnight;
+                const diffDays = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+                return diffDays;
+            }
+
+            function hideCountdown() {
+                container.classList.add('hidden');
+                audio.pause();
+                audio.currentTime = 0;
+            }
+
+            function checkAndRedirect() {
+                const days = getDaysUntil(finalTarget);
+                if (days <= 0) {
+                    hideCountdown();
+                    window.location.href = redirectURL;
+                    return true;
+                }
+                return false;
+            }
+
+            function updateCount() {
+                if (checkAndRedirect()) {
+                    return;
+                }
+                const days = getDaysUntil(finalTarget);
+                const display = days >= 0 ? days : 0;
+                countEl.textContent = display;
+                document.title = display + ' days until the kirkiversary';
+            }
+
+            updateCount();
+
+            setInterval(() => {
+                if (checkAndRedirect()) {
+                    return;
+                }
+                const newDays = getDaysUntil(finalTarget);
+                const currentDisplay = parseInt(countEl.textContent, 10);
+                if (newDays !== currentDisplay) {
+                    const display = newDays >= 0 ? newDays : 0;
+                    countEl.textContent = display;
+                    document.title = display + ' days until the kirkiversary';
+                }
+            }, 10000);
+
+            document.addEventListener('visibilitychange', () => {
+                if (!document.hidden) {
+                    if (checkAndRedirect()) {
+                        return;
+                    }
+                    const fresh = getDaysUntil(finalTarget);
+                    const display = fresh >= 0 ? fresh : 0;
+                    countEl.textContent = display;
+                    document.title = display + ' days until the kirkiversary';
+                }
+            });
+
+            audio.play().catch(() => {
+                document.addEventListener('click', () => {
+                    audio.play();
+                }, { once: true });
+            });
+        })();
+    </script>
+</body>
+
+</html>
