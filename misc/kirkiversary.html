@@ -104,6 +104,12 @@
                 return false;
             }
 
+            function updateDisplay(display) {
+                const dayLabel = display === 1 ? 'day' : 'days';
+                document.querySelector('.text p').innerHTML = `<span id="days">${display}</span> ${dayLabel} until the kirkiversary.`;
+                document.title = display + ' days until the kirkiversary';
+            }
+
             function updateCount() {
                 if (checkAndRedirect()) {
                     return;
@@ -111,7 +117,7 @@
                 const days = getDaysUntil(finalTarget);
                 const display = days >= 0 ? days : 0;
                 countEl.textContent = display;
-                document.title = display + ' days until the kirkiversary';
+                updateDisplay(display);
             }
 
             updateCount();
@@ -125,7 +131,7 @@
                 if (newDays !== currentDisplay) {
                     const display = newDays >= 0 ? newDays : 0;
                     countEl.textContent = display;
-                    document.title = display + ' days until the kirkiversary';
+                    updateDisplay(display);
                 }
             }, 10000);
 
@@ -137,7 +143,7 @@
                     const fresh = getDaysUntil(finalTarget);
                     const display = fresh >= 0 ? fresh : 0;
                     countEl.textContent = display;
-                    document.title = display + ' days until the kirkiversary';
+                    updateDisplay(display);
                 }
             });
 
