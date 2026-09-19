@@ -1,181 +1,127 @@
-.blog-side {
-    width: 300px;
-    flex-shrink: 0;
-    font-size: 14px;
+.section.main {
+    width: 100%;
+    min-width: 0;
 }
 
-.blog-side-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 8px;
+.blog-list {
+    width: 100%;
+    margin: 0 0 24px 0;
+    padding: 10px 12px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+.blog-list-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
     font-size: 13px;
-    color: #888;
-    width: 300px;
+    line-height: 1.9;
+    color: #3D3D3D;
 }
 
-.blog-side-bar strong {
+.blog-list-items li {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.blog-list-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.blog-list-date {
+    font-size: 11px;
+    color: #aaa;
+    font-variant-numeric: tabular-nums;
+}
+
+.blog-list-sep {
+    color: #ccc;
+}
+
+.blog-list-items a {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 13px;
+}
+
+.blog-list-items a[aria-current="page"] {
+    color: #3D3D3D;
+}
+
+.blog-list-desc {
+    font-size: 12px;
+    color: #888;
+}
+
+.blog-pages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px 10px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #eee;
+    font-size: 12px;
+    color: #888;
+}
+
+.blog-pages[hidden] {
+    display: none;
+}
+
+.blog-pages a {
+    padding: 2px 0;
+}
+
+.blog-pages [aria-current="page"] {
+    padding: 2px 0;
     color: #3D3D3D;
     font-weight: 600;
-}
-
-.blog-filter {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.blog-filter label {
-    font-size: 11px;
-    color: #888;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-}
-
-.blog-filter select {
-    font-family: 'Radio Canada', sans-serif;
-    font-size: 13px;
-    border: 0;
-    border-bottom: 1px solid #ddd;
-    background: transparent;
-    color: #3D3D3D;
-    padding: 2px 4px;
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
     outline: none;
 }
 
-.blog-filter select:hover {
-    border-bottom-color: #aaa;
-}
-
-.blog-side-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    max-height: 170px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    width: 300px;
-}
-
-.blog-card {
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: inherit;
-    width: 300px;
-    box-sizing: border-box;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #eee;
-}
-
-.blog-card:last-child {
-    border-bottom: none;
-    padding-bottom: 0;
-}
-
-.blog-card-thumb {
-    width: 300px;
-    height: 120px;
-    object-fit: cover;
-    display: block;
-    background: #f5f5f5;
-}
-
-.blog-card-thumb-placeholder {
-    width: 300px;
-    height: 120px;
-    background: #f0f0f0;
-}
-
-.blog-card-body {
-    width: 300px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    overflow: hidden;
-    margin-top: 5px;
-}
-
-.blog-card-title-row {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-}
-
-.blog-card-new {
-    width: 16px;
-    height: 16px;
-    object-fit: contain;
-    flex-shrink: 0;
-    display: block;
-}
-
-.blog-card-title {
-    font-family: 'Yusei Magic', sans-serif;
-    font-size: 12px;
-    color: #3D3D3D;
-    flex-shrink: 0;
-    max-width: 55%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.blog-card-sep {
-    color: #ccc;
-    font-size: 11px;
-    flex-shrink: 0;
-}
-
-.blog-card-date {
-    font-size: 11px;
-    color: #aaa;
-    flex-shrink: 0;
-    white-space: nowrap;
-}
-
-.blog-card-desc-wrap {
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%;
-}
-
-.blog-card-desc {
-    font-size: 12px;
+.blog-status {
+    margin: 0;
+    font-size: 14px;
     color: #888;
-    display: inline-block;
-    white-space: nowrap;
 }
 
-.blog-card:hover .blog-card-title {
-    text-decoration: underline;
-}
-
-.blog-side hr {
-    width: 300px;
-    border: 0;
-    border-top: 1px solid #eee;
-    margin: 6px 0;
-}
-
-.blog-empty {
-    font-size: 13px;
-    color: #888;
-    padding: 10px 0;
+.blog-welcome {
+    padding: 24px 0;
     text-align: center;
-    width: 300px;
+}
+
+.blog-welcome p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #3D3D3D;
+}
+
+.blog-welcome .wave {
+    width: 40px;
+    height: 40px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.monkey {
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
 }
 
 .blog-post-wrap {
     max-width: 620px;
     width: 100%;
+    min-width: 0;
     text-align: left;
 }
 
@@ -198,18 +144,6 @@
     border: 0;
     border-top: 1px solid #eee;
     margin: 0;
-}
-
-.blog-post-back {
-    font-size: 13px;
-    color: #888;
-    text-decoration: none;
-    flex-shrink: 0;
-}
-
-.blog-post-back:hover {
-    color: #3D3D3D;
-    text-decoration: none;
 }
 
 .blog-post-bar-sep {
@@ -290,6 +224,19 @@
     padding: 1px 4px;
 }
 
+.blog-post-body video,
+.blog-post-body iframe {
+    max-width: 100%;
+}
+
+.blog-post-body table {
+    display: block;
+    max-width: 100%;
+    overflow-x: auto;
+    margin: 0 0 14px 0;
+    border-collapse: collapse;
+}
+
 .blog-post-body pre {
     background: #f5f5f5;
     padding: 12px;
@@ -361,4 +308,36 @@
 
 .blog-likebtn .likebtn-wrapper > * {
     margin: 0 auto;
+}
+@media (pointer: coarse) {
+    .blog-list-items {
+        line-height: 2.3;
+    }
+
+    .blog-pages a,
+    .blog-pages [aria-current="page"] {
+        padding: 6px 2px;
+    }
+}
+@media (max-width: 480px) {
+    .section.main {
+        padding: 12px;
+    }
+
+    .blog-list {
+        padding: 8px 10px;
+    }
+
+    .blog-welcome {
+        padding: 18px 0;
+    }
+
+    .blog-welcome p {
+        font-size: 14px;
+    }
+
+    .blog-welcome .wave {
+        width: 34px;
+        height: 34px;
+    }
 }

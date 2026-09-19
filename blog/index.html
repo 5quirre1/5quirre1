@@ -5,6 +5,17 @@
     <script defer="" src="https://umm.nomaakip.xyz/script.js" data-website-id="49543798-55ae-44f6-9c08-c8069f0ed2b8"></script>
     <script src="https://u.widget.st/ar.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="squirrel's blog">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="blog">
+    <meta property="og:description" content="squirrel's blog">
+    <meta property="og:url" content="https://squirrelz.xyz/blog/">
+    <meta property="og:site_name" content="squirrelz.xyz">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="blog">
+    <meta name="twitter:description" content="squirrel's blog">
     <title>blog</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <link rel="stylesheet" href="/stylesheets/blog/blog.css">
@@ -14,6 +25,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Radio+Canada:ital,wght@0,300..700&family=Yusei+Magic&display=swap"
         rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.6/marked.min.js"></script>
 </head>
 
 <body>
@@ -21,44 +33,17 @@
 
     <div class="container">
         <section class="section main">
-            <div class="text">
-                <h1 class="about-heading">blog</h1>
-                <p>hi welcome to my blog page!!!</p>
-                <p>on this page you will find all the random blog posts i wrote!! i don't really write all that much but
-                    if i want to write about something like a new project, something i bought or just some random shit
-                </p>
-                <p>i genuinely don't know what really else to write here so like go check out the blog posts LMFAO</p>
-            </div>
+            <div class="text blog-post-wrap">
 
-            <div class="side blog-side">
-                <div class="blog-side-bar">
-                    <span><strong id="stat-posts">-</strong> posts</span>
-
-                    <div class="blog-last">
-                        <span>last: <strong><span id="blog-last-date">-</span></strong></span>
-                    </div>
-
-                    <div class="blog-filter">
-                        <label for="blog-date-filter">date</label>
-                        <select id="blog-date-filter">
-                            <option value="all">all</option>
-                        </select>
-                    </div>
+                <div id="post-content">
+                    <p class="blog-status">loading...</p>
                 </div>
-
-                <hr>
-
-                <div class="blog-side-list" id="blog-list">
-                    <p class="blog-empty">loading...</p>
-                </div>
-
-                <hr>
             </div>
         </section>
     </div>
 
     <include src="/components/footer.html"></include>
-    
+
     <script src="https://sc.squirrelz.xyz/track.js?key=squirrel"></script>
     <ws-widget type="cursor" iid="4699" embed="script"></ws-widget>
     <script src="/js/rolling-text.js"></script>
@@ -66,7 +51,7 @@
     <script src="/js/maybemarquee.js"></script>
     <script src="/js/tooltip.js"></script>
     <script src="/js/misc.js"></script>
-    <script src="/js/blog/blog.js"></script>
+    <script src="/js/blog/loader.js"></script>
 </body>
 
 </html>

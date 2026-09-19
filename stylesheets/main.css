@@ -181,3 +181,216 @@ a[aria-disabled="true"] {
         transform: translateX(-100%);
     }
 }
+
+select {
+    width: 100%;
+    min-width: 0;
+    padding: 2px 16px 2px 0;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    background: transparent url(/assets/down.png) no-repeat right 2px center;
+    font-family: 'Radio Canada', sans-serif;
+    font-size: 13px;
+    color: #3D3D3D;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+select:hover {
+    border-bottom-color: #aaa;
+}
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 0 10px;
+    }
+
+    header h1 {
+        font-size: 23px;
+        line-height: 1.35;
+    }
+
+    .links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 4px 14px;
+        padding: 0 8px;
+    }
+
+    .links a {
+        margin: 0;
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    hr {
+        width: 85%;
+    }
+
+    .container {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .section.main {
+        width: 100%;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 15px;
+    }
+
+    .text {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .text p {
+        line-height: 1.7;
+    }
+
+    .text-change-container img {
+        position: static;
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        margin-left: 4px;
+        vertical-align: middle;
+    }
+
+    .jvc-arrow {
+        display: none;
+    }
+
+    .side {
+        width: 100%;
+        max-width: 100%;
+        align-items: center;
+    }
+
+    .side figure {
+        width: 100%;
+        text-align: center;
+    }
+
+    .side figure img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .side figcaption {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .side-info {
+        width: 100%;
+        max-width: 100%;
+        margin: 15px auto 0 auto;
+        font-size: 16px;
+    }
+
+    .side-row {
+        gap: 10px;
+    }
+
+    .side-label {
+        font-size: 13px;
+    }
+
+    .site-stat-number {
+        font-size: 16px;
+    }
+
+    .site-stat-label {
+        font-size: 13px;
+    }
+
+    .music-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .lastfm-cover {
+        width: 20px;
+        height: 20px;
+    }
+
+    .moon-phase-img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .blinkies {
+        width: 100%;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .blinkies img {
+        width: auto;
+        height: 20px;
+        max-height: 20px;
+        object-fit: fill;
+    }
+
+    .button-share {
+        width: 100%;
+    }
+
+    .button-share-inner {
+        width: 100%;
+    }
+
+    .button-share-inner textarea {
+        min-width: 0;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    .links {
+        gap: 3px 10px;
+    }
+
+    .links a {
+        font-size: 16px;
+    }
+
+    .section.main {
+        padding: 12px;
+        gap: 25px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .text p {
+        line-height: 1.65;
+    }
+
+    .side {
+        max-width: 100%;
+    }
+
+    .side figure img {
+        max-width: 100%;
+    }
+
+    .side-info {
+        font-size: 15px;
+    }
+}

@@ -10,21 +10,21 @@ if (slendyEl) {
 
         if (slendyClicks >= 10) {
             slendyLocked = true;
-            slendyEl.classList.add('slendycuck-fade-out');
+            slendyEl.classList.add('penis-fade-out');
 
             setTimeout(() => {
-                slendyEl.textContent = 'dummy thick guardian 👀👀';
+                slendyEl.textContent = 'bon YAMS. 👀👀';
                 void slendyEl.offsetWidth;
-                slendyEl.classList.remove('slendycuck-fade-out');
+                slendyEl.classList.remove('penis-fade-out');
             }, 400);
 
             setTimeout(() => {
-                slendyEl.classList.add('slendycuck-fade-out');
+                slendyEl.classList.add('penis-fade-out');
 
                 setTimeout(() => {
-                    slendyEl.textContent = 'slendytubbies';
+                    slendyEl.textContent = 'walten files';
                     void slendyEl.offsetWidth;
-                    slendyEl.classList.remove('slendycuck-fade-out');
+                    slendyEl.classList.remove('penis-fade-out');
                     slendyClicks = 0;
                     slendyLocked = false;
                 }, 400);
