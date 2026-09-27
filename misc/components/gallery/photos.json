@@ -460,5 +460,35 @@
         "thumb": "/assets/misc/photos-i-took/thumbs/2021/IMG_0560.webp",
         "caption": "",
         "date": "2021-09-11"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/IMG_8043.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/IMG_8043.webp",
+        "caption": "",
+        "date": "2026-09-25"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/IMG_8046.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/IMG_8046.webp",
+        "caption": "",
+        "date": "2026-09-25"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/IMG_8053.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/IMG_8053.webp",
+        "caption": "",
+        "date": "2026-09-25"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/IMG_8057.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/IMG_8057.webp",
+        "caption": "",
+        "date": "2026-09-25"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/IMG_8059.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/IMG_8059.webp",
+        "caption": "",
+        "date": "2026-09-25"
     }
 ]
