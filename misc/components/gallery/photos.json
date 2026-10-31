@@ -539,7 +539,7 @@
         "caption": "",
         "date": "2026-10-03"
     },
-        {
+    {
         "src": "/assets/misc/photos-i-took/2026/_DSC0011.JPG",
         "thumb": "/assets/misc/photos-i-took/thumbs/2026/_DSC0011.webp",
         "caption": "",
@@ -592,5 +592,41 @@
         "thumb": "/assets/misc/photos-i-took/thumbs/2026/_DSC9996.webp",
         "caption": "",
         "date": "2026-10-12"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/_DSC0099.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/_DSC0099.webp",
+        "caption": "",
+        "date": "2026-10-24"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/_DSC0119.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/_DSC0119.webp",
+        "caption": "",
+        "date": "2026-10-24"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/_DSC0123.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/_DSC0123.webp",
+        "caption": "",
+        "date": "2026-10-24"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/_DSC0127.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/_DSC0127.webp",
+        "caption": "",
+        "date": "2026-10-24"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/_DSC0130.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/_DSC0130.webp",
+        "caption": "",
+        "date": "2026-10-24"
+    },
+    {
+        "src": "/assets/misc/photos-i-took/2026/_DSC0117.JPG",
+        "thumb": "/assets/misc/photos-i-took/thumbs/2026/_DSC0117.webp",
+        "caption": "",
+        "date": "2026-10-24"
     }
 ]
