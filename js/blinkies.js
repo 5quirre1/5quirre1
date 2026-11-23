@@ -4,7 +4,6 @@ const blinkies = [
     'nerd.gif',
     'dream.gif',
     'groupchat.gif',
-    'loveonline.gif',
     '100musical.gif',
     'addicted.gif',
 ];
