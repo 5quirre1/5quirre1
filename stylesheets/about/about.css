@@ -1,3 +1,4 @@
+
 @import "bucket.css";
 
 .about-right {
@@ -19,6 +20,7 @@
     flex-direction: column;
     justify-content: center;
     min-width: 0;
+    flex: 1;
 }
 
 .discord-pfp {
@@ -38,11 +40,6 @@
     font-family: 'Yusei Magic', sans-serif;
     font-size: 18px;
     margin: 0 0 12px 0;
-}
-
-.likes-dislikes {
-    flex-direction: column;
-    gap: 8px;
 }
 
 .ld-row {
@@ -107,15 +104,171 @@
     gap: 6px;
 }
 
-.badges-thingie {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+.side-info {
+    margin-top: 10px;
+    font-size: 14px;
+    width: 100%;
+    min-width: 0;
 }
 
-.badges-thingie img {
+.side-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 5px;
+    min-width: 0;
+    width: 100%;
+}
+
+.status-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+    min-width: 0;
+    flex: 1 1 100%;
+}
+
+#discord-status-icon,
+#discord-status-emoji {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+}
+
+#discord-status-icon img {
     width: 16px;
     height: 16px;
     object-fit: contain;
     display: block;
+}
+
+#discord-status {
+    flex-shrink: 0;
+}
+
+#discord-status-emoji {
+    font-size: 14px;
+}
+
+#discord-status-emoji img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    display: block;
+}
+
+.side-marquee-wrap {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    flex: 1 1 0%;
+    min-width: 0;
+    width: 0;
+}
+
+
+.favorite-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 0;
+    overflow: hidden;
+}
+
+.favorite-card {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    text-decoration: none;
+    border: none;
+    border-radius: 0;
+}
+
+.favorite-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.favorite-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 3px 7px;
+    background: rgba(250, 250, 250, 0.95);
+    color: #555;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 11px;
+    line-height: 18px;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-radius: 0;
+}
+
+.favorite-color {
+    background: linear-gradient(to bottom, hotpink 50%, orange 50%);
+}
+
+.favorite-animals {
+    position: relative;
+}
+
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.animal-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-width: 0;
+    min-height: 0;
+}
+
+.favorite-animals .favorite-label {
+    z-index: 1;
+}
+
+#nationality-card {
+    cursor: pointer;
+}
+
+#nationality-image {
+    transition: opacity 0.4s ease;
+}
+
+#nationality-image.fading {
+    opacity: 0;
+}
+
+.stamps {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 5px;
+    width: 100%;
+}
+
+.stamps img {
+    flex: 1;
+    min-width: 0;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
 }

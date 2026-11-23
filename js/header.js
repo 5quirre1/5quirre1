@@ -1,10 +1,11 @@
 (function () {
     function initHeaderTextStuff() {
         const colors = [
-            '#FF7518',
-            '#000000',
-            '#6A0DAD',
-            '#32CD32'
+            '#F5223B',
+            '#00A844',
+            '#F5223B',
+            '#00A844',
+            '#D9A500'
         ];
 
         document.querySelectorAll('.website-name-shit').forEach(el => {

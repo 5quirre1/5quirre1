@@ -1,31 +1,39 @@
+
 let tooltip = null;
 let active = false;
 
 function initTooltip() {
-    if (!tooltip) {
-        tooltip = document.createElement('div');
-        tooltip.className = 'tooltip';
-        document.body.appendChild(tooltip);
-    }
+    if (tooltip) return;
 
-    document.querySelectorAll('[data-tip]').forEach(el => {
-        if (el.dataset.tooltipBound) return;
-        el.dataset.tooltipBound = "1";
+    tooltip = document.createElement('div');
+    tooltip.className = 'tooltip';
+    document.body.appendChild(tooltip);
 
-        el.addEventListener('mouseenter', e => {
-            tooltip.textContent = el.dataset.tip;
-            active = true;
-            moveTooltip(e);
-            setTimeout(() => {
-                if (active) tooltip.style.opacity = 1;
-            }, 50);
-        });
+    document.addEventListener('mouseover', e => {
+        const el = e.target.closest('[data-tip]');
 
-        el.addEventListener('mousemove', moveTooltip);
-        el.addEventListener('mouseleave', () => {
-            active = false;
-            tooltip.style.opacity = 0;
-        });
+        if (!el || el.contains(e.relatedTarget)) return;
+
+        tooltip.textContent = el.dataset.tip;
+        active = true;
+        moveTooltip(e);
+
+        setTimeout(() => {
+            if (active) tooltip.style.opacity = 1;
+        }, 50);
+    });
+
+    document.addEventListener('mousemove', e => {
+        if (active) moveTooltip(e);
+    });
+
+    document.addEventListener('mouseout', e => {
+        const el = e.target.closest('[data-tip]');
+
+        if (!el || el.contains(e.relatedTarget)) return;
+
+        active = false;
+        tooltip.style.opacity = 0;
     });
 }
 

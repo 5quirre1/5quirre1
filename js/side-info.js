@@ -86,16 +86,58 @@ function linksOnly(html) {
     return temp.innerHTML;
 }
 
-fetch('https://status.cafe/users/squirrel/status.json')
-    .then(r => r.json())
-    .then(d => {
-        const el = document.getElementById('status-text');
-        const content = d.content || 'no status';
-        maybeMarquee(el, null, linksOnly(content));
-    })
-    .catch(() => {
-        document.getElementById('status-text').textContent = 'unavailable';
-    });
+
+
+function fetchStatus() {
+    fetch('https://status.cafe/users/squirrel/status.json')
+        .then(r => r.json())
+        .then(d => {
+            const el = document.getElementById('status-text');
+            const emoji = document.getElementById('status-emoji');
+
+            maybeMarquee(el, null, linksOnly(d.content || 'no status'));
+
+            const statusEmoji = d.face || d.emoji;
+
+            if (statusEmoji) {
+                emoji.textContent = statusEmoji;
+            } else {
+                const img = document.createElement('img');
+                img.src = '/assets/icons/status.png';
+                img.alt = 'status';
+                emoji.replaceChildren(img);
+            }
+        })
+        .catch(() => {
+            document.getElementById('status-text').textContent = 'unavailable';
+        });
+
+    fetch('https://status.cafe/users/squirrel.atom')
+        .then(r => r.text())
+        .then(xml => {
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(xml, 'application/xml');
+
+            const icon = doc.getElementsByTagNameNS(
+                'http://www.w3.org/2005/Atom',
+                'icon'
+            )[0]?.textContent ||
+            doc.getElementsByTagNameNS(
+                'http://www.w3.org/2005/Atom',
+                'logo'
+            )[0]?.textContent;
+
+            if (icon) {
+                document.getElementById('status-profile').src = icon;
+            }
+        })
+        .catch(() => {});
+}
+
+fetchStatus();
+setInterval(fetchStatus, 30000);
+
+
 
 // const DEBUG_DATE = new Date("2026-08-04T12:00:00");
 //for debugging shit to just make sure it's good

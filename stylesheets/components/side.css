@@ -63,25 +63,37 @@
 }
 
 .side-links a,
-#lastfm-text a {
+#lastfm-text a,
+#status-text a {
     text-decoration: none;
 }
 
 .side-links a:hover,
-#lastfm-text a:hover {
+#lastfm-text a:hover,
+#status-text a:hover {
     text-decoration: underline;
 }
 
-.lastfm-row {
+.lastfm-row,
+.status-row {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
-.lastfm-cover {
+.lastfm-cover,
+.status-profile {
     width: 16px;
     height: 16px;
     object-fit: cover;
+    flex-shrink: 0;
+    margin-left: auto;
+}
+
+#lastfm-cover-link,
+#status-profile-link {
+    display: flex;
+    align-items: center;
     flex-shrink: 0;
     margin-left: auto;
 }

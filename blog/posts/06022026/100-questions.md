@@ -32,8 +32,7 @@
 
    <dt>9. Do you keep the same layout on all of your pages? Or do you use different ones?</dt>
    <dd>yea it's basically the same layout for MOST of the pages. it's a left and right side with stuff on top and
-       below. some things that are different are the <a href="/misc/gallery">gallery</a> and the <a
-           href="/misc/albums">albums</a></dd>
+       below. some things that are different are the <a href="/misc/gallery">gallery</a></dd>
 
    <dt>10. How confident are you with CSS?</dt>
    <dd>i think i'm pretty good with it, maybe not like the BEST but i can do what i can LOL</dd>

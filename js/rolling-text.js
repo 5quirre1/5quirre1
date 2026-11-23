@@ -1,8 +1,8 @@
 //https://www.mf2fm.com/rv/dhtmlrolltext.php
 const text = [
     "last updated: loading...",
-    "2025-FOREVER squirrelz.xyz",
-    `built with love <img src="/assets/icons/red-heart-normal.png" style="width:10px;height:10px;vertical-align:middle;position:relative;top:-1px;">`
+    `2025-FOREVER squirrelz.xyz <img src="/assets/icons/awesome.png" style="width:14px;height:14px;vertical-align:middle;position:relative;top:-1px;">`,
+    `built with love and my own paws <img src="/assets/icons/red-heart-normal.png" style="width:14px;height:14px;vertical-align:middle;position:relative;top:-1px;">`
 ];
 
 const delay = 10000;
